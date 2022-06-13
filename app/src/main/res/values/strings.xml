@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FitMe</string>
     <string name="fitme">FitMe</string>
+    <string name="welcomtxtpar">The best fitness app in the century to accompany your lifestyle</string>
+    <string name="gender_text">To give you a better experience and results we need to know your gender</string>
+    <string name="continue_txt">Continue</string>
+    <string name="agetext">Age in years. This will help us to personalize an exercise program that suits you.</string>
+    <string name="fp_text">Don\'t worry you can always change it later, or you can skip it for now</string>
 </resources>

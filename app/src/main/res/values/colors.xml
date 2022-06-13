@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="color_primary">#f7f7f7</color>
+    <color name="color_secondary">#ff0d75ef</color>
+
+
+    <color name="color_text_primary">#212121</color>
+    <color name="color_text_secondary">#808080</color>
+
+    <color name="genderselector">#800D75EF</color>
+    <color name="color_backbtn">#1A0D75EF</color>
+
+
+
+    <color name="fullbody">#33145DA0</color>
+    <color name="arms">#330C2D48</color>
+    <color name="abs">#332E8BC0</color>
+    <color name="chest">#33B1D4E0</color>
 </resources>

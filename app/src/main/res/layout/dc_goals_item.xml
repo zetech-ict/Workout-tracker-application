@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dc_goals_selected"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+android:id="@+id/dc_goalName_txt"
+
+        android:padding="@dimen/_15sdp"
+        android:paddingStart="0dp"
+        android:fontFamily="@font/nunitosemibold"
+        android:textSize="@dimen/_13sdp"
+        android:text="Gain Weight"
+        android:textColor="@color/color_text_primary"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <View
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:background="@drawable/dc_check_bg"
+android:id="@+id/dc_check_holder"
+        app:layout_constraintTop_toTopOf="@id/dc_goalName_txt"
+        app:layout_constraintBottom_toBottomOf="@id/dc_goalName_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        />
+    <androidx.cardview.widget.CardView
+    android:layout_width="0dp"
+        android:layout_margin="@dimen/_2sdp"
+    app:cardElevation="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintEnd_toEndOf="@id/dc_check_holder"
+        app:layout_constraintStart_toStartOf="@id/dc_check_holder"
+
+    app:layout_constraintTop_toTopOf="@id/dc_check_holder"
+    app:layout_constraintBottom_toBottomOf="@id/dc_check_holder"
+    android:id="@+id/checkBox_holder"
+    app:cardCornerRadius="@dimen/_2sdp"
+
+
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:src="@drawable/ic_check"
+        app:tint="@color/white"
+
+        android:background="@color/color_secondary"
+        android:padding="@dimen/_2sdp"
+        android:scaleType="centerCrop"
+        />
+</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

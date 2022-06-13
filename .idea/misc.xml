@@ -3,7 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.278125" />
+        <entry key="app/src/main/res/drawable/backbtn_bg.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/continue_bg.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/continuebtn_bg.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/dc_goals_selected.xml" value="0.2405" />
+        <entry key="app/src/main/res/drawable/fp_edit_bg.xml" value="0.2405" />
+        <entry key="app/src/main/res/drawable/fp_input_bg_null.xml" value="0.2405" />
+        <entry key="app/src/main/res/drawable/genderselectorholder_bg.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/welcome_bg.xml" value="0.2405" />
+        <entry key="app/src/main/res/layout/activity_about_your_self.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/activity_data_collection.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/activity_fill_profile.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/dc_goals_item.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2355" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2355" />
       </map>
     </option>
   </component>

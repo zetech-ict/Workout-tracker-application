@@ -15,13 +15,13 @@
     <color name="color_text_primary">#212121</color>
     <color name="color_text_secondary">#808080</color>
 
-    <color name="genderselector">#800D75EF</color>
+    <color name="genderselector">#8A8A8A</color>
     <color name="color_backbtn">#1A0D75EF</color>
 
 
 
-    <color name="fullbody">#33145DA0</color>
+    <color name="fullbody">#66000000</color>
     <color name="arms">#330C2D48</color>
     <color name="abs">#332E8BC0</color>
-    <color name="chest">#33B1D4E0</color>
+    <color name="chest">#1AB1D4E0</color>
 </resources>

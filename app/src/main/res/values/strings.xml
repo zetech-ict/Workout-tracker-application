@@ -6,4 +6,7 @@
     <string name="continue_txt">Continue</string>
     <string name="agetext">Age in years. This will help us to personalize an exercise program that suits you.</string>
     <string name="fp_text">Don\'t worry you can always change it later, or you can skip it for now</string>
+    <string name="email">Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

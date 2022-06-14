@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context=".LetsYouIn">
+<ImageView
+    android:layout_width="@dimen/_25sdp"
+    android:layout_height="@dimen/_25sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:src="@drawable/ic_round_arrow_back_24"
+    app:tint="@color/color_text_primary"
+    android:id="@+id/lyi_backBtn"
+    android:layout_marginStart="@dimen/_15sdp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's you in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lyi_backBtn"
+        android:fontFamily="@font/nunitobold"
+        android:id="@+id/letsyouin_txt"
+        android:textSize="@dimen/_40ssp"
+        android:textColor="@color/color_text_primary"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lyi_continue"
+        android:id="@+id/continueholder"
+        app:layout_constraintTop_toBottomOf="@id/letsyouin_txt"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:background="@drawable/continueitem_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+android:id="@+id/facebook_signup_holder"
+            android:layout_height="@dimen/_50sdp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with Facebook"
+            android:fontFamily="@font/nunitosemibold"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_30sdp"
+android:id="@+id/facebook_txt"
+android:textSize="@dimen/_11ssp"            app:layout_constraintStart_toStartOf="@id/facebook_signup_holder"
+            app:layout_constraintEnd_toEndOf="@id/facebook_signup_holder"
+            app:layout_constraintTop_toTopOf="@id/facebook_signup_holder"
+            app:layout_constraintBottom_toBottomOf="@id/facebook_signup_holder"
+
+
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/facebook_txt"
+            app:layout_constraintBottom_toBottomOf="@id/facebook_txt"
+            app:layout_constraintEnd_toStartOf="@id/facebook_txt"
+            android:src="@drawable/googleicon"
+            />
+        <View
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:id="@+id/google_signup_holder"
+
+            android:background="@drawable/continueitem_bg"
+            app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/facebook_signup_holder"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with Google"
+            android:fontFamily="@font/nunitosemibold"
+            android:textStyle="bold"
+android:id="@+id/google_txt"
+            android:layout_marginStart="@dimen/_30sdp"
+
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="@id/facebook_signup_holder"
+            app:layout_constraintEnd_toEndOf="@id/google_signup_holder"
+            app:layout_constraintTop_toTopOf="@id/google_signup_holder"
+            app:layout_constraintBottom_toBottomOf="@id/google_signup_holder"
+
+
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/google_txt"
+            app:layout_constraintBottom_toBottomOf="@id/google_txt"
+            app:layout_constraintEnd_toStartOf="@id/google_txt"
+            android:src="@drawable/googleicon"
+            />
+
+        <View
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:background="@drawable/continueitem_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/apple_signup_holder"
+app:layout_constraintTop_toBottomOf="@id/google_signup_holder"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with Apple"
+            android:fontFamily="@font/nunitosemibold"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_30sdp"
+android:id="@+id/apple_txt"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="@id/apple_signup_holder"
+            app:layout_constraintEnd_toEndOf="@id/apple_signup_holder"
+            app:layout_constraintTop_toTopOf="@id/apple_signup_holder"
+            app:layout_constraintBottom_toBottomOf="@id/apple_signup_holder"
+
+
+            />
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/apple_txt"
+            app:layout_constraintBottom_toBottomOf="@id/apple_txt"
+            app:layout_constraintEnd_toStartOf="@id/apple_txt"
+            android:src="@drawable/googleicon"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="#4DAAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/continueholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lyi_continue"
+        android:id="@+id/ordivider"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:background="@color/color_primary"
+android:padding="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/ordivider"
+        app:layout_constraintEnd_toEndOf="@id/ordivider"
+        app:layout_constraintTop_toTopOf="@id/ordivider"
+        app:layout_constraintBottom_toBottomOf="@id/ordivider"
+        android:textSize="@dimen/_13ssp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+app:layout_constraintBottom_toTopOf="@id/donthaveac_txt"
+app:layout_constraintBottom_toBottomOf="@id/continueholder"
+        android:text="Sign in with password"
+        android:elevation="@dimen/_3sdp"
+        android:fontFamily="@font/nunitosemibold"
+
+
+
+
+
+
+
+        android:id="@+id/lyi_continue"
+        android:background="@drawable/continue_bg"
+
+        android:textSize="@dimen/_14ssp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:padding="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:id="@+id/donthaveac_txt"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:text="Don't have an account?"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginRight="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_txt"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="@dimen/_11ssp"
+        android:text="Sign up"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="@id/donthaveac_txt"
+        app:layout_constraintBottom_toBottomOf="@id/donthaveac_txt"
+        app:layout_constraintStart_toEndOf="@id/donthaveac_txt"
+
+        android:textColor="@color/color_secondary"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

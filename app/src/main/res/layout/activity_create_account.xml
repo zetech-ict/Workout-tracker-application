@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_primary"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccount">
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:tint="@color/color_text_primary"
+        android:id="@+id/ca_backBtn"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your account"
+
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_backBtn"
+        android:fontFamily="@font/nunitobold"
+        android:id="@+id/createAcc_txt"
+        android:textSize="@dimen/_40ssp"
+        android:textColor="@color/color_text_primary"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/ca_ordivider"
+    app:layout_constraintTop_toBottomOf="@id/createAcc_txt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+
+    android:id="@+id/center_holder_parent"
+
+    >
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:hint="@string/email"
+        android:paddingStart="@dimen/_40sdp"
+
+        android:fontFamily="@font/nunitosemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+android:autofillHints="emailAddress"
+
+
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:id="@+id/ca_email_edit"
+        android:layout_marginEnd="@dimen/_15sdp"    />
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/icon_email"
+        android:padding="@dimen/_1sdp"
+
+        app:tint="@color/color_text_secondary"
+        app:layout_constraintTop_toTopOf="@id/ca_email_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ca_email_edit"
+        app:layout_constraintStart_toStartOf="@id/ca_email_edit"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:hint="Password"
+
+        android:fontFamily="@font/nunitosemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+android:paddingStart="@dimen/_40sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        android:id="@+id/ca_password_edit"
+        app:layout_constraintTop_toBottomOf="@id/ca_email_edit"
+        android:layout_marginEnd="@dimen/_15sdp"    />
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/lock_ic"
+        app:tint="@color/color_text_secondary"
+        android:padding="@dimen/_1sdp"
+
+        app:layout_constraintTop_toTopOf="@id/ca_password_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ca_password_edit"
+app:layout_constraintStart_toStartOf="@id/ca_password_edit"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/design_ic_visibility_off"
+        android:padding="@dimen/_2sdp"
+        app:tint="@color/color_text_secondary"
+        app:layout_constraintTop_toTopOf="@id/ca_password_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ca_password_edit"
+        app:layout_constraintEnd_toEndOf="@id/ca_email_edit"
+        android:layout_marginEnd="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rememberMe_txt"
+        android:text="Remember Me"
+        app:layout_constraintBottom_toTopOf="@id/ca_continue"
+        android:fontFamily="@font/nunitosemibold"
+        android:textSize="@dimen/_10ssp"
+android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_password_edit"
+        android:layout_marginStart="@dimen/_20sdp"
+        />
+
+
+
+    <View
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintEnd_toStartOf="@id/rememberMe_txt"
+        app:layout_constraintTop_toTopOf="@id/rememberMe_txt"
+        app:layout_constraintBottom_toBottomOf="@id/rememberMe_txt"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@drawable/dc_check_bg"
+        android:id="@+id/ca_check_holder"
+
+
+        android:layout_marginEnd="@dimen/_10sdp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/_2sdp"
+        app:cardElevation="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@id/ca_check_holder"
+        app:layout_constraintStart_toStartOf="@id/ca_check_holder"
+
+        app:layout_constraintTop_toTopOf="@id/ca_check_holder"
+        app:layout_constraintBottom_toBottomOf="@id/ca_check_holder"
+        android:id="@+id/checkBox_holder"
+        app:cardCornerRadius="@dimen/_2sdp"
+
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_check"
+            app:tint="@color/white"
+
+            android:background="@color/color_secondary"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rememberMe_txt"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Sign up"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:elevation="@dimen/_3sdp"
+        android:fontFamily="@font/nunitosemibold"
+
+
+
+
+
+
+
+        android:id="@+id/ca_continue"
+        android:background="@drawable/continue_bg"
+
+        android:textSize="@dimen/_14ssp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:padding="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="#4DAAAAAA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ca_google_signup_holder"
+        android:id="@+id/ca_ordivider"
+        android:layout_marginBottom="@dimen/_30sdp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or continue with"
+        android:background="@color/color_primary"
+        android:padding="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/ca_ordivider"
+        app:layout_constraintEnd_toEndOf="@id/ca_ordivider"
+        app:layout_constraintTop_toTopOf="@id/ca_ordivider"
+        app:layout_constraintBottom_toBottomOf="@id/ca_ordivider"
+        android:textSize="@dimen/_13ssp"
+        />
+
+
+
+    <View
+        android:layout_width="@dimen/_70sdp"
+app:layout_constraintTop_toTopOf="@id/ca_google_signup_holder"
+        app:layout_constraintBottom_toBottomOf="@id/ca_google_signup_holder"
+        app:layout_constraintEnd_toStartOf="@id/ca_google_signup_holder"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:id="@+id/ca_facebook_signup_holder"
+        android:background="@drawable/continueitem_bg"
+
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/ca_facebook_signup_holder"
+        app:layout_constraintEnd_toEndOf="@id/ca_facebook_signup_holder"
+        app:layout_constraintTop_toTopOf="@id/ca_facebook_signup_holder"
+        app:layout_constraintBottom_toBottomOf="@id/ca_facebook_signup_holder"
+android:contentDescription="@string/app_name"
+        android:layout_height="0dp"
+
+        android:padding="@dimen/_15sdp"
+        android:src="@drawable/googleicon"
+        />
+
+
+
+    <View
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:id="@+id/ca_google_signup_holder"
+        app:layout_constraintBottom_toTopOf="@id/haveAcc_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/continueitem_bg"
+        android:layout_marginBottom="@dimen/_30sdp"
+
+        />
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/ca_google_signup_holder"
+            app:layout_constraintEnd_toEndOf="@id/ca_google_signup_holder"
+            app:layout_constraintTop_toTopOf="@id/ca_google_signup_holder"
+            app:layout_constraintBottom_toBottomOf="@id/ca_google_signup_holder"
+            android:contentDescription="@string/app_name"
+
+            android:layout_height="0dp"
+
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/googleicon"
+            />
+
+
+
+
+
+
+
+    <View
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:id="@+id/ca_apple_signup_holder"
+        android:background="@drawable/continueitem_bg"
+app:layout_constraintStart_toEndOf="@id/ca_google_signup_holder"
+        app:layout_constraintTop_toTopOf="@id/ca_google_signup_holder"
+        app:layout_constraintBottom_toBottomOf="@id/ca_google_signup_holder"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/ca_apple_signup_holder"
+        app:layout_constraintEnd_toEndOf="@id/ca_apple_signup_holder"
+        app:layout_constraintTop_toTopOf="@id/ca_apple_signup_holder"
+        app:layout_constraintBottom_toBottomOf="@id/ca_apple_signup_holder"
+        android:contentDescription="@string/app_name"
+
+        android:layout_height="0dp"
+
+        android:padding="@dimen/_15sdp"
+        android:src="@drawable/googleicon"
+        />
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/haveAcc_txt"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:text="Already have an account?"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginRight="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_txt"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="@dimen/_11ssp"
+        android:text="Sign in"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="@id/haveAcc_txt"
+        app:layout_constraintBottom_toBottomOf="@id/haveAcc_txt"
+        app:layout_constraintStart_toEndOf="@id/haveAcc_txt"
+
+        android:textColor="@color/color_secondary"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

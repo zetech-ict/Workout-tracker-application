@@ -33,7 +33,7 @@
 android:id="@+id/ays_desc_txt"
         app:layout_constraintTop_toBottomOf="@id/ays_heading_txt"
         android:layout_marginTop="@dimen/_15sdp"
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_14ssp"
         android:textAlignment="center"
         />
 
@@ -50,13 +50,16 @@ android:id="@+id/ays_desc_txt"
         app:layout_constraintBottom_toTopOf="@id/ays_female_holder"
         />
 <ImageView
-    android:layout_width="@dimen/_10sdp"
-    android:layout_height="@dimen/_10sdp"
+    android:layout_width="@dimen/_60sdp"
+    android:layout_height="@dimen/_60sdp"
+    android:padding="@dimen/_10sdp"
+    app:tint="@color/white"
     app:layout_constraintStart_toStartOf="@id/ays_male_holder"
     app:layout_constraintEnd_toEndOf="@id/ays_male_holder"
     app:layout_constraintTop_toTopOf="@id/ays_male_holder"
     app:layout_constraintBottom_toTopOf="@id/ays_male_txt"
     android:id="@+id/ays_male_img"
+    android:src="@drawable/male"
     />
 
     <TextView
@@ -66,7 +69,7 @@ android:id="@+id/ays_desc_txt"
         android:text="Male"
         android:id="@+id/ays_male_txt"
         android:fontFamily="@font/nunitosemibold"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_15ssp"
     android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/ays_male_holder"
         app:layout_constraintEnd_toEndOf="@id/ays_male_holder"
@@ -88,19 +91,21 @@ android:layout_marginBottom="@dimen/_10sdp"
 
         />
     <ImageView
-        android:layout_width="@dimen/_10sdp"
         app:layout_constraintTop_toTopOf="@id/ays_female_holder"
         app:layout_constraintBottom_toTopOf="@id/ays_female_txt"
         app:layout_constraintStart_toStartOf="@id/ays_female_holder"
         app:layout_constraintEnd_toEndOf="@id/ays_female_holder"
-        android:layout_height="@dimen/_10sdp"
         android:id="@+id/ays_female_img"
+        android:layout_width="@dimen/_60sdp"
+        app:tint="@color/white"
+        android:src="@drawable/female"
+        android:layout_height="@dimen/_60sdp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Male"
+        android:text="Female"
         app:layout_constraintTop_toBottomOf="@id/ays_female_img"
         android:id="@+id/ays_female_txt"
         app:layout_constraintStart_toStartOf="@id/ays_female_holder"
@@ -119,7 +124,8 @@ android:layout_marginBottom="@dimen/_10sdp"
         android:id="@+id/ays_continue"
 android:background="@drawable/continue_bg"
 
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_14ssp"
+        android:elevation="@dimen/_3sdp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

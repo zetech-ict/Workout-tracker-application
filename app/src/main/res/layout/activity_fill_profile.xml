@@ -55,7 +55,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-android:src="@drawable/icon_profile"
+android:src="@drawable/user"
+        app:tint="@color/color_secondary"
         android:scaleType="centerCrop"
         android:background="#0D0C2D48"
 
@@ -135,8 +136,8 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:id="@+id/fp_email_edit"
         android:layout_marginEnd="@dimen/_15sdp"    />
 <ImageView
-    android:layout_width="@dimen/_20sdp"
-    android:layout_height="@dimen/_20sdp"
+    android:layout_width="@dimen/_18sdp"
+    android:layout_height="@dimen/_18sdp"
     android:layout_marginEnd="@dimen/_10sdp"
     android:src="@drawable/icon_email"
     app:layout_constraintEnd_toEndOf="@id/fp_email_edit"
@@ -181,6 +182,9 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/flag"
+        android:elevation="@dimen/_3sdp"
+        android:background="#1AAAAAAA"
+
         android:scaleType="centerCrop"
         />
 
@@ -197,6 +201,8 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:textSize="@dimen/_14ssp"
+        android:elevation="@dimen/_3sdp"
+
         android:id="@+id/skipBtn"
         android:textColor="@color/color_secondary"
         android:layout_marginBottom="@dimen/_20sdp"
@@ -216,6 +222,8 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:padding="@dimen/_14sdp"
         android:fontFamily="@font/nunitobold"
         android:textSize="@dimen/_14ssp"
+        android:elevation="@dimen/_3sdp"
+
         android:textColor="@color/white"
         android:layout_marginEnd="@dimen/_15sdp"
         android:layout_marginStart="@dimen/_5sdp"

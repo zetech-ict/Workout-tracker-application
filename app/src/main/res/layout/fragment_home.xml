@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/logoimg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logotwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/nunitobold"
+        android:text="FitMe"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/logoimg"
+        app:layout_constraintStart_toEndOf="@id/logoimg"
+        app:layout_constraintTop_toTopOf="@id/logoimg"
+
+        />
+
+    <ImageView
+        android:id="@+id/bookmark_img"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/star_fill"
+        app:layout_constraintBottom_toBottomOf="@id/logoimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logoimg"
+        app:tint="@color/black"
+
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/noti_icon"
+        app:layout_constraintBottom_toBottomOf="@id/logoimg"
+        app:layout_constraintEnd_toStartOf="@id/bookmark_img"
+        app:layout_constraintTop_toTopOf="@id/logoimg"
+        app:tint="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:scrollIndicators="none"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoimg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/timeNote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/nunitobold"
+                android:text="Morning"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitobold"
+                android:text=", Billy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:layout_constraintBottom_toBottomOf="@id/timeNote_text"
+                app:layout_constraintStart_toEndOf="@id/timeNote_text"
+                app:layout_constraintTop_toTopOf="@id/timeNote_text"
+
+                />
+
+            <TextView
+                android:id="@+id/supHeading_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosemibold"
+                android:text="Surprise workout"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="@id/timeNote_text"
+                app:layout_constraintTop_toBottomOf="@id/timeNote_text" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ft_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/supHeading_txt"
+
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+
+                        android:src="@drawable/hero"
+
+
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/ft_bg"
+
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="-16dp" />
+
+                    <ImageView
+                        android:id="@+id/ft_level_img"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ft_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ft_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ft_level_img" />
+                    <ImageView
+                        android:id="@+id/ft_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ft_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ft_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Full Body Stretching"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ft_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ft_level_img" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/bg_Heading_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/nunitosemibold"
+                android:text="Beginner"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="@id/ft_card"
+                app:layout_constraintTop_toBottomOf="@id/ft_card" />
+
+            <TextView
+                android:id="@+id/bg_desc_txt"
+                android:layout_width="match_parent"
+
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/nunitolight"
+                android:text="Ligher exersices that are simple to perform and do the so try them"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bg_Heading_txt"
+
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+android:id="@+id/fb_bg_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_desc_txt"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_fullbody" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/bg_fb_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_fb_level_img"
+                        app:layout_constraintStart_toEndOf="@id/bg_fb_level_img"
+                        app:layout_constraintTop_toTopOf="@id/bg_fb_level_img" />
+                    <ImageView
+                        android:id="@+id/fb_bg_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_fb_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bg_fb_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Full Body Beginners"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/bg_fb_level_img"
+                        app:layout_constraintStart_toStartOf="@id/bg_fb_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/ch_bg_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/fb_bg_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_chest_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/bg_ch_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_ch_level_img"
+                        app:layout_constraintStart_toEndOf="@id/bg_ch_level_img"
+                        app:layout_constraintTop_toTopOf="@id/bg_ch_level_img" />
+                    <ImageView
+                        android:id="@+id/ch_bg_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_ch_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bg_ch_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Chest Beginners"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/bg_ch_level_img"
+                        app:layout_constraintStart_toStartOf="@id/bg_ch_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/abs_bg_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ch_bg_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_abs_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/bg_abs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="15 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_abs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/bg_abs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/bg_abs_level_img" />
+                    <ImageView
+                        android:id="@+id/abs_bg_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_abs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bg_abs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Abs Beginners"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/bg_abs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/bg_abs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/arms_bg_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/abs_bg_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_arm_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/bg_arms_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_arms_level_img"
+                        app:layout_constraintStart_toEndOf="@id/bg_arms_level_img"
+                        app:layout_constraintTop_toTopOf="@id/bg_arms_level_img" />
+                    <ImageView
+                        android:id="@+id/arms_bg_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_arms_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bg_arms_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Arms Beginners"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/bg_arms_level_img"
+                        app:layout_constraintStart_toStartOf="@id/bg_arms_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/legs_bg_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/arms_bg_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_leg_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/bg_legs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_legs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/bg_legs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/bg_legs_level_img" />
+
+                    <ImageView
+                        android:id="@+id/legs_bg_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_legs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/bg_legs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Legs Beginner"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/bg_legs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/bg_legs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            
+
+
+
+            <TextView
+                android:id="@+id/in_Heading_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/nunitosemibold"
+                android:text="Intermediate"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="@id/ft_card"
+                app:layout_constraintTop_toBottomOf="@id/legs_bg_cv" />
+
+            <TextView
+                android:id="@+id/in_desc_txt"
+                android:layout_width="match_parent"
+
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/nunitolight"
+                android:text="Ligher exersices that are simple to perform and do the so try them"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/in_Heading_txt"
+
+                />
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/fb_in_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/in_desc_txt"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_fullbody" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/in_fb_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_fb_level_img"
+                        app:layout_constraintStart_toEndOf="@id/in_fb_level_img"
+                        app:layout_constraintTop_toTopOf="@id/in_fb_level_img" />
+                    <ImageView
+                        android:id="@+id/fb_in_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_fb_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/in_fb_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Full Body Intermediate"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/in_fb_level_img"
+                        app:layout_constraintStart_toStartOf="@id/in_fb_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/ch_in_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/fb_in_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_chest_2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/in_ch_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_ch_level_img"
+                        app:layout_constraintStart_toEndOf="@id/in_ch_level_img"
+                        app:layout_constraintTop_toTopOf="@id/in_ch_level_img" />
+                    <ImageView
+                        android:id="@+id/ch_in_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_ch_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/in_ch_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Chest Intermediate"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/in_ch_level_img"
+                        app:layout_constraintStart_toStartOf="@id/in_ch_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/abs_in_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ch_in_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_abs_2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/in_abs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="15 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_abs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/in_abs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/in_abs_level_img" />
+
+
+                    <ImageView
+                        android:id="@+id/abs_in_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_abs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/in_abs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Abs Intermediate"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/in_abs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/in_abs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/arms_in_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/abs_in_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_arm_2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/in_arms_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_arms_level_img"
+                        app:layout_constraintStart_toEndOf="@id/in_arms_level_img"
+                        app:layout_constraintTop_toTopOf="@id/in_arms_level_img" />
+
+                    <ImageView
+                        android:id="@+id/arms_in_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_arms_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/in_arms_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Arms Intermediate"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/in_arms_level_img"
+                        app:layout_constraintStart_toStartOf="@id/in_arms_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/legs_in_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/arms_in_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_leg_2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/in_legs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_legs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/in_legs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/in_legs_level_img" />
+                    <ImageView
+                        android:id="@+id/legs_in_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/in_legs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/in_legs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Legs Intermediate"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/in_legs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/in_legs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/ad_Heading_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/nunitosemibold"
+                android:text="Advanced"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="@id/ft_card"
+                app:layout_constraintTop_toBottomOf="@id/legs_in_cv" />
+
+            <TextView
+                android:id="@+id/ad_desc_txt"
+                android:layout_width="match_parent"
+
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/nunitolight"
+                android:text="Ligher exersices that are simple to perform and do the so try them"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ad_Heading_txt"
+
+                />
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/fb_ad_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ad_desc_txt"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_fullbody" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/ad_fb_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_fb_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ad_fb_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ad_fb_level_img" />
+                    <ImageView
+                        android:id="@+id/fb_ad_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_fb_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ad_fb_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Full Body Advanced"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ad_fb_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ad_fb_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/ch_ad_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/fb_ad_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_chest_3" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/ad_ch_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_ch_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ad_ch_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ad_ch_level_img" />
+                    <ImageView
+                        android:id="@+id/ch_ad_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_ch_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ad_ch_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Chest Advanced"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ad_ch_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ad_ch_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/abs_ad_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ch_ad_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_abs_3" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/ad_abs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="15 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_abs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ad_abs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ad_abs_level_img" />
+                    <ImageView
+                        android:id="@+id/abs_ad_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_abs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ad_abs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Abs Advanced"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ad_abs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ad_abs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/arms_ad_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/abs_ad_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_arm_3" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/ad_arms_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_arms_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ad_arms_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ad_arms_level_img" />
+                    <ImageView
+                        android:id="@+id/arms_ad_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_arms_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ad_arms_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Arms Advanced"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ad_arms_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ad_arms_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:id="@+id/legs_ad_cv"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/arms_ad_cv"
+
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_leg_3" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fullbody">
+
+                    <ImageView
+                        android:id="@+id/ad_legs_level_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/ic_level_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitoregular"
+                        android:text="10 minutes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_legs_level_img"
+                        app:layout_constraintStart_toEndOf="@id/ad_legs_level_img"
+                        app:layout_constraintTop_toTopOf="@id/ad_legs_level_img" />
+                    <ImageView
+                        android:id="@+id/legs_ad_bookmark_img"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/star"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/ad_legs_level_img"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ad_legs_level_img"
+                        app:tint="@color/color_text_secondary"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="Legs Advanced"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17ssp"
+                        app:layout_constraintBottom_toTopOf="@id/ad_legs_level_img"
+                        app:layout_constraintStart_toStartOf="@id/ad_legs_level_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

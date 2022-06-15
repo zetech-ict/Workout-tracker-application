@@ -41,7 +41,7 @@
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/star"
+        android:src="@drawable/file"
         android:padding="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,12 +55,12 @@
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/star"
+        android:src="@drawable/menu"
         android:padding="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
 app:layout_constraintEnd_toStartOf="@id/list_bookmark_img"
         app:layout_constraintTop_toTopOf="@id/notIf_backBtn"
-        app:tint="@color/color_text_secondary"
+        app:tint="@color/black"
 
         />
 

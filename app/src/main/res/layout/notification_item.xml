@@ -30,12 +30,23 @@
                android:layout_height="@dimen/_80sdp"
 app:layout_constraintStart_toStartOf="parent"
                android:id="@+id/noti_img"
+               android:src="@drawable/pngwing"
                android:layout_marginStart="@dimen/_10sdp"
                app:layout_constraintTop_toTopOf="parent"
                app:layout_constraintBottom_toBottomOf="parent"
 
                />
-
+<ImageView
+    android:layout_width="@dimen/_15sdp"
+    android:layout_height="@dimen/_15sdp"
+    android:src="@drawable/notification"
+    app:tint="@color/white"
+    app:layout_constraintTop_toTopOf="@id/noti_img"
+    app:layout_constraintBottom_toBottomOf="@id/noti_img"
+    app:layout_constraintStart_toStartOf="@id/noti_img"
+           app:layout_constraintEnd_toEndOf="@id/noti_img"
+    android:layout_marginStart="@dimen/_5sdp"
+    />
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"

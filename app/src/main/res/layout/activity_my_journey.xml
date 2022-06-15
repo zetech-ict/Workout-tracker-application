@@ -145,7 +145,7 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
         android:textSize="@dimen/_15ssp"
         android:fontFamily="@font/nunitobold"
-
+android:id="@+id/share_txt"
         android:background="@drawable/myjourney_bg"
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"

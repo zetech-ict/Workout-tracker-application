@@ -78,7 +78,7 @@ android:autofillHints="emailAddress"
     <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        android:src="@drawable/icon_email"
+        android:src="@drawable/envelope"
         android:padding="@dimen/_1sdp"
 
         app:tint="@color/color_text_secondary"
@@ -112,7 +112,7 @@ android:paddingStart="@dimen/_40sdp"
     <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        android:src="@drawable/lock_ic"
+        android:src="@drawable/password"
         app:tint="@color/color_text_secondary"
         android:padding="@dimen/_1sdp"
 
@@ -127,6 +127,7 @@ app:layout_constraintStart_toStartOf="@id/ca_password_edit"
         android:layout_height="@dimen/_20sdp"
         android:src="@drawable/design_ic_visibility_off"
         android:padding="@dimen/_2sdp"
+        android:id="@+id/ca_eye"
         app:tint="@color/color_text_secondary"
         app:layout_constraintTop_toTopOf="@id/ca_password_edit"
         app:layout_constraintBottom_toBottomOf="@id/ca_password_edit"
@@ -184,7 +185,8 @@ android:layout_marginTop="@dimen/_20sdp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_check"
             app:tint="@color/white"
-
+            android:id="@+id/ca_remcheck"
+            android:visibility="invisible"
             android:background="@color/color_secondary"
             android:padding="@dimen/_2sdp"
             android:scaleType="centerCrop"
@@ -278,7 +280,7 @@ android:contentDescription="@string/app_name"
         android:layout_height="0dp"
 
         android:padding="@dimen/_15sdp"
-        android:src="@drawable/googleicon"
+        android:src="@drawable/facebook"
         />
 
 
@@ -306,7 +308,7 @@ android:contentDescription="@string/app_name"
             android:layout_height="0dp"
 
             android:padding="@dimen/_15sdp"
-            android:src="@drawable/googleicon"
+            android:src="@drawable/google"
             />
 
 
@@ -337,7 +339,7 @@ app:layout_constraintStart_toEndOf="@id/ca_google_signup_holder"
         android:layout_height="0dp"
 
         android:padding="@dimen/_15sdp"
-        android:src="@drawable/googleicon"
+        android:src="@drawable/apple"
         />
 
 

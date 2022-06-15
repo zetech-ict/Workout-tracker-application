@@ -75,7 +75,7 @@ android:textSize="@dimen/_11ssp"            app:layout_constraintStart_toStartOf
             app:layout_constraintTop_toTopOf="@id/facebook_txt"
             app:layout_constraintBottom_toBottomOf="@id/facebook_txt"
             app:layout_constraintEnd_toStartOf="@id/facebook_txt"
-            android:src="@drawable/googleicon"
+            android:src="@drawable/facebook"
             />
         <View
             android:layout_marginStart="@dimen/_15sdp"
@@ -115,7 +115,7 @@ android:id="@+id/google_txt"
             app:layout_constraintTop_toTopOf="@id/google_txt"
             app:layout_constraintBottom_toBottomOf="@id/google_txt"
             app:layout_constraintEnd_toStartOf="@id/google_txt"
-            android:src="@drawable/googleicon"
+            android:src="@drawable/google"
             />
 
         <View
@@ -154,7 +154,7 @@ android:id="@+id/apple_txt"
             app:layout_constraintTop_toTopOf="@id/apple_txt"
             app:layout_constraintBottom_toBottomOf="@id/apple_txt"
             app:layout_constraintEnd_toStartOf="@id/apple_txt"
-            android:src="@drawable/googleicon"
+            android:src="@drawable/apple"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

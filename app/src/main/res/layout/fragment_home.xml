@@ -35,8 +35,8 @@
 
     <ImageView
         android:id="@+id/bookmark_img"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:src="@drawable/star_fill"
         app:layout_constraintBottom_toBottomOf="@id/logoimg"
@@ -49,9 +49,9 @@
     <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-
+android:id="@+id/notificationClick"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/noti_icon"
+        android:src="@drawable/notification"
         app:layout_constraintBottom_toBottomOf="@id/logoimg"
         app:layout_constraintEnd_toStartOf="@id/bookmark_img"
         app:layout_constraintTop_toTopOf="@id/logoimg"

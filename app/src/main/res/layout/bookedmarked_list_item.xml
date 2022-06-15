@@ -57,7 +57,7 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/star"
+                android:src="@drawable/star_fill"
                 android:padding="@dimen/_5sdp"
                 app:layout_constraintBottom_toBottomOf="@id/bg_fb_level_img"
                 app:layout_constraintEnd_toEndOf="parent"

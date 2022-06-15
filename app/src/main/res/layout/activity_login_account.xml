@@ -80,7 +80,7 @@
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/icon_email"
+            android:src="@drawable/envelope"
             android:padding="@dimen/_1sdp"
 
             app:tint="@color/color_text_secondary"
@@ -114,7 +114,7 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/lock_ic"
+            android:src="@drawable/password"
             app:tint="@color/color_text_secondary"        android:padding="@dimen/_1sdp"
 
 
@@ -127,6 +127,7 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
+            android:id="@+id/la_eye"
             android:src="@drawable/design_ic_visibility_off"
             android:padding="@dimen/_2sdp"
             app:tint="@color/color_text_secondary"
@@ -186,7 +187,8 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_icon_exe_done_small"
                 app:tint="@color/white"
-
+android:id="@+id/remTick"
+                android:visibility="invisible"
                 android:background="@color/color_secondary"
                 android:padding="@dimen/_3sdp"
 
@@ -293,9 +295,9 @@ app:layout_constraintTop_toTopOf="@id/la_ordivider"
         app:layout_constraintBottom_toBottomOf="@id/ca_facebook_signup_holder"
         android:contentDescription="@string/app_name"
         android:layout_height="0dp"
-
+android:id="@+id/lg_fb"
         android:padding="@dimen/_15sdp"
-        android:src="@drawable/googleicon"
+        android:src="@drawable/facebook"
         />
 
 
@@ -321,9 +323,10 @@ app:layout_constraintTop_toTopOf="@id/la_ordivider"
         android:contentDescription="@string/app_name"
 
         android:layout_height="0dp"
+        android:id="@+id/lg_gg"
 
         android:padding="@dimen/_15sdp"
-        android:src="@drawable/googleicon"
+        android:src="@drawable/google"
         />
 
 
@@ -350,11 +353,12 @@ app:layout_constraintTop_toTopOf="@id/la_ordivider"
         app:layout_constraintTop_toTopOf="@id/ca_apple_signup_holder"
         app:layout_constraintBottom_toBottomOf="@id/ca_apple_signup_holder"
         android:contentDescription="@string/app_name"
+        android:id="@+id/lg_ap"
 
         android:layout_height="0dp"
 
         android:padding="@dimen/_15sdp"
-        android:src="@drawable/googleicon"
+        android:src="@drawable/apple"
         />
 
 

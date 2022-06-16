@@ -38,7 +38,8 @@
             android:name=".LoginAccount"
             android:exported="false" />
         <activity
-            android:name=".LetsYouIn"
+            android:name=".WelcomeScreen"
+
             android:exported="false" />
         <activity
             android:name=".FillProfile"
@@ -50,7 +51,8 @@
             android:name=".AboutYourSelf"
             android:exported="false" />
         <activity
-            android:name=".WelcomeScreen"
+            android:name=".LetsYouIn"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

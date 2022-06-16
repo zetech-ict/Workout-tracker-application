@@ -24,7 +24,7 @@ public class LetsYouIn extends AppCompatActivity {
 
 
         signin.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),LoginAccount.class);
+            Intent intent = new Intent(this.getApplicationContext(),LoginAccount.class);
             startActivity(intent);
 
         });

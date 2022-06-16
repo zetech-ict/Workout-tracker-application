@@ -14,9 +14,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fi_text_const"
         android:layout_height="0dp"
-android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_3sdp"
         android:id="@+id/fi_imageHolder"
+        android:layout_marginTop="-1dp"
 app:cardElevation="0dp"
 
         >

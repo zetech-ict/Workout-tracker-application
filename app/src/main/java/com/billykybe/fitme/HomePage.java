@@ -49,8 +49,9 @@ TextView greatings;
         historyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new HistoryFragment());
-
+//                replaceFragment(new HistoryFragment());
+                Intent intent = new Intent(getApplicationContext(),LoginAccount.class);
+                startActivity(intent);
 
 
             }

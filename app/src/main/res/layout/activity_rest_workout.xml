@@ -24,6 +24,7 @@
       />
   <TextView
       android:layout_width="wrap_content"
+      app:layout_constraintBottom_toTopOf="@id/resttimer"
       android:layout_height="wrap_content"
 android:id="@+id/takearest"
       android:text="TAKE A REST"
@@ -37,6 +38,7 @@ android:id="@+id/takearest"
 
   <TextView
       android:layout_width="wrap_content"
+      app:layout_constraintBottom_toTopOf="@id/progress_text_holder"
       android:layout_height="wrap_content"
 android:layout_marginTop="@dimen/_20sdp"
       android:text="00:25"
@@ -57,6 +59,7 @@ android:layout_marginTop="@dimen/_20sdp"
       android:layout_width="match_parent"
       android:layout_marginStart="@dimen/_10sdp"
       android:layout_marginEnd="@dimen/_10sdp"
+      app:layout_constraintBottom_toTopOf="@id/wr_texttop_txt"
       android:layout_height="1dp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -65,17 +68,52 @@ android:layout_marginTop="@dimen/_20sdp"
       android:id="@+id/progress_text_holder"
       />
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/wr_texttop_txt"
+      android:text="Next Workout (2/10)"
+      android:fontFamily="@font/proximanovalight"
+      android:textSize="@dimen/_14ssp"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:textColor="@color/color_text_primary"
+      app:layout_constraintBottom_toTopOf="@id/wr_title_txt"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginBottom="@dimen/_10sdp"
+      />
 
-
-
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/wr_title_txt"
+      android:text="One Leg Downwards"
+      android:fontFamily="@font/proximanovabold"
+      android:textSize="@dimen/_20ssp"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:textColor="@color/color_text_primary"
+      app:layout_constraintBottom_toTopOf="@id/rw_image_holder"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginBottom="@dimen/_15sdp"
+      />
 
   <androidx.cardview.widget.CardView
       android:layout_width="match_parent"
       android:layout_height="@dimen/_300sdp"
-
+      android:layout_marginStart="@dimen/_10sdp"
+      android:layout_marginEnd="@dimen/_10sdp"
+android:id="@+id/rw_image_holder"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:cardElevation="0dp"
       app:layout_constraintBottom_toTopOf="@id/rw_continue"
       android:layout_marginBottom="@dimen/_20sdp"
-    />
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:scaleType="centerCrop"
+      android:src="@drawable/cover_fullbody"
+      />
+  </androidx.cardview.widget.CardView>
 
   <TextView
       android:id="@+id/rw_continue"

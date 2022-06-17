@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context=".WorkoutScreen">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/w_ditails_holder"
+
+        android:id="@+id/lottie_holder"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/cover_fullbody"
+        android:scaleType="centerCrop"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:tint="@color/white"
+        android:id="@+id/w_backBtn"
+        android:layout_marginStart="@dimen/_15sdp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/lottie_holder"
+        android:layout_height="0dp"
+app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/w_ditails_holder"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_25ssp"
+            android:id="@+id/ws_title"
+android:textColor="@color/color_text_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/proximanovabold"
+            app:layout_constraintBottom_toTopOf="@id/counter_holder"
+            android:text="Side Plank"
+            />
+
+        <View
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintBottom_toTopOf="@id/ws_pauseBtn"
+            app:layout_constraintTop_toBottomOf="@id/ws_title"
+            android:id="@+id/counter_holder"
+            android:background="@color/color_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/counter_holder"
+            app:layout_constraintBottom_toTopOf="@id/ws_skipBtn"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ws_pauseBtn"
+            android:padding="@dimen/_12sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textSize="@dimen/_12ssp"
+            android:elevation="@dimen/_3sdp"
+
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/continue_bg"
+            android:gravity="center"
+            />
+
+
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:background="@drawable/backbtn_bg"
+            android:padding="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovabold"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:textSize="@dimen/_14ssp"
+            android:elevation="@dimen/_3sdp"
+
+            android:id="@+id/ws_skipBtn"
+            android:textColor="@color/color_secondary"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ws_startBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ws_startBtn"
+            app:layout_constraintStart_toEndOf="@id/ws_skipBtn"
+            android:padding="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovabold"
+            android:textSize="@dimen/_14ssp"
+            android:elevation="@dimen/_3sdp"
+
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="@id/ws_skipBtn"
+            android:background="@drawable/continue_bg"
+            app:layout_constraintBottom_toBottomOf="@id/ws_skipBtn"
+            android:gravity="center"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

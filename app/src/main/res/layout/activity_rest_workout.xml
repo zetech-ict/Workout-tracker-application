@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestWorkout">
+
+
+
+  <ImageView
+      android:layout_width="@dimen/_25sdp"
+      android:layout_height="@dimen/_25sdp"
+      android:contentDescription="@string/app_name"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:src="@drawable/ic_round_arrow_back_24"
+      app:tint="@color/color_text_primary"
+      android:id="@+id/sw_backBtn"
+      android:layout_marginStart="@dimen/_15sdp"
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+android:id="@+id/takearest"
+      android:text="TAKE A REST"
+      android:fontFamily="@font/proximanovabold"
+      android:textSize="@dimen/_25ssp"
+      android:textColor="@color/color_secondary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/sw_backBtn"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/_20sdp"
+      android:text="00:25"
+      android:fontFamily="@font/proximanovabold"
+      android:textSize="@dimen/_25ssp"
+      android:id="@+id/resttimer"
+      android:textColor="@color/color_text_primary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/takearest"
+      />
+
+
+
+  <View
+      app:layout_constraintTop_toBottomOf="@id/resttimer"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_width="match_parent"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:layout_marginEnd="@dimen/_10sdp"
+      android:layout_height="1dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+
+      android:background="#4DAAAAAA"
+      android:id="@+id/progress_text_holder"
+      />
+
+
+
+
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_300sdp"
+
+      app:layout_constraintBottom_toTopOf="@id/rw_continue"
+      android:layout_marginBottom="@dimen/_20sdp"
+    />
+
+  <TextView
+      android:id="@+id/rw_continue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/_15sdp"
+      android:layout_marginEnd="@dimen/_15sdp"
+
+      android:layout_marginBottom="@dimen/_20sdp"
+      android:background="@drawable/continue_bg"
+
+      android:elevation="@dimen/_3sdp"
+      android:fontFamily="@font/proximanovabold"
+      android:gravity="center"
+      android:padding="@dimen/_14sdp"
+      android:text="Skip Rest"
+      android:textColor="@color/white"
+      android:textSize="@dimen/_14ssp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

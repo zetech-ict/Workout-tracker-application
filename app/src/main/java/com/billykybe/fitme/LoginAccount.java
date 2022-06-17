@@ -12,7 +12,8 @@ import android.widget.TextView;
 public class LoginAccount extends AppCompatActivity {
 
 
-    TextView signIn = findViewById(R.id.la_continue);
+    TextView signIn = findViewById(R.id.la_continue); //todo:fix
+
     TextView rememberMe = findViewById(R.id.la_rememberMe_txt);
     ImageView eye = findViewById(R.id.la_eye);
     TextView forgetPass = findViewById(R.id.lg_fp);

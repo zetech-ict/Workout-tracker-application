@@ -55,8 +55,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-android:src="@drawable/user"
-        app:tint="@color/color_secondary"
+android:src="@drawable/icon_user_default"
         android:scaleType="centerCrop"
         android:background="#0D0C2D48"
 

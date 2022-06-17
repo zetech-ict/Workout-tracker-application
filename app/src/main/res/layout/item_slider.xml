@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fi_imageHolder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-1dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/fi_text_const"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/mainimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_secondary"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover_fullbody" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fi_text_const"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fi_imageHolder"
+
+        >
+
+        <TextView
+            android:id="@+id/fi_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/proximanovabold"
+            android:lineHeight="@dimen/_40sdp"
+            android:text="Find the right workout for what you need"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_35ssp"
+            app:layout_constraintBottom_toTopOf="@id/fi_indicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/fi_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fi_text" />
+
+
+        <View
+            android:id="@+id/fi_dashOne"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dash_null"
+            app:layout_constraintBottom_toBottomOf="@id/fi_indicator"
+            app:layout_constraintEnd_toStartOf="@id/fi_dashTwo"
+            app:layout_constraintTop_toTopOf="@id/fi_indicator"
+
+            />
+
+
+        <View
+            android:id="@+id/fi_dashTwo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/dashselected_bg"
+
+            app:layout_constraintBottom_toBottomOf="@id/fi_indicator"
+            app:layout_constraintEnd_toEndOf="@id/fi_indicator"
+            app:layout_constraintStart_toStartOf="@id/fi_indicator"
+            app:layout_constraintTop_toTopOf="@id/fi_indicator"
+
+            />
+
+        <View
+            android:id="@+id/fi_dashThree"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/dash_null"
+            app:layout_constraintBottom_toBottomOf="@id/fi_indicator"
+
+            app:layout_constraintStart_toEndOf="@id/fi_dashTwo"
+            app:layout_constraintTop_toTopOf="@id/fi_indicator"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

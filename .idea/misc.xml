@@ -17,12 +17,17 @@
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_main.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_my_journey.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_notifications.xml" value="0.17702702702702702" />
-        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_welcome_screen.xml" value="0.17702702702702702" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.17702702702702702" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_rest_workout.xml" value="0.2" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_start_workouts.xml" value="0.17702702702702702" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_welcome_screen.xml" value="0.21903787103377687" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/activity_workout_screen.xml" value="0.25" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/bookedmarked_list_item.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/fragment_account.xml" value="0.25" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/fragment_history.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/fragment_home.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/fragment_intro.xml" value="0.25" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/fragment_intro.xml" value="0.17702702702702702" />
+        <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/item_slider.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/notification_item.xml" value="0.17702702702702702" />
         <entry key="app/src/main/res/drawable/ach_bg.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/addweight_bg.xml" value="0.2615" />

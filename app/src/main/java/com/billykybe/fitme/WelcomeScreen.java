@@ -22,8 +22,9 @@ public class WelcomeScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-              Intent toOnboarding = new Intent(getApplicationContext(),IntroShow.class);
+              Intent toOnboarding = new Intent(getApplicationContext(),OnboardingScreen.class);
               startActivity(toOnboarding);
+              finish();
             }
         },1500);
     }

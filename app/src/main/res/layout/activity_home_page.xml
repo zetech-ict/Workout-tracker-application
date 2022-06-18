@@ -50,7 +50,7 @@
             app:layout_constraintBottom_toBottomOf="@id/home_btn"
             app:layout_constraintEnd_toStartOf="@id/home_btn"
             app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/history"
+            android:src="@drawable/fork_multi_panel_cache"
             app:tint="@color/black"
             />
 
@@ -58,7 +58,7 @@
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:id="@+id/home_btn"
-            android:padding="@dimen/_4sdp"
+            android:padding="@dimen/_3sdp"
             android:contentDescription="@string/app_name"
 
             android:src="@drawable/home_ic"
@@ -77,10 +77,10 @@
             app:layout_constraintBottom_toBottomOf="@id/home_btn"
             app:layout_constraintStart_toEndOf="@id/home_btn"
             android:id="@+id/account_btn"
-            android:padding="@dimen/_2sdp"
+            android:padding="@dimen/_4sdp"
             app:tint="@color/black"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/account_ic"
+            android:src="@drawable/payment_name"
             app:layout_constraintEnd_toEndOf="parent"
             />
 

@@ -73,7 +73,6 @@ android:layout_marginTop="@dimen/_70sdp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/circle_shape"
-        android:progress="100"
         android:indeterminate="false"
         android:progressDrawable="@drawable/circle_progress_bar"
         android:textAlignment="center" />

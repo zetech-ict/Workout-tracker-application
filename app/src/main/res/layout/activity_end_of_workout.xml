@@ -17,17 +17,32 @@
 
 
     />
-  <ImageView
-      android:layout_width="@dimen/_150sdp"
-      android:layout_height="@dimen/_150sdp"
-
-      android:src="@drawable/ic_challenge_complete"
-      app:layout_constraintStart_toStartOf="@id/img_holder"
-      app:layout_constraintEnd_toEndOf="@id/img_holder"
-      app:layout_constraintTop_toTopOf="@id/img_holder"
-      app:layout_constraintBottom_toBottomOf="@id/img_holder"
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="@dimen/_200sdp"
+    app:layout_constraintBottom_toBottomOf="@id/img_holder"
+    app:layout_constraintEnd_toEndOf="@id/img_holder"
+    app:layout_constraintStart_toStartOf="@id/img_holder"
+    app:lottie_autoPlay="true"
+    app:lottie_rawRes="@raw/trophy"
+    android:id="@+id/lootietrophy"
+    app:layout_constraintTop_toTopOf="@id/img_holder"
 
     />
+  <com.airbnb.lottie.LottieAnimationView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintStart_toStartOf="@id/lootietrophy"
+      app:layout_constraintEnd_toEndOf="@id/lootietrophy"
+      app:layout_constraintTop_toTopOf="@id/lootietrophy"
+      app:layout_constraintBottom_toBottomOf="@id/lootietrophy"
+      app:lottie_rawRes="@raw/congratulations"
+      app:lottie_autoPlay="true"
+
+
+      />
+onstraintVertical_bias="0.482" />
+
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

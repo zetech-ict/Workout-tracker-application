@@ -28,6 +28,7 @@ String id;
     LottieAnimationView wImage;
     TextView wText;
     int modifier=0;
+    int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,20 +40,17 @@ wText =  findViewById(R.id.ws_title);
         id =intent.getString("id");
         //update list of items
 addItems(id);
-
+size = 0;
         progressBar = findViewById(R.id.ws_progressbar);
         counter = findViewById(R.id.wscounter_text);
 wText.setText("hh");
 
 for (int i = 1 ;i<workout_list.size();i++){
             displayWorkout(workout_list.get(i));
-    Toast.makeText(this, "done with"+workout_list.get(i).w_name +workout_list.get(i).w_duration, Toast.LENGTH_SHORT).show();
+
+
+
         }
-Intent toCongrats = new Intent(getApplicationContext(),EndOfWorkout.class);
-startActivity(toCongrats);
-finish();
-
-
 
 
 
@@ -61,12 +59,10 @@ finish();
     private void displayWorkout(Workout_items_model workout_items_model) {
 
 
-        counter.setText(workout_items_model.w_duration);
-        wText.setText( workout_items_model.w_name);
+        wText.setText( workout_items_model.getW_name());
         wImage.setImageResource(workout_items_model.getW_lottie());
 
-        int duration = Integer.parseInt(workout_items_model.w_duration); //
-        int wait = (int)duration * 1000;
+        int wait = 50;
 
 
 
@@ -80,13 +76,14 @@ finish();
                     @Override
                     public void run() {
 
-                        if (modifier <= duration){
+                        if (modifier <=Integer.parseInt(workout_items_model.getW_duration())){
                             counter.setText(""+modifier);
                             progressBar.setProgress(modifier);
                             modifier++;
-                            handler.postDelayed(this,wait);
+                            handler.postDelayed(this,50);
                         }else {
-                            handler.removeCallbacks(this);
+
+                        handler.removeCallbacks(this);
 
                         }
 
@@ -99,9 +96,18 @@ finish();
             }
         };
         timer.schedule(timerTask,0,wait);
+        Toast.makeText(this, "done with  "+size, Toast.LENGTH_SHORT).show();
 
 
 
+        if (size ==workout_list.size()){
+
+            //TODO: pass data here
+            Intent toCongrats = new Intent(getApplicationContext(),EndOfWorkout.class);
+            startActivity(toCongrats);
+            finish();
+        }
+        size++;
 
 
     }

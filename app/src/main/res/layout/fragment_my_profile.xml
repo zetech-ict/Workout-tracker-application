@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MyProfile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+android:background="@color/trans"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/topholder"
+        />
+
+    <ImageView
+        android:id="@+id/logoimg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logotwo"
+        app:layout_constraintBottom_toBottomOf="@id/topholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/proximanovabold"
+        android:text="FitMe"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/logoimg"
+        app:layout_constraintStart_toEndOf="@id/logoimg"
+        app:layout_constraintTop_toTopOf="@id/logoimg"
+
+        />
+<ScrollView
+    android:scrollbars="none"
+    android:scrollIndicators="none"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+
+        >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilepic_holder"
+        android:layout_width="@dimen/_70sdp"
+        app:cardCornerRadius="@dimen/_70sdp"
+        app:cardElevation="0dp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/userpicholder"
+            />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:text="Billy Kibet"
+        android:textColor="@color/color_text_primary"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/profilepic_holder"
+        android:fontFamily="@font/proximanovabold"
+        android:textSize="@dimen/_20ssp"
+        android:id="@+id/p_name_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/p_email_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_secondary"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/proximanovaregular"
+        android:text="billykybe@gmail.com"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/game_mode"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p_name_txt" />
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+app:layout_constraintTop_toBottomOf="@id/p_email_holder"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/gamemode_bg"
+    android:layout_marginStart="@dimen/_10sdp"
+        android:id="@+id/game_mode"
+    android:layout_marginEnd="@dimen/_10sdp"
+    app:layout_constraintBottom_toTopOf="@id/p_divider_text_holder"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+app:layout_constraintStart_toStartOf="@id/game_mode"
+        app:layout_constraintEnd_toEndOf="@id/game_mode"
+        app:layout_constraintTop_toTopOf="@id/game_mode"
+        android:textColor="@color/white"
+        android:fontFamily="@font/proximanovabold"
+        android:textSize="@dimen/_16ssp"
+android:text="Aim at a higher height"
+        app:layout_constraintBottom_toBottomOf="@id/g_text"
+        android:id="@+id/g_title"
+/>
+<ImageView
+    android:layout_width="@dimen/_25sdp"
+    android:layout_height="@dimen/_25sdp"
+    android:src="@drawable/icon_exe_skip"
+    app:tint="@color/white"
+    app:layout_constraintTop_toTopOf="@id/g_title"
+    app:layout_constraintBottom_toBottomOf="@id/g_title"
+    app:layout_constraintEnd_toEndOf="@id/game_mode"
+    android:layout_marginEnd="@dimen/_15sdp"
+    />
+    <TextView
+        android:layout_width="0dp"
+        android:id="@+id/g_text"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/game_mode"
+        app:layout_constraintEnd_toEndOf="@id/game_mode"
+        app:layout_constraintTop_toBottomOf="@id/g_title"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/proximanovaregular"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/game_mode"
+        android:text="Workout daily to earn badges as you aim for Everest"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_mode"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintBottom_toTopOf="@id/pages_links"
+        android:background="@color/border"
+        android:id="@+id/p_divider_text_holder"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p_divider_text_holder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+android:id="@+id/pages_links"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+android:layout_marginBottom="@dimen/_20sdp"
+            android:id="@+id/logout_holder"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/darkmode_holder"
+
+            />
+
+
+
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/lock_ic"
+            app:tint="@color/error"
+
+            android:id="@+id/logout_ic"
+            app:layout_constraintTop_toTopOf="@id/logout_holder"
+            app:layout_constraintBottom_toBottomOf="@id/logout_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/logout_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/logout_ic"
+            app:layout_constraintBottom_toBottomOf="@id/logout_ic"
+            app:layout_constraintStart_toEndOf="@id/logout_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/error"
+            />
+
+
+        <View
+            app:layout_constraintBottom_toTopOf="@id/logout_holder"
+                     android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/help_holder"
+
+            android:id="@+id/darkmode_holder"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/design_ic_visibility"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/dm_ic"
+            app:layout_constraintTop_toTopOf="@id/darkmode_holder"
+            app:layout_constraintBottom_toBottomOf="@id/darkmode_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/logout_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Theme"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintTop_toTopOf="@id/dm_ic"
+            app:layout_constraintBottom_toBottomOf="@id/dm_ic"
+            app:layout_constraintStart_toEndOf="@id/dm_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintBottom_toTopOf="@id/darkmode_holder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/security_holder"
+
+            android:id="@+id/help_holder"
+            />
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/design_ic_visibility"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/help_ic"
+            app:layout_constraintTop_toTopOf="@id/help_holder"
+            app:layout_constraintBottom_toBottomOf="@id/help_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/help_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintTop_toTopOf="@id/help_ic"
+            app:layout_constraintBottom_toBottomOf="@id/help_ic"
+            app:layout_constraintStart_toEndOf="@id/help_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            />
+        <View
+            app:layout_constraintBottom_toTopOf="@id/help_holder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nottification_holder"
+
+            android:id="@+id/security_holder"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/password"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/security_ic"
+            app:layout_constraintTop_toTopOf="@id/security_holder"
+            app:layout_constraintBottom_toBottomOf="@id/security_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/security_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintTop_toTopOf="@id/security_ic"
+            app:layout_constraintBottom_toBottomOf="@id/security_ic"
+            app:layout_constraintStart_toEndOf="@id/security_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            />
+        <View
+            app:layout_constraintBottom_toTopOf="@id/security_holder"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@id/editprofile_holder"
+            android:id="@+id/nottification_holder"
+            />
+
+
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/notification"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/notis_ic"
+            app:layout_constraintTop_toTopOf="@id/nottification_holder"
+            app:layout_constraintBottom_toBottomOf="@id/nottification_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/nottification_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications "
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintTop_toTopOf="@id/notis_ic"
+            app:layout_constraintBottom_toBottomOf="@id/notis_ic"
+            app:layout_constraintStart_toEndOf="@id/notis_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/editprofile_holder"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintBottom_toTopOf="@id/nottification_holder"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_edit_goal"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/editprofile_ic"
+            app:layout_constraintTop_toTopOf="@id/editprofile_holder"
+            app:layout_constraintBottom_toBottomOf="@id/editprofile_holder"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/editprofile_holder"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintTop_toTopOf="@id/editprofile_ic"
+            app:layout_constraintBottom_toBottomOf="@id/editprofile_ic"
+            app:layout_constraintStart_toEndOf="@id/editprofile_ic"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

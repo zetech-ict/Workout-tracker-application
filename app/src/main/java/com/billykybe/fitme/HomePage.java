@@ -37,7 +37,7 @@ TextView greatings;
         accountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new AccountFragment());
+                replaceFragment(new MyProfile());
 
 
 

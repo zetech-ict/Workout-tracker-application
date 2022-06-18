@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".EndOfWorkout">
 
   <View
@@ -16,10 +17,22 @@
 
 
     />
+  <ImageView
+      android:layout_width="@dimen/_150sdp"
+      android:layout_height="@dimen/_150sdp"
+
+      android:src="@drawable/ic_challenge_complete"
+      app:layout_constraintStart_toStartOf="@id/img_holder"
+      app:layout_constraintEnd_toEndOf="@id/img_holder"
+      app:layout_constraintTop_toTopOf="@id/img_holder"
+      app:layout_constraintBottom_toBottomOf="@id/img_holder"
+
+    />
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:id="@+id/congrats"
+      android:layout_marginTop="@dimen/_20sdp"
       android:text="Congratulations!"
       app:layout_constraintTop_toBottomOf="@id/img_holder"
       android:fontFamily="@font/proximanovabold"
@@ -53,15 +66,49 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toBottomOf="@id/congrats_p"
-      android:layout_marginTop="@dimen/_15sdp"
+      android:layout_marginTop="@dimen/_25sdp"
+      app:layout_constraintBottom_toTopOf="@id/congrats_calories"
       android:background="#4DAAAAAA"
       android:id="@+id/divider_text_holder"
+      />
+
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:text="14"
+      app:layout_constraintTop_toBottomOf="@id/divider_text_holder"
+      app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toStartOf="@id/divider_left"
+      android:id="@+id/congrats_workouts"
+      android:textColor="@color/color_text_primary"
+      android:fontFamily="@font/proximanovasemibold"
+      android:textSize="@dimen/_12ssp"
       />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/_10sdp"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:text="Workouts"
+      app:layout_constraintTop_toBottomOf="@id/congrats_calories"
+      app:layout_constraintStart_toStartOf="@id/congrats_workouts"
+      app:layout_constraintEnd_toEndOf="@id/congrats_workouts"
+      android:id="@+id/congrats_workouts_txt"
+      android:textColor="@color/color_text_primary"
+      android:fontFamily="@font/proximanovaregular"
+      android:textSize="@dimen/_10ssp"
+      />
+
+
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_20sdp"
       android:text="350"
       app:layout_constraintTop_toBottomOf="@id/divider_text_holder"
       app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +140,7 @@
       android:layout_marginTop="@dimen/_15sdp"
       android:background="#4DAAAAAA"
       android:id="@+id/divider_left"
+      app:layout_constraintStart_toEndOf="@id/congrats_workouts"
       app:layout_constraintEnd_toStartOf="@id/congrats_calories"
       app:layout_constraintTop_toTopOf="@id/congrats_calories"
       app:layout_constraintBottom_toBottomOf="@id/congrats_calories"
@@ -103,6 +151,7 @@
       android:layout_width="1dp"
       android:layout_marginStart="@dimen/_10sdp"
       android:layout_marginEnd="@dimen/_10sdp"
+      app:layout_constraintEnd_toStartOf="@id/congrats_minutes"
       android:layout_height="@dimen/_40sdp"
       app:layout_constraintStart_toEndOf="@id/congrats_calories"
       app:layout_constraintTop_toTopOf="@id/congrats_calories"
@@ -111,5 +160,82 @@
       android:background="#4DAAAAAA"
       android:id="@+id/divider_right"
       />
+
+
+
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:text="10:00"
+      app:layout_constraintTop_toBottomOf="@id/divider_text_holder"
+app:layout_constraintStart_toEndOf="@id/divider_right"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:id="@+id/congrats_minutes"
+      android:textColor="@color/color_text_primary"
+      android:fontFamily="@font/proximanovasemibold"
+      android:textSize="@dimen/_12ssp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:text="Minutes"
+      app:layout_constraintTop_toBottomOf="@id/congrats_minutes"
+      app:layout_constraintStart_toStartOf="@id/congrats_minutes"
+      app:layout_constraintEnd_toEndOf="@id/congrats_minutes"
+      android:id="@+id/congrats_minutes_txt"
+      android:textColor="@color/color_text_primary"
+      android:fontFamily="@font/proximanovaregular"
+      android:textSize="@dimen/_10ssp"
+      />
+
+
+  <TextView
+      android:id="@+id/eow_toTimer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/_15sdp"
+      android:layout_marginEnd="@dimen/_15sdp"
+
+      android:layout_marginBottom="@dimen/_20sdp"
+      android:background="@drawable/continue_bg"
+
+      android:elevation="@dimen/_3sdp"
+      android:fontFamily="@font/proximanovabold"
+      android:gravity="center"
+      android:padding="@dimen/_14sdp"
+      android:text="Plan Your Next Workout"
+      android:textColor="@color/white"
+      android:textSize="@dimen/_14ssp"
+      app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintBottom_toTopOf="@id/eow_toHome"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+  <TextView
+      android:id="@+id/eow_toHome"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/_15sdp"
+      android:layout_marginEnd="@dimen/_15sdp"
+
+      android:layout_marginBottom="@dimen/_20sdp"
+      android:background="@drawable/backbtn_bg"
+
+      android:elevation="@dimen/_3sdp"
+      android:fontFamily="@font/proximanovabold"
+      android:gravity="center"
+      android:padding="@dimen/_14sdp"
+      android:text="Home"
+      android:textColor="@color/color_secondary"
+      android:textSize="@dimen/_14ssp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+
+      app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_primary"
+    android:paddingTop="@dimen/_11sdp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/wi_holder"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/wi_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:id="@+id/wi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_19sdp"
+        android:fontFamily="@font/nunitobold"
+        android:text="Push-Ups"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="@id/wi_holder"
+        app:layout_constraintStart_toEndOf="@id/wi_holder"
+        app:layout_constraintTop_toTopOf="@id/wi_holder" />
+
+    <TextView
+
+        android:id="@+id/wi_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/nunitosemibold"
+        android:text="00:30"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/wi_holder"
+        app:layout_constraintStart_toEndOf="@id/wi_holder"
+        app:layout_constraintTop_toTopOf="@id/wi_holder" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/fullbody"
+        app:layout_constraintTop_toBottomOf="@id/wi_holder"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

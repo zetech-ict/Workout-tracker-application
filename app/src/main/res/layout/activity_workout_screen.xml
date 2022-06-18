@@ -18,24 +18,34 @@
 
         android:id="@+id/lottie_holder"
         >
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/cover_fullbody"
-        android:scaleType="centerCrop"
-        />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/wi_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
 
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/topholder"
+        />
     <ImageView
         android:layout_width="@dimen/_25sdp"
         android:layout_height="@dimen/_25sdp"
         android:contentDescription="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/_20sdp"
         android:src="@drawable/ic_round_arrow_back_24"
         app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/topholder"
         android:id="@+id/w_backBtn"
         android:layout_marginStart="@dimen/_15sdp"
         />
@@ -71,15 +81,53 @@ android:textColor="@color/color_text_primary"
             app:layout_constraintBottom_toTopOf="@id/ws_pauseBtn"
             app:layout_constraintTop_toBottomOf="@id/ws_title"
             android:id="@+id/counter_holder"
-            android:background="@color/color_secondary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 
             />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/counter_holder"
+            app:layout_constraintEnd_toEndOf="@id/counter_holder"
+            app:layout_constraintTop_toTopOf="@id/counter_holder"
+            app:layout_constraintBottom_toBottomOf="@id/counter_holder"
+            android:layout_height="0dp"
+
+
+            >
+
+            <ProgressBar
+                android:id="@+id/ws_progressbar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circle_progress_bar"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/wscounter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/proximanovabold"
+                android:text="10"
+                android:textAlignment="center"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/_25ssp"
+
+                />
+        </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pause"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/counter_holder"
             app:layout_constraintBottom_toTopOf="@id/ws_skipBtn"
@@ -91,7 +139,7 @@ android:textColor="@color/color_text_primary"
             android:paddingEnd="@dimen/_25sdp"
             android:fontFamily="@font/proximanovasemibold"
             android:textSize="@dimen/_12ssp"
-            android:elevation="@dimen/_3sdp"
+            android:elevation="0dp"
 
             android:textColor="@color/white"
             android:layout_marginEnd="@dimen/_15sdp"

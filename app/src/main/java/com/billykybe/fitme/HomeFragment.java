@@ -16,6 +16,7 @@ import java.util.Date;
 
 public class HomeFragment extends Fragment {
     TextView greatings;
+    View featuredWorkout;
     ImageView notificationsBtn,favorites;
 
     @Override
@@ -27,11 +28,20 @@ public class HomeFragment extends Fragment {
         greatings = view.findViewById(R.id.timeNote_text);
         notificationsBtn = view.findViewById(R.id.notificationClick);
         favorites = view.findViewById(R.id.bookmark_img);
-
+featuredWorkout = view.findViewById(R.id.ft_click);
 //       / Init items
 
 
         //        Onclick
+        featuredWorkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),Workout.class);
+                intent.putExtra("id","fullbody-bg");
+                startActivity(intent);
+
+            }
+        });
         notificationsBtn.setOnClickListener(view1 -> {
             Intent notificationGo = new Intent(getActivity(),Notifications.class);
             startActivity(notificationGo);

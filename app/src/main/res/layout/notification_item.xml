@@ -30,6 +30,7 @@
                android:layout_height="@dimen/_60sdp"
 app:layout_constraintStart_toStartOf="parent"
                android:id="@+id/noti_img"
+               app:tint="@color/success"
                android:src="@drawable/pngwing"
                android:layout_marginStart="@dimen/_10sdp"
                app:layout_constraintTop_toTopOf="parent"

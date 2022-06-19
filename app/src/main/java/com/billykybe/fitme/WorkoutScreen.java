@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.ImageView;
@@ -46,7 +47,8 @@ size = 0;
 wText.setText("hh");
 
 for (int i = 1 ;i<workout_list.size();i++){
-            displayWorkout(workout_list.get(i));
+//            displayWorkout(workout_list.get(i));
+            trytwo(workout_list.get(i));
 
 
 
@@ -55,63 +57,27 @@ for (int i = 1 ;i<workout_list.size();i++){
 
 
     }
-
-    private void displayWorkout(Workout_items_model workout_items_model) {
-
-
-        wText.setText( workout_items_model.getW_name());
-        wImage.setImageResource(workout_items_model.getW_lottie());
-
-        int wait = 50;
-
-
-
-
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                Handler handler = new Handler(Looper.getMainLooper());
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if (modifier <=Integer.parseInt(workout_items_model.getW_duration())){
-                            counter.setText(""+modifier);
-                            progressBar.setProgress(modifier);
-                            modifier++;
-                            handler.postDelayed(this,50);
-                        }else {
-
-                        handler.removeCallbacks(this);
-
-                        }
-
-                    }
-                },wait);
-
-
-
-
+public  int counterOn;
+    private void trytwo(Workout_items_model workout_items_model) {
+        new CountDownTimer(3000,1000){
+            public void onTick(long millisec){
+                wText.setText( workout_items_model.getW_name());
+                Toast.makeText(WorkoutScreen.this, String.valueOf(counterOn), Toast.LENGTH_SHORT).show();
+                wImage.setImageResource(workout_items_model.getW_lottie());
+counterOn++;
             }
-        };
-        timer.schedule(timerTask,0,wait);
-        Toast.makeText(this, "done with  "+size, Toast.LENGTH_SHORT).show();
+
+            @Override
+            public void onFinish() {
+                 wText.setText( "Finnished");
+                 Intent toCongrats = new Intent(getApplicationContext(),EndOfWorkout.class);
+                 startActivity(toCongrats);
+                 finish();
+            }
 
 
-
-        if (size ==workout_list.size()){
-
-            //TODO: pass data here
-            Intent toCongrats = new Intent(getApplicationContext(),EndOfWorkout.class);
-            startActivity(toCongrats);
-            finish();
-        }
-        size++;
-
-
+        }.start();
     }
-
     public  void addItems(String id){
         switch (id){
             case "fullbody-bg":

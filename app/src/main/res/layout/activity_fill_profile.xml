@@ -83,7 +83,7 @@ android:padding="@dimen/_5sdp"
     android:background="@drawable/fp_input_bg_null"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginStart="@dimen/_10sdp"
 app:layout_constraintTop_toBottomOf="@id/fp_cv_holder"
     android:layout_marginTop="@dimen/_20sdp"
     android:padding="@dimen/_14sdp"
@@ -91,7 +91,7 @@ app:layout_constraintTop_toBottomOf="@id/fp_cv_holder"
     android:inputType="text"
 android:imeOptions="actionNext"
     android:id="@+id/fp_name_edit"
-android:layout_marginEnd="@dimen/_15sdp"    />
+android:layout_marginEnd="@dimen/_10sdp"    />
 
 
     <EditText
@@ -106,13 +106,13 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:background="@drawable/fp_input_bg_null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         app:layout_constraintTop_toBottomOf="@id/fp_name_edit"
         android:layout_marginTop="@dimen/_20sdp"
         android:padding="@dimen/_14sdp"
         android:textSize="@dimen/_13ssp"
         android:id="@+id/fp_nickname_edit"
-        android:layout_marginEnd="@dimen/_15sdp"    />
+        android:layout_marginEnd="@dimen/_10sdp"    />
 
 
 
@@ -127,13 +127,13 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:background="@drawable/fp_input_bg_null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         app:layout_constraintTop_toBottomOf="@id/fp_nickname_edit"
         android:layout_marginTop="@dimen/_20sdp"
         android:padding="@dimen/_14sdp"
         android:textSize="@dimen/_13ssp"
         android:id="@+id/fp_email_edit"
-        android:layout_marginEnd="@dimen/_15sdp"    />
+        android:layout_marginEnd="@dimen/_10sdp"    />
 <ImageView
     android:layout_width="@dimen/_18sdp"
     android:layout_height="@dimen/_18sdp"
@@ -158,13 +158,13 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:background="@drawable/fp_input_bg_null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         app:layout_constraintTop_toBottomOf="@id/fp_email_edit"
         android:layout_marginTop="@dimen/_20sdp"
         android:padding="@dimen/_14sdp"
         android:textSize="@dimen/_13ssp"
         android:id="@+id/fp_phone_edit"
-        android:layout_marginEnd="@dimen/_15sdp"    />
+        android:layout_marginEnd="@dimen/_10sdp"    />
 
 <androidx.cardview.widget.CardView
     android:layout_width="@dimen/_20sdp"
@@ -197,7 +197,7 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:background="@drawable/backbtn_bg"
         android:padding="@dimen/_14sdp"
         android:fontFamily="@font/proximanovabold"
-        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:textSize="@dimen/_14ssp"
         android:elevation="@dimen/_3sdp"
@@ -224,7 +224,7 @@ android:layout_marginEnd="@dimen/_15sdp"    />
         android:elevation="@dimen/_3sdp"
 
         android:textColor="@color/white"
-        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_5sdp"
         app:layout_constraintTop_toTopOf="@id/skipBtn"
         android:background="@drawable/continue_bg"

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_primary"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+<View
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:id="@+id/topholder"
+
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+    />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="@id/topholder"
+
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:tint="@color/color_text_primary"
+        android:id="@+id/notIf_backBtn"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/nunitobold"
+        android:text="Edit Profile"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
+        app:layout_constraintStart_toEndOf="@id/notIf_backBtn"
+        app:layout_constraintTop_toTopOf="@id/notIf_backBtn"
+
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:fontFamily="@font/proximanovasemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/topholder"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:id="@+id/ep_name_edit"
+        android:layout_marginEnd="@dimen/_10sdp"    />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of birth"
+        android:fontFamily="@font/proximanovasemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ep_name_edit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="date"
+        android:imeOptions="actionNext"
+        android:id="@+id/ep_dob_edit"
+        android:layout_marginEnd="@dimen/_10sdp"    />
+<ImageView
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"
+    app:tint="@color/color_text_secondary"
+    app:layout_constraintTop_toTopOf="@id/ep_dob_edit"
+    app:layout_constraintEnd_toEndOf="@id/ep_dob_edit"
+    app:layout_constraintBottom_toBottomOf="@id/ep_dob_edit"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:src="@drawable/msg_calendar2"
+    />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:fontFamily="@font/proximanovasemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ep_dob_edit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:id="@+id/ep_email_edit"
+        android:layout_marginEnd="@dimen/_10sdp"    />
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:tint="@color/color_text_secondary"
+        app:layout_constraintTop_toTopOf="@id/ep_email_edit"
+        app:layout_constraintEnd_toEndOf="@id/ep_email_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ep_email_edit"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/envelope"
+        />
+
+
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:paddingStart="@dimen/_40sdp"
+
+        android:inputType="phone"
+        android:imeOptions="actionDone"
+
+        android:fontFamily="@font/proximanovasemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ep_email_edit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:id="@+id/ep_phone_edit"
+        android:layout_marginEnd="@dimen/_10sdp"    />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_20sdp"
+        app:cardElevation="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:backgroundTint="@color/color_primary"
+        app:layout_constraintStart_toStartOf="@id/ep_phone_edit"
+        app:layout_constraintTop_toTopOf="@id/ep_phone_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ep_phone_edit"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/flag"
+            android:elevation="@dimen/_3sdp"
+            android:background="#1AAAAAAA"
+
+            android:scaleType="centerCrop"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gender"
+        android:fontFamily="@font/proximanovasemibold"
+        android:background="@drawable/fp_input_bg_null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ep_phone_edit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_13ssp"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:id="@+id/ep_gender_edit"
+        android:layout_marginEnd="@dimen/_10sdp"    />
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Update"
+        android:elevation="@dimen/_3sdp"
+        android:fontFamily="@font/proximanovasemibold"
+
+
+
+
+
+
+
+        android:id="@+id/ep_continue"
+        android:background="@drawable/continue_bg"
+
+        android:textSize="@dimen/_14ssp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:padding="@dimen/_14sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

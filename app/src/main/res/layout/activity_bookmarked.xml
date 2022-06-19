@@ -96,8 +96,7 @@ app:layout_constraintTop_toBottomOf="@id/topholder"
             >
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/_56sdp"
-
+android:paddingBottom="@dimen/_56sdp"
                 tools:itemCount="3"
                 android:id="@+id/favorite_rv"
                 android:layout_height="wrap_content"

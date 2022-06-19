@@ -5,32 +5,30 @@
     android:background="@color/color_primary"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AccountFragment">
+    tools:context=".JourneyAct">
 
-  <androidx.cardview.widget.CardView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      app:cardCornerRadius="@dimen/_40sdp"
-      android:id="@+id/ac_logoimg"
-      android:layout_marginBottom="@dimen/_10sdp"
-      app:cardElevation="0dp"
-      android:layout_marginStart="@dimen/_10sdp"
-      app:layout_constraintBottom_toTopOf="@id/scrollscreen"
-      android:layout_marginTop="@dimen/_5sdp"
-      app:layout_constraintStart_toStartOf="parent"
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/trans"
       app:layout_constraintTop_toTopOf="parent"
-      >
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:id="@+id/topholder"
+      />
 
-    <ImageView
-        android:id="@+id/ac_logoimg_child"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
+  <ImageView
+      android:id="@+id/logoimg"
+      android:layout_width="@dimen/_30sdp"
+      android:layout_height="@dimen/_30sdp"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/logotwo"
+      app:layout_constraintBottom_toBottomOf="@id/topholder"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_review_avatar"
-        />
 
-  </androidx.cardview.widget.CardView>
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -40,9 +38,9 @@
       android:textColor="@color/color_text_primary"
       android:textSize="@dimen/_16ssp"
       android:textStyle="bold"
-      app:layout_constraintBottom_toBottomOf="@id/ac_logoimg"
-      app:layout_constraintStart_toEndOf="@id/ac_logoimg"
-      app:layout_constraintTop_toTopOf="@id/ac_logoimg"
+      app:layout_constraintBottom_toBottomOf="@id/logoimg"
+      app:layout_constraintStart_toEndOf="@id/logoimg"
+      app:layout_constraintTop_toTopOf="@id/logoimg"
 
       />
   <ImageView
@@ -50,11 +48,11 @@
       android:layout_width="@dimen/_30sdp"
       android:layout_height="@dimen/_30sdp"
       android:layout_marginEnd="@dimen/_10sdp"
-      android:src="@drawable/share"
+      android:src="@drawable/msg_shareout"
       android:padding="@dimen/_5sdp"
-      app:layout_constraintBottom_toBottomOf="@id/ac_logoimg"
+      app:layout_constraintBottom_toBottomOf="@id/logoimg"
       app:layout_constraintEnd_toStartOf="@id/ft_setings_img"
-      app:layout_constraintTop_toTopOf="@id/ac_logoimg"
+      app:layout_constraintTop_toTopOf="@id/logoimg"
       app:tint="@color/black"
 
       />
@@ -64,11 +62,11 @@
       android:layout_width="@dimen/_30sdp"
       android:layout_height="@dimen/_30sdp"
       android:layout_marginEnd="@dimen/_10sdp"
-      android:src="@drawable/setting"
+      android:src="@drawable/notifications_settings"
       android:padding="@dimen/_5sdp"
-      app:layout_constraintBottom_toBottomOf="@id/ac_logoimg"
+      app:layout_constraintBottom_toBottomOf="@id/logoimg"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="@id/ac_logoimg"
+      app:layout_constraintTop_toTopOf="@id/logoimg"
       app:tint="@color/black"
 
       />
@@ -80,12 +78,13 @@
       android:layout_height="0dp"
       android:scrollIndicators="none"
       android:scrollbars="none"
+
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="parent"
 
-      app:layout_constraintTop_toBottomOf="@id/ac_logoimg">
+      app:layout_constraintTop_toBottomOf="@id/topholder">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

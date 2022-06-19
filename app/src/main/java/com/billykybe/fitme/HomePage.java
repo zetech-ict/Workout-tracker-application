@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
 TextView greatings;
@@ -67,5 +68,18 @@ TextView greatings;
         fragmentTransaction.replace(R.id.fragmentContainer,fragment);
         fragmentTransaction.commit();
 
+    }
+    long pressedtime;
+
+    @Override
+    public void onBackPressed() {
+        if (pressedtime +2000>System.currentTimeMillis()){
+            super.onBackPressed();
+            finish();
+
+        }else {
+            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedtime=System.currentTimeMillis();
     }
 }

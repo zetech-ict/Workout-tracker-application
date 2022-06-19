@@ -38,10 +38,10 @@ app:layout_constraintStart_toStartOf="parent"
 
                />
 <ImageView
-    android:layout_width="@dimen/_20sdp"
-    android:layout_height="@dimen/_20sdp"
+    android:layout_width="@dimen/_15sdp"
+    android:layout_height="@dimen/_15sdp"
     android:background="@drawable/noti_ic_bg"
-    android:padding="@dimen/_5sdp"
+    android:padding="@dimen/_4sdp"
     android:src="@drawable/notification"
     app:tint="@color/white"
     android:id="@+id/notificationcat_ic"

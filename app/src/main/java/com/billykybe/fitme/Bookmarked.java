@@ -6,12 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bookmarked extends AppCompatActivity {
     RecyclerView favorite_rv;
+    ImageView back;
     List<favorite_model> favorites = new ArrayList<>();
     favorite_adapter favorite_adapter;
     @SuppressLint("NotifyDataSetChanged")
@@ -19,7 +22,13 @@ public class Bookmarked extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmarked);
-
+back = findViewById(R.id.notIf_backBtn);
+back.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        finish();
+    }
+});
         favorite_rv = findViewById(R.id.favorite_rv);
 
 

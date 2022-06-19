@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+
+    tools:context=".NottificationSettings">
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/topholder"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="@id/topholder"
+
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:tint="@color/color_text_primary"
+        android:id="@+id/notIf_backBtn"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/nunitobold"
+        android:text="Edit Profile"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
+        app:layout_constraintStart_toEndOf="@id/notIf_backBtn"
+        app:layout_constraintTop_toTopOf="@id/notIf_backBtn"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Notification"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+android:id="@+id/gen_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topholder"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="@dimen/_25sdp"
+app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gen_txt"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        app:layout_constraintBottom_toBottomOf="@id/gen_txt"
+
+
+        />
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:id="@+id/sound_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gen_txt"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sound_txt"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        app:layout_constraintBottom_toBottomOf="@id/sound_txt"
+
+
+        />
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibrate"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:id="@+id/vibrate_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sound_txt"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vibrate_txt"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        app:layout_constraintBottom_toBottomOf="@id/vibrate_txt"
+
+
+        />
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Updates"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:id="@+id/appupdate_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vibrate_txt"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/appupdate_txt"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        app:layout_constraintBottom_toBottomOf="@id/appupdate_txt"
+
+
+        />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout Updates"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:id="@+id/wku_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appupdate_txt"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_height="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wku_txt"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        app:layout_constraintBottom_toBottomOf="@id/wku_txt"
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

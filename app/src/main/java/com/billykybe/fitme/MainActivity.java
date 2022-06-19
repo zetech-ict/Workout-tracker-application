@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        afterHandler = 1;
+        afterHandler = 3;
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -29,15 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 if (afterHandler == 1){
                     Intent toHomePage = new Intent(getApplicationContext(),HomePage.class);
                     startActivity(toHomePage);
+                    finish();
 
 
                 }else if (afterHandler == 2){
 //                    Intent toSecurityCheck = new Intent(getApplicationContext(),);
-//                    todo://           startActivity(toSecurityCheck);
+//                    TODO://           startActivity(toSecurityCheck);
 
                 }else if (afterHandler == 3){
                     Intent toOnboardingLauncher = new Intent(getApplicationContext(),WelcomeScreen.class);
 startActivity(toOnboardingLauncher);
+                    finish();
+
 
                 }
 

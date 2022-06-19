@@ -41,6 +41,11 @@ public class OnboardingScreen extends AppCompatActivity {
         view3 = findViewById(R.id.fi_dashThree);
         mainImage =findViewById(R.id.mainimg);
 
+        fi_continue.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),LetsYouIn.class);
+            startActivity(intent);
+            finish();
+        });
         // fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -52,22 +57,11 @@ public class OnboardingScreen extends AppCompatActivity {
 //        setUpIndicators(0);
 
         pagerAdapter = new PagerAdapter(this.getApplicationContext(), images, titles);
-
+slider = findViewById(R.id.viewpager_slider);
         slider.setAdapter(pagerAdapter);
 
-        btn_next.setOnClickListener(View ->{
-            if(getItem(0) < 2){
-                slider.setCurrentItem(getItem(1), true);
-            }else{
-                startActivity(new Intent(OnboardingScreen.this, HomePage.class));
-                finish();
-            }
-        });
-//        btn_prev.setOnClickListener(View ->{
-//            if(getItem(0) > 0){
-//                slider.setCurrentItem(getItem(-1), true);
-//            }
-//        });
+
+
 
         slider.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -91,22 +85,7 @@ public class OnboardingScreen extends AppCompatActivity {
         });
     }
 
-//    @SuppressLint("NewApi")
-//    private void setUpIndicators(int position) {
-//        dots = new TextView[3];
-//        ll_dots.removeAllViews();
-//
-//        for (int i = 0; i < dots.length; i++) {
-//            dots[i] = new TextView(this);
-//            dots[i].setText(Html.fromHtml("&#8226"));
-//            dots[i].setTextSize(35);
-//            dots[i].setTextColor(getResources().getColor(R.color.color_text_primary,
-//                    getApplicationContext().getTheme()));
-//            ll_dots.addView(dots[i]);
-//        }
-//        dots[position].setTextColor(getColor(R.color.color_secondary));
-//        //dots[position].setTextSize(50);
-//    }
+
 
     int getItem(int i){
         return slider.getCurrentItem() + i;

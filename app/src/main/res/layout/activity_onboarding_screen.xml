@@ -9,6 +9,9 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_slider"
         android:layout_width="match_parent"
+        android:scrollIndicators="none"
+        android:scrollbars="none"
+        android:overScrollMode="never"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

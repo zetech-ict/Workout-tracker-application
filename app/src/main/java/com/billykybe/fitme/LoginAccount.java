@@ -10,24 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LoginAccount extends AppCompatActivity {
-
-
-    TextView signIn = findViewById(R.id.la_continue); //todo:fix
-
-    TextView rememberMe = findViewById(R.id.la_rememberMe_txt);
-    ImageView eye = findViewById(R.id.la_eye);
-    TextView forgetPass = findViewById(R.id.lg_fp);
-    ImageView loginFaceBook = findViewById(R.id.lg_fb);
-    ImageView loginGoogle = findViewById(R.id.lg_gg);
-    ImageView loginApple = findViewById(R.id.lg_ap);
-    TextView signupTxt = findViewById(R.id.signup_txt);
-    ImageView backBtn = findViewById(R.id.la_backBtn);
-
-    ImageView rememberCheck = findViewById(R.id.remTick);
-
-
-    EditText laEmail = findViewById(R.id.la_email_edit);
-    EditText laPassword = findViewById(R.id.la_password_edit);
+    TextView signIn ,rememberMe,forgetPass,signupTxt;
+    ImageView eye,loginApple,loginGoogle,loginFaceBook,backBtn,rememberCheck;
+    EditText laEmail,laPassword;
 
     String cEmail = "billykybe@gmail.com";
     String cPassword = "123456";
@@ -38,7 +23,7 @@ public class LoginAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_account);
-
+initViews();
         signIn.setOnClickListener(view -> {
             //check email -> check pass -> check remember -> verify -> go to home
 
@@ -113,6 +98,28 @@ public class LoginAccount extends AppCompatActivity {
         backBtn.setOnClickListener(view -> {
             //todo:// backbtn
         });
+    }
+
+    private void initViews() {
+
+
+       signIn = findViewById(R.id.la_continue); //todo:fix
+
+        rememberMe = findViewById(R.id.la_rememberMe_txt);
+         eye = findViewById(R.id.la_eye);
+      forgetPass = findViewById(R.id.lg_fp);
+      loginFaceBook = findViewById(R.id.lg_fb);
+   loginGoogle = findViewById(R.id.lg_gg);
+        loginApple = findViewById(R.id.lg_ap);
+         signupTxt = findViewById(R.id.signup_txt);
+         backBtn = findViewById(R.id.la_backBtn);
+
+         rememberCheck = findViewById(R.id.remTick);
+
+
+         laEmail = findViewById(R.id.la_email_edit);
+         laPassword = findViewById(R.id.la_password_edit);
+
     }
 
 

@@ -41,6 +41,7 @@
             android:exported="false" />
         <activity
             android:name=".OnboardingScreen"
+
             android:exported="false" />
         <activity
             android:name=".MyJourney"
@@ -52,7 +53,7 @@
             android:name=".Notifications"
             android:exported="false" />
         <activity
-            android:name=".NottificationSettings"
+            android:name=".MainActivity"
 
             android:exported="true">
             <intent-filter>
@@ -86,7 +87,8 @@
             android:name=".LetsYouIn"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".NottificationSettings"
+
             android:exported="false" />
     </application>
 

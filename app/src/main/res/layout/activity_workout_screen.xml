@@ -24,6 +24,7 @@
             android:layout_height="match_parent"
             android:fadingEdge="none"
             app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/spaceman"
             app:lottie_loop="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

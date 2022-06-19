@@ -56,6 +56,8 @@ for (int i = 1 ;i<workout_list.size();i++){
 
 
 
+
+
     }
 public  int counterOn;
     private void trytwo(Workout_items_model workout_items_model) {
@@ -78,6 +80,11 @@ counterOn++;
 
         }.start();
     }
+
+
+
+
+
     public  void addItems(String id){
         switch (id){
             case "fullbody-bg":

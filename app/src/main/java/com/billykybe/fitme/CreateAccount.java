@@ -10,16 +10,16 @@ import android.widget.TextView;
 public class CreateAccount extends AppCompatActivity {
 
 
-    ImageView eye = findViewById(R.id.ca_eye);
-    TextView rememberMe = findViewById(R.id.rememberMe_txt);
-    ImageView rememberCheck = findViewById(R.id.ca_remcheck);
-    TextView signUp = findViewById(R.id.ca_continue);
+    ImageView eye;
+    TextView rememberMe  ;
+    ImageView rememberCheck ;
+    TextView signUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
-
+initviews();
 
         rememberMe.setOnClickListener(view -> {
 
@@ -54,5 +54,12 @@ public class CreateAccount extends AppCompatActivity {
         signUp.setOnClickListener(view -> {
 
         });
+    }
+
+    private void initviews() {
+        rememberMe = findViewById(R.id.rememberMe_txt);
+        signUp = findViewById(R.id.ca_continue);
+        rememberCheck = findViewById(R.id.ca_remcheck);
+        eye = findViewById(R.id.ca_eye);
     }
 }

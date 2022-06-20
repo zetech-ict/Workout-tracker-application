@@ -76,20 +76,20 @@ android:layout_marginTop="@dimen/_70sdp"
         android:indeterminate="false"
         android:progressDrawable="@drawable/circle_progress_bar"
         android:textAlignment="center" />
+
     <TextView
+        android:id="@+id/counter_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-android:id="@+id/counter_text"
-android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:text="10"
-        android:textSize="@dimen/_20ssp"
-        android:textAlignment="center"
         android:fontFamily="@font/proximanovabold"
+        android:textAlignment="center"
         android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_20ssp"
 
-/>
+        />
   </RelativeLayout>
   <TextView
       android:id="@+id/fi_continue"

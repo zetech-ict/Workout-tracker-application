@@ -37,7 +37,9 @@
             android:name=".WorkoutScreen"
             android:exported="false" />
         <activity
-            android:name=".StartWorkouts"
+
+            android:name=".MainActivity"
+
             android:exported="false" />
         <activity
             android:name=".OnboardingScreen"
@@ -53,7 +55,7 @@
             android:name=".Notifications"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartWorkouts"
 
             android:exported="true">
             <intent-filter>

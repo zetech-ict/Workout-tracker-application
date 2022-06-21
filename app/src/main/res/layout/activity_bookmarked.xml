@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/proximanovabold"
         android:text="My Bookmark"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_16ssp"
@@ -45,34 +45,7 @@
 
         />
 
-    <ImageView
-        android:id="@+id/list_bookmark_img"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/file"
-        android:padding="@dimen/_7sdp"
-        app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/notIf_backBtn"
-        app:tint="@color/black"
-
-        />
-<!--todo://change btns-->
-    <ImageView
-        android:id="@+id/grid_bookmark_img"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        app:tint="@color/color_text_secondary"
-
-        android:src="@drawable/menu"
-        android:padding="@dimen/_7sdp"
-        app:layout_constraintBottom_toBottomOf="@id/notIf_backBtn"
-app:layout_constraintEnd_toStartOf="@id/list_bookmark_img"
-        app:layout_constraintTop_toTopOf="@id/notIf_backBtn"
-
-        />
+    <!--todo://change btns-->
 
 
     <ScrollView

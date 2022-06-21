@@ -18,8 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/_20ssp"
-        android:fontFamily="@font/nunitobold"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/proximanovabold"
         />
     <TextView
         android:layout_width="0dp"
@@ -50,25 +50,243 @@
     android:layout_marginTop="@dimen/_20sdp"
     android:layout_marginBottom="@dimen/_20sdp"
     />
-<!--old wheight height goal-->
-
-    <!--    goal -->
-    <androidx.recyclerview.widget.RecyclerView
-tools:listitem="@layout/dc_goals_item"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        tools:itemCount="4"
-        android:layout_height="wrap_content"
-        android:id="@+id/dc_goals_rv"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
         app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
         app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
         app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
+        android:layout_height="0dp"
+        android:id="@+id/ageCollection"
+>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_agePick"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--   /  Age -->
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:visibility="gone"
 
+        app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
+        app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
+        app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
+        app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
+        android:layout_height="0dp"
+        android:id="@+id/wheightCollection"
         />
+    <!--   /  wheight -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
+        app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
+        app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
+        app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
+        android:layout_height="0dp"
+        android:id="@+id/heightCollection"
+        />
+    <!--   /  height -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
+        app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
+        app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
+        app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
+        android:layout_height="0dp"
+        android:id="@+id/levelCollection"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="Begginer"
+            android:elevation="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/level_holder"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            android:id="@+id/level_begginer"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@id/level_intermediate"
+
+            android:textSize="@dimen/_15ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="Intermediate"
+            android:elevation="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+android:background="@drawable/level_holder"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            android:id="@+id/level_intermediate"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/level_begginer"
+            app:layout_constraintEnd_toEndOf="@id/level_begginer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/_15ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="Advanced"
+            android:elevation="@dimen/_1sdp"
+android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/level_holder"
+            app:layout_constraintTop_toBottomOf="@id/level_intermediate"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="@id/level_intermediate"
+            app:layout_constraintEnd_toEndOf="@id/level_intermediate"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textColor="@color/color_text_primary"
+            android:id="@+id/level_advanced"
+
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--   /  Level -->
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:visibility="gone"
+    android:id="@+id/goals_pick"
+    app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
+    app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
+    app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
+    app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
+    android:layout_height="0dp"
+
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:text="Improve Endurance"
+        android:elevation="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/level_holder"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        android:id="@+id/goal_endurance"
+        app:layout_constraintBottom_toTopOf="@id/goal_getfitter"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_15ssp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:text="Get Fitter"
+        android:elevation="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/level_holder"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        android:id="@+id/goal_getfitter"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/goal_loseweight"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_15ssp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:text="Lose Weight"
+        android:elevation="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/level_holder"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        android:id="@+id/goal_loseweight"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/_15ssp"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:text="Build Muscles"
+        android:elevation="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/level_holder"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        android:id="@+id/goal_buildmuscles"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/goal_loseweight"
+        android:textSize="@dimen/_15ssp"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:text="Gain Weight"
+        android:elevation="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/level_holder"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_text_primary"
+        android:id="@+id/goal_gainweight"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/goal_buildmuscles"
+        android:textSize="@dimen/_15ssp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
     <!--   /  goal -->
+    <!--old wheight height goal-->
+
 
     <TextView
         android:layout_width="0dp"
@@ -76,9 +294,9 @@ tools:listitem="@layout/dc_goals_item"
 android:text="Back"
         android:background="@drawable/backbtn_bg"
         android:padding="@dimen/_14sdp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/proximanovabold"
         android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:textSize="@dimen/_14ssp"
         android:id="@+id/backBtn"
         android:elevation="@dimen/_3sdp"
@@ -99,13 +317,13 @@ android:text="Back"
         android:id="@+id/continueBtn"
 app:layout_constraintStart_toEndOf="@id/backBtn"
         android:padding="@dimen/_14sdp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/proximanovabold"
         android:textSize="@dimen/_14ssp"
         android:elevation="@dimen/_3sdp"
 
         android:textColor="@color/white"
         android:layout_marginEnd="@dimen/_15sdp"
-        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
 app:layout_constraintTop_toTopOf="@id/backBtn"
 android:background="@drawable/continue_bg"
         app:layout_constraintBottom_toBottomOf="@id/backBtn"

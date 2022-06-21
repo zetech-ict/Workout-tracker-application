@@ -13,32 +13,19 @@
         android:layout_height="56dp"
         android:id="@+id/topHolder"
         />
-<ImageView
-    android:layout_width="@dimen/_25sdp"
-    android:layout_height="@dimen/_25sdp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:src="@drawable/ic_round_arrow_back_24"
-    app:tint="@color/color_text_primary"
-    app:layout_constraintBottom_toBottomOf="@id/topHolder"
-    android:id="@+id/lyi_backBtn"
-    android:layout_marginStart="@dimen/_15sdp"
-    />
 
     <TextView
+        android:id="@+id/letsyouin_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's you in"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lyi_backBtn"
         android:fontFamily="@font/proximanovabold"
-        android:id="@+id/letsyouin_txt"
-        android:textSize="@dimen/_40ssp"
+        android:text="Let's you in"
         android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_40ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
-        android:layout_marginTop="@dimen/_20sdp"
-        />
+    app:layout_constraintTop_toBottomOf="@id/topHolder" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

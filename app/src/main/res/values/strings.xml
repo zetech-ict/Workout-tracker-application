@@ -9,4 +9,9 @@
     <string name="email">Email</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="physical">Choose your regular activity level.This will help us to personalize plans for you</string>
+    <string name="goals">You can choose more than one. Don\'t worry you can always change it later</string>
+    <string name="height">Height in cm. Don\'t worry you can always change it later.</string>
+    <string name="wheightt">Weight in kg. Don\'t worry you can always change it later.</string>
+    <string name="agess">Age in years. This will help us to personalize an exercise program plan that suits you.</string>
 </resources>

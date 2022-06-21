@@ -49,7 +49,20 @@
 
     >
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Email required"
+    android:visibility="gone"
+    android:id="@+id/email_err"
+    android:textColor="@color/error"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:textSize="@dimen/_11ssp"
+    android:fontFamily="@font/proximanovalight"
+    app:layout_constraintStart_toStartOf="@id/ca_email_edit"
+    app:layout_constraintBottom_toTopOf="@id/ca_email_edit"
 
+    />
 
 
     <EditText
@@ -81,13 +94,29 @@ android:autofillHints="emailAddress"
         android:src="@drawable/envelope"
         android:padding="@dimen/_1sdp"
 
-        app:tint="@color/color_text_secondary"
+        app:tint="@color/black"
         app:layout_constraintTop_toTopOf="@id/ca_email_edit"
         app:layout_constraintBottom_toBottomOf="@id/ca_email_edit"
         app:layout_constraintStart_toStartOf="@id/ca_email_edit"
         android:layout_marginStart="@dimen/_10sdp"
         />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password required"
+        android:textColor="@color/error"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/password_err"
+
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/proximanovalight"
+        app:layout_constraintStart_toStartOf="@id/ca_password_edit"
+        app:layout_constraintBottom_toTopOf="@id/ca_password_edit"
+
+        />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -113,7 +142,7 @@ android:paddingStart="@dimen/_40sdp"
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
         android:src="@drawable/password"
-        app:tint="@color/color_text_secondary"
+        app:tint="@color/black"
         android:padding="@dimen/_1sdp"
 
         app:layout_constraintTop_toTopOf="@id/ca_password_edit"
@@ -123,12 +152,13 @@ app:layout_constraintStart_toStartOf="@id/ca_password_edit"
         />
 
     <ImageView
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
         android:src="@drawable/design_ic_visibility_off"
-        android:padding="@dimen/_2sdp"
+        android:padding="@dimen/_6sdp"
         android:id="@+id/ca_eye"
-        app:tint="@color/color_text_secondary"
+        app:tint="@color/black"
+
         app:layout_constraintTop_toTopOf="@id/ca_password_edit"
         app:layout_constraintBottom_toBottomOf="@id/ca_password_edit"
         app:layout_constraintEnd_toEndOf="@id/ca_email_edit"
@@ -150,48 +180,15 @@ android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_20sdp"
         />
 
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@id/rememberMe_txt"
+    app:layout_constraintTop_toTopOf="@id/rememberMe_txt"
+    app:layout_constraintBottom_toBottomOf="@id/rememberMe_txt"
+    android:id="@+id/ca_remMe"
 
-
-    <View
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="@dimen/_15sdp"
-        app:layout_constraintEnd_toStartOf="@id/rememberMe_txt"
-        app:layout_constraintTop_toTopOf="@id/rememberMe_txt"
-        app:layout_constraintBottom_toBottomOf="@id/rememberMe_txt"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:background="@drawable/dc_check_bg"
-        android:id="@+id/ca_check_holder"
-
-
-        android:layout_marginEnd="@dimen/_10sdp"
-        />
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_margin="@dimen/_2sdp"
-        app:cardElevation="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="@id/ca_check_holder"
-        app:layout_constraintStart_toStartOf="@id/ca_check_holder"
-
-        app:layout_constraintTop_toTopOf="@id/ca_check_holder"
-        app:layout_constraintBottom_toBottomOf="@id/ca_check_holder"
-        android:id="@+id/checkBox_holder"
-        app:cardCornerRadius="@dimen/_2sdp"
-
-
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_check"
-            app:tint="@color/white"
-            android:id="@+id/ca_remcheck"
-            android:visibility="invisible"
-            android:background="@color/color_secondary"
-            android:padding="@dimen/_2sdp"
-            android:scaleType="centerCrop"
-            />
-    </androidx.cardview.widget.CardView>
+    />
 
 
 
@@ -364,7 +361,7 @@ app:layout_constraintStart_toEndOf="@id/ca_google_signup_holder"
     <TextView
         android:layout_width="@dimen/_40sdp"
         android:layout_height="wrap_content"
-        android:id="@+id/signup_txt"
+        android:id="@+id/signin_txt"
         android:fontFamily="@font/proximanovabold"
         android:textSize="@dimen/_11ssp"
         android:text="Sign in"

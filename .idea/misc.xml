@@ -3,7 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_about_your_self.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/gender_selected_bg.xml" value="0.235" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/genderselectorholder_bg.xml" value="0.235" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/level_holder.xml" value="0.234" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/level_holder_selected.xml" value="0.234" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_about_your_self.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_bookmarked.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_create_account.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_data_collection.xml" value="0.22" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_edit_profile.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_lets_you_in.xml" value="0.1" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_login_account.xml" value="0.33" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_my_journey.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_notifications.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_nottification_settings.xml" value="0.25" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_rest_workout.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_welcome_screen.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/activity_workout_screen.xml" value="0.16120401337792642" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/agepick_item.xml" value="0.16554054054054054" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/archive_item.xml" value="0.17331081081081082" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/fragment_my_profile.xml" value="0.25" />
+        <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/layout/item_slider.xml" value="0.16554054054054054" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/drawable-v24/dash_null.xml" value="0.2625" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/drawable-v24/dashselected_bg.xml" value="0.2625" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/drawable/circle_progress_bar.xml" value="0.2285" />

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,7 +18,7 @@ public class LoginAccount extends AppCompatActivity {
     String cEmail = "billykybe@gmail.com";
     String cPassword = "123456";
     //change email icon and pass
-
+CheckBox remmecheck ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,23 +49,6 @@ initViews();
 
 
 
-        rememberMe.setOnClickListener(view -> {
-
-
-
-            if (rememberCheck.getVisibility()==View.INVISIBLE){
-
-                //save login data
-                rememberCheck.setVisibility(View.VISIBLE);
-
-
-            }else {
-
-                //dont save data
-                rememberCheck.setVisibility(View.INVISIBLE);
-            }
-
-        });
 
 
         eye.setOnClickListener(view -> {
@@ -98,6 +82,7 @@ initViews();
         backBtn.setOnClickListener(view -> {
             //todo:// backbtn
         });
+
     }
 
     private void initViews() {
@@ -114,7 +99,7 @@ initViews();
          signupTxt = findViewById(R.id.signup_txt);
          backBtn = findViewById(R.id.la_backBtn);
 
-         rememberCheck = findViewById(R.id.remTick);
+        remmecheck = findViewById(R.id.remmecheck);
 
 
          laEmail = findViewById(R.id.la_email_edit);

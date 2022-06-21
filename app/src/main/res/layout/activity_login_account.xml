@@ -90,7 +90,7 @@
             android:src="@drawable/envelope"
             android:padding="@dimen/_1sdp"
 
-            app:tint="@color/color_text_secondary"
+            app:tint="@color/black"
             app:layout_constraintTop_toTopOf="@id/la_email_edit"
             app:layout_constraintBottom_toBottomOf="@id/la_email_edit"
             app:layout_constraintStart_toStartOf="@id/la_email_edit"
@@ -122,8 +122,9 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:src="@drawable/password"
-            app:tint="@color/color_text_secondary"        android:padding="@dimen/_1sdp"
+          android:padding="@dimen/_1sdp"
 
+            app:tint="@color/black"
 
             app:layout_constraintTop_toTopOf="@id/la_password_edit"
             app:layout_constraintBottom_toBottomOf="@id/la_password_edit"
@@ -137,7 +138,8 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
             android:id="@+id/la_eye"
             android:src="@drawable/design_ic_visibility_off"
             android:padding="@dimen/_2sdp"
-            app:tint="@color/color_text_secondary"
+            app:tint="@color/black"
+
             app:layout_constraintTop_toTopOf="@id/la_password_edit"
             app:layout_constraintBottom_toBottomOf="@id/la_password_edit"
             app:layout_constraintEnd_toEndOf="@id/la_email_edit"
@@ -168,40 +170,23 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
             app:layout_constraintTop_toTopOf="@id/la_rememberMe_txt"
             app:layout_constraintBottom_toBottomOf="@id/la_rememberMe_txt"
             android:layout_marginStart="@dimen/_5sdp"
-            android:background="@drawable/dc_check_bg"
+
             android:id="@+id/la_check_holder"
 
 
             android:layout_marginEnd="@dimen/_10sdp"
             />
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_margin="@dimen/_2sdp"
-            app:cardElevation="0dp"
-            android:layout_height="0dp"
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@id/la_check_holder"
             app:layout_constraintStart_toStartOf="@id/la_check_holder"
-
+android:id="@+id/remmecheck"
             app:layout_constraintTop_toTopOf="@id/la_check_holder"
             app:layout_constraintBottom_toBottomOf="@id/la_check_holder"
-            android:id="@+id/checkBox_holder"
-            app:cardCornerRadius="@dimen/_2sdp"
 
+            />
 
-            >
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_icon_exe_done_small"
-                app:tint="@color/color_primary"
-android:id="@+id/remTick"
-                android:visibility="invisible"
-                android:background="@color/color_secondary"
-                android:padding="@dimen/_3sdp"
-
-                android:scaleType="centerCrop"
-                />
-        </androidx.cardview.widget.CardView>
 
 
 

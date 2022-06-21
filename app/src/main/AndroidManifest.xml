@@ -13,12 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMe"
         tools:targetApi="31">
+<!--        TODO:Add portrait orientation to all scrrens-->
         <activity
+            android:screenOrientation="portrait"
+
             android:name=".EditProfile"
 
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".StartWorkouts"
 
             android:exported="false" />
         <activity
@@ -38,7 +41,7 @@
             android:exported="false" />
         <activity
 
-            android:name=".MainActivity"
+            android:name=".HomePage"
 
             android:exported="false" />
         <activity
@@ -55,7 +58,7 @@
             android:name=".Notifications"
             android:exported="false" />
         <activity
-            android:name=".StartWorkouts"
+            android:name=".MainActivity"
 
             android:exported="true">
             <intent-filter>

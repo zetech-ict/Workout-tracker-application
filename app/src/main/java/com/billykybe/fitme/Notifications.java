@@ -7,12 +7,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Notifications extends AppCompatActivity {
     RecyclerView rv_notifications;
+    ImageView notIf_backBtn ;
     List<notification_model> notifications = new ArrayList<>();
     notification_adapter notification_adapter;
     @SuppressLint("NotifyDataSetChanged")
@@ -20,7 +22,10 @@ public class Notifications extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
-
+        notIf_backBtn = findViewById(R.id.notIf_backBtn);
+        notIf_backBtn.setOnClickListener(view -> {
+            finish();
+        });
         rv_notifications = findViewById(R.id.noti_rv);
 
 

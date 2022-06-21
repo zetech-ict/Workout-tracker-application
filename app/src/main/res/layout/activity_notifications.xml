@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/proximanovabold"
         android:text="Today's Notification"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_16ssp"
@@ -64,6 +64,7 @@
             android:id="@+id/noti_rv"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
             tools:listitem="@layout/notification_item"
 
             />

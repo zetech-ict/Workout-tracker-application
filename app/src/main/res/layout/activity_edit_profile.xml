@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/proximanovabold"
         android:text="Edit Profile"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_16ssp"

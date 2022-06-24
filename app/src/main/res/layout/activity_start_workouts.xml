@@ -44,8 +44,8 @@
     app:layout_constraintBottom_toBottomOf="@id/progressbar_holder"
   />
   <View
-      android:layout_width="@dimen/_150sdp"
-      android:layout_height="@dimen/_150sdp"
+      android:layout_width="@dimen/_200sdp"
+      android:layout_height="@dimen/_200sdp"
 
 
     android:id="@+id/progressbar_holder"
@@ -74,6 +74,7 @@ android:layout_marginTop="@dimen/_70sdp"
         android:layout_height="match_parent"
         android:background="@drawable/circle_shape"
         android:indeterminate="false"
+        android:progress="50"
         android:progressDrawable="@drawable/circle_progress_bar"
         android:textAlignment="center" />
 

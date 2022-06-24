@@ -14,8 +14,9 @@
         android:id="@+id/fi_imageHolder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="-1dp"
-        app:cardElevation="0dp"
+android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="@dimen/_5sdp"
         app:layout_constraintBottom_toTopOf="@id/fi_text_const"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
 
         <ImageView
             android:id="@+id/mainimg"
-            android:layout_width="match_parent"
+           android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/color_secondary"
             android:scaleType="centerCrop"
@@ -89,7 +90,7 @@
             android:id="@+id/fi_dashTwo"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_5sdp"
-            android:background="@drawable/dashselected_bg"
+            android:background="@drawable/dash_null"
 
             app:layout_constraintBottom_toBottomOf="@id/fi_indicator"
             app:layout_constraintEnd_toEndOf="@id/fi_indicator"

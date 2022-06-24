@@ -10,6 +10,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_slider"
         android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
         android:scrollIndicators="none"
         android:scrollbars="none"
         android:overScrollMode="never"

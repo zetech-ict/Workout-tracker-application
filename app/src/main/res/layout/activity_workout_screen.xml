@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/color_primary"
     tools:context=".WorkoutScreen">
 
@@ -11,6 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lottie_holder"
         android:layout_width="0dp"
+
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/w_ditails_holder"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,14 +20,17 @@
 
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/wi_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fadingEdge="none"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/spaceman" />
+        <VideoView
+            android:id="@+id/wi_iimg"
+app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -58,6 +63,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lottie_holder">
+<View
+    android:id="@+id/progress_bg"
+    android:layout_width="match_parent"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_height="@dimen/_2sdp"
+app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/color_secondary"
+
+    />
+
 
 
         <TextView
@@ -75,8 +92,8 @@
 
         <View
             android:id="@+id/counter_holder"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
             app:layout_constraintBottom_toTopOf="@id/ws_pauseBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,12 +126,11 @@
                 android:id="@+id/wscounter_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
 
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:fontFamily="@font/proximanovabold"
-                android:text="10"
                 android:textAlignment="center"
                 android:textColor="@color/color_text_primary"
                 android:textSize="@dimen/_25ssp"
@@ -194,7 +210,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_primary"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <View
             android:id="@+id/top"
@@ -207,6 +223,7 @@
 
         <ImageView
             android:id="@+id/sw_backBtn"
+            android:visibility="invisible"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
             android:layout_marginStart="@dimen/_15sdp"
@@ -296,10 +313,11 @@
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@id/rw_continue">
 
-            <ImageView
+            <VideoView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
+                android:id="@+id/rest_img"
                 android:src="@drawable/cover_fullbody" />
         </androidx.cardview.widget.CardView>
 

@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -19,8 +20,8 @@ public class OnboardingScreen extends AppCompatActivity {
 
     ViewPager slider ;
     PagerAdapter pagerAdapter;
-    int[] images = {R.drawable.intro1, R.drawable.intro2, R.drawable.intro3};
-    String[] titles = {"Find suitable workouts and genuine results", "Find Find the right workout for what you need", "Let's do a workout and live healthy with us"};
+    int[] images = {R.drawable.wsetimg_plan_addtools_v0, R.drawable.intro2, R.drawable.intro3};
+    String[] titles = {"Find suitable workouts and genuine results with no equipments", "Find Find the right workout for what you need", "Let's do a workout and live healthy with us"};
 
     Button btn_prev, btn_next;
     TextView fi_continue ,fi_text;
@@ -47,8 +48,6 @@ public class OnboardingScreen extends AppCompatActivity {
             finish();
         });
         // fullscreen
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 
 
 //        btn_prev.setVisibility(View.INVISIBLE);
@@ -67,11 +66,28 @@ slider = findViewById(R.id.viewpager_slider);
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+
             }
 
             @Override
             public void onPageSelected(int position) {
-
+//if (position==0){
+//    view1.setBackgroundResource(R.drawable.dashselected_bg);
+//    view2.setBackgroundResource(R.drawable.dash_null);
+//
+//    view3.setBackgroundResource(R.drawable.dash_null);
+//}else if (position==1){
+//    view1.setBackgroundResource(R.drawable.dash_null);
+//    view2.setBackgroundResource(R.drawable.dashselected_bg);
+//    view3.setBackgroundResource(R.drawable.dash_null);
+//
+//}else if (position==2){
+//    view1.setBackgroundResource(R.drawable.dash_null);
+//    view2.setBackgroundResource(R.drawable.dash_null);
+//    view3.setBackgroundResource(R.drawable.dashselected_bg);
+//
+//}TODO: Fix this
+                Toast.makeText(OnboardingScreen.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
 
 
             }

@@ -1,6 +1,7 @@
 package com.billykybe.fitme;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -8,19 +9,28 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.shawnlin.numberpicker.NumberPicker;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataCollection extends AppCompatActivity {
-    int age;
-    double weight,height;
+    int age = 25;
+    TextView ageHolder;
+    double weight = 55.00;
+    TextView weightHolder;
+    double height = 300;
+    TextView heightHolder;
     boolean isMale;
     int goal,activityLevel;
     View one,two,three,four,five;
     List<Boolean> isPicked = new ArrayList<>();
-
+    ImageView addAge ,minusAge;
+    ImageView addweight ,minusweight;
+    ImageView addheight ,minusheight;
     TextView levelBg,levelIm,levelAd;
     TextView gBuildMuscles,gImprove,gLoseWeight,gGainWeight,gGetFitter;
 
@@ -30,9 +40,15 @@ TextView mainHeading,mainDescription,nexBtn,prevBtnt;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_collection);
+
+
+        ///
+
+
+
         ///
         // Age picker
-        agePicker();
+//        agePicker();
 
         goalsPicker();
 
@@ -42,6 +58,8 @@ TextView mainHeading,mainDescription,nexBtn,prevBtnt;
 
 
          initViews();
+        updateView(COLLECTION_SCREEN);
+
 //Onclicks
         nexBtn.setOnClickListener(view -> {
             if (COLLECTION_SCREEN < 5){
@@ -61,6 +79,66 @@ updateView(COLLECTION_SCREEN);
                 startActivity(intent);
             }
         });
+
+
+        //Age collection
+
+        addAge = findViewById(R.id.increment_age);
+        minusAge = findViewById(R.id.decrement_age);
+ageHolder = findViewById(R.id.age_holder_txt);
+        addAge.setOnClickListener(view -> {
+         age++;
+         ageHolder.setText(String.valueOf(age));
+
+        });
+        minusAge.setOnClickListener(view ->{
+            if (age>16)age--;
+
+            ageHolder.setText(String.valueOf(age));
+
+        } );
+
+
+
+        // weight collection
+
+        minusweight = findViewById(R.id.decrement_weight);
+        addweight = findViewById(R.id.increment_weight);
+       weightHolder  = findViewById(R.id.weight_holder_txt);
+        addweight.setOnClickListener(view -> {
+            weight++;
+            weightHolder.setText(String.valueOf((int) weight));
+
+        });
+        minusweight.setOnClickListener(view ->{
+
+            if (weight>0)weight--;
+
+            weightHolder.setText(String.valueOf((int) weight));
+
+        } );
+
+
+        minusheight = findViewById(R.id.decrement_height);
+        addheight = findViewById(R.id.increment_height);
+        heightHolder  = findViewById(R.id.height_holder_txt);
+        addheight.setOnClickListener(view -> {
+
+            if (height<500)height++;
+
+            heightHolder.setText(String.valueOf((int) height));
+
+        });
+        minusheight.setOnClickListener(view ->{
+            if (height>0)height--;
+
+
+            heightHolder.setText(String.valueOf((int) height));
+
+        } );
+
+
+
 
         levelBg.setOnClickListener(view -> {
 //            Change views bg and txt hackish
@@ -199,32 +277,32 @@ updateView(COLLECTION_SCREEN);
 
     }
 
-    private void agePicker() {
-        int firstItemHeightDate,paddingDate,itemHeightDate,allPxDate,finalHeightDate;
-
-        final RecyclerView recyclerView = findViewById(R.id.rv_agePick);
-        if (recyclerView != null){
-        recyclerView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                setAgeValue();
-            }
-        },300)    ;
-        }
-
-        ViewTreeObserver viewTreeObserver = recyclerView.getViewTreeObserver();
-        viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                recyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
-
-
-                return false;
-            }
-        });
-
-
-    }
+//    private void agePicker() {
+//        int firstItemHeightDate,paddingDate,itemHeightDate,allPxDate,finalHeightDate;
+//
+//        final RecyclerView recyclerView = findViewById(R.id.rv_agePick);
+//        if (recyclerView != null){
+//        recyclerView.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                setAgeValue();
+//            }
+//        },300)    ;
+//        }
+//
+//        ViewTreeObserver viewTreeObserver = recyclerView.getViewTreeObserver();
+//        viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+//            @Override
+//            public boolean onPreDraw() {
+//                recyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
+//
+//
+//                return false;
+//            }
+//        });
+//
+// TODO: Update to this age wheight height picker
+//    }
 
     private void setAgeValue() {
     }
@@ -305,7 +383,7 @@ updateView(COLLECTION_SCREEN);
         levelBg = findViewById(R.id.level_begginer);
         levelIm = findViewById(R.id.level_intermediate);
         levelAd = findViewById(R.id.level_advanced);
-        one = findViewById(R.id.rv_agePick);
+        one = findViewById(R.id.ageCollection);
         two = findViewById(R.id.wheightCollection);
         three = findViewById(R.id.heightCollection);
         four= findViewById(R.id.levelCollection);

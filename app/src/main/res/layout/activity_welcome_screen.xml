@@ -12,8 +12,9 @@ android:theme="@style/Theme.FullTop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
+
         android:fitsSystemWindows="true"
-android:src="@drawable/splashbg"
+android:src="@drawable/plan_img_11_f"
             />
     <View
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@ android:src="@drawable/splashbg"
         android:layout_marginBottom="@dimen/_20sdp"
         android:fontFamily="@font/proximanovaregular"
         android:id="@+id/ws_welcome_txt"
-        android:textColor="@color/white"
+        android:textColor="@color/color_text_primary"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +43,7 @@ android:id="@+id/ws_name_txt"
         android:fontFamily="@font/proximanovabold"
         android:textSize="@dimen/_40ssp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:textColor="@color/white"
+        android:textColor="@color/color_secondary"
         app:layout_constraintStart_toStartOf="@id/ws_description_txt"
         app:layout_constraintBottom_toTopOf="@id/ws_description_txt"
 
@@ -58,9 +59,9 @@ android:id="@+id/ws_description_txt"
         app:layout_constraintBottom_toBottomOf="@id/ws_text_holder"
         app:layout_constraintStart_toStartOf="@id/ws_text_holder"
         android:textSize="@dimen/_14ssp"
-        android:fontFamily="@font/proximanovalight"
-        android:layout_marginBottom="@dimen/_30sdp"
-        android:textColor="@color/white"
+        android:fontFamily="@font/proximanovaregular"
+        android:layout_marginBottom="@dimen/_56sdp"
+        android:textColor="@color/color_text_primary"
         app:layout_constraintEnd_toEndOf="@id/ws_text_holder"
         />
     <View

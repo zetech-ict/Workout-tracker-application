@@ -60,7 +60,20 @@
 
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email required"
+            android:visibility="gone"
+            android:id="@+id/la_email_err"
+            android:textColor="@color/error"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/proximanovalight"
+            app:layout_constraintStart_toStartOf="@id/la_email_edit"
+            app:layout_constraintBottom_toTopOf="@id/la_email_edit"
 
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,6 +110,20 @@
             android:layout_marginStart="@dimen/_10sdp"
             />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password required"
+            android:id="@+id/la_pass_err"
+            android:visibility="gone"
+            android:textColor="@color/error"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/proximanovalight"
+            app:layout_constraintStart_toStartOf="@id/la_password_edit"
+            app:layout_constraintBottom_toTopOf="@id/la_password_edit"
+
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,12 +160,12 @@ app:layout_constraintTop_toBottomOf="@id/la_email_edit"
             />
 
         <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:id="@+id/la_eye"
             android:src="@drawable/design_ic_visibility_off"
-            android:padding="@dimen/_2sdp"
             app:tint="@color/black"
+            android:padding="@dimen/_6sdp"
 
             app:layout_constraintTop_toTopOf="@id/la_password_edit"
             app:layout_constraintBottom_toBottomOf="@id/la_password_edit"
@@ -194,7 +221,7 @@ android:id="@+id/remmecheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 app:layout_constraintBottom_toTopOf="@id/lg_fp"
-            app:layout_constraintTop_toBottomOf="@id/la_password_edit"
+            app:layout_constraintTop_toBottomOf="@id/remmecheck"
             android:text="Sign in"
             android:layout_marginBottom="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_30sdp"

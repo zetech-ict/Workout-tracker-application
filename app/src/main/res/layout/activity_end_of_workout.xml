@@ -17,6 +17,7 @@
 
 
     />
+
 <com.airbnb.lottie.LottieAnimationView
     android:layout_width="match_parent"
     android:layout_height="0dp"
@@ -252,5 +253,12 @@ app:layout_constraintBottom_toTopOf="@id/eow_toHome"
       app:layout_constraintEnd_toEndOf="parent"
 
       app:layout_constraintStart_toStartOf="parent" />
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:lottie_rawRes="@raw/animation_gift"
+    app:lottie_autoPlay="true"
+    android:visibility="gone"
 
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>

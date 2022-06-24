@@ -100,7 +100,7 @@ backBtn.setOnClickListener(view -> {
 
             } else {
                 passErr.setVisibility(View.INVISIBLE);
-                if (guestPassword.length() <= 7) {
+                if (guestPassword.length() <= 5) {
                     passErr.setText("Password to short");
                     passErr.setVisibility(View.VISIBLE);
                 }

@@ -141,11 +141,11 @@ android:id="@+id/notificationClick"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-
+android:id="@+id/heroImg"
                         android:src="@drawable/hero"
 
 
-                        />
+                        android:contentDescription="TODO" />
 
                     <View
                         android:layout_width="match_parent"
@@ -251,7 +251,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/fb_bg"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_fullbody" />
 
@@ -333,7 +333,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/ch_bg"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_chest_1" />
 
@@ -413,7 +413,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/abs_bg"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_abs_1" />
 
@@ -489,7 +489,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/arm_bg"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_arm_1" />
 
@@ -567,6 +567,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/leg_bg"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_leg_1" />
@@ -681,6 +682,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/fb_im"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_fullbody" />
@@ -763,7 +765,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/ch_im"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_chest_2" />
 
@@ -843,7 +845,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+android:id="@+id/abs_im"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_abs_2" />
 
@@ -921,6 +923,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/arm_im"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_arm_2" />
@@ -1000,6 +1003,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/leg_im"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_leg_2" />
@@ -1115,6 +1119,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/fb_ad"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_fullbody" />
@@ -1197,6 +1202,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/ch_ad"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_chest_3" />
@@ -1277,6 +1283,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/abs_ad"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_abs_3" />
@@ -1353,6 +1360,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/arm_ad"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_arm_3" />
@@ -1431,6 +1439,7 @@ android:id="@+id/fb_bg_cv"
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/leg_ad"
 
                     android:scaleType="centerCrop"
                     android:src="@drawable/cover_leg_3" />

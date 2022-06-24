@@ -3,8 +3,11 @@ package com.billykybe.fitme;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
 
 public class WelcomeScreen extends AppCompatActivity {
@@ -15,8 +18,10 @@ public class WelcomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_screen);
 
 
-
-        //todo: add timeout then to onboarding
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
+            //todo: add timeout then to onboarding
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -26,6 +31,6 @@ public class WelcomeScreen extends AppCompatActivity {
               startActivity(toOnboarding);
               finish();
             }
-        },1500);
+        },3500);
     }
 }

@@ -50,6 +50,9 @@
     android:layout_marginTop="@dimen/_20sdp"
     android:layout_marginBottom="@dimen/_20sdp"
     />
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:visibility="gone"
@@ -60,38 +63,196 @@
         android:layout_height="0dp"
         android:id="@+id/ageCollection"
 >
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rv_agePick"
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/rv_agePick"-->
+<!--            />-->
+
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/increment_age"
+            android:src="@drawable/add_age"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/backbtn_bg"
+
+            app:tint="@color/black"
+app:layout_constraintStart_toStartOf="parent"
+            android:elevation="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/age_holder_txt"
+
             />
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/decrement_age"
+            android:padding="@dimen/_15sdp"
+            android:elevation="@dimen/_1sdp"
+
+            app:tint="@color/black"
+            android:background="@drawable/backbtn_bg"
+
+            android:src="@drawable/age_minus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@id/age_holder_txt"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="25"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/level_holder"
+            android:fontFamily="@font/proximanovabold"
+            android:textColor="@color/color_secondary"
+            android:id="@+id/age_holder_txt"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_25ssp"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--   /  Age -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:visibility="gone"
-
+android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
         app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
         app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
         app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
         android:layout_height="0dp"
         android:id="@+id/wheightCollection"
-        />
-    <!--   /  wheight -->
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/increment_weight"
+            android:src="@drawable/add_age"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/backbtn_bg"
+
+            app:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/weight_holder_txt"
+
+            />
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/decrement_weight"
+            android:padding="@dimen/_15sdp"
+            android:elevation="@dimen/_1sdp"
+
+            app:tint="@color/black"
+            android:background="@drawable/backbtn_bg"
+
+            android:src="@drawable/age_minus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight_holder_txt"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="55"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/level_holder"
+            android:fontFamily="@font/proximanovabold"
+            android:textColor="@color/color_secondary"
+            android:id="@+id/weight_holder_txt"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_25ssp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--   /  weight -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:visibility="gone"
-
+android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/dc_forms_holder"
         app:layout_constraintEnd_toEndOf="@id/dc_forms_holder"
         app:layout_constraintTop_toTopOf="@id/dc_forms_holder"
         app:layout_constraintBottom_toBottomOf="@id/dc_forms_holder"
         android:layout_height="0dp"
         android:id="@+id/heightCollection"
-        />
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/increment_height"
+            android:src="@drawable/add_age"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/backbtn_bg"
+
+            app:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/height_holder_txt"
+
+            />
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/decrement_height"
+            android:padding="@dimen/_15sdp"
+            android:elevation="@dimen/_1sdp"
+
+            app:tint="@color/black"
+            android:background="@drawable/backbtn_bg"
+
+            android:src="@drawable/age_minus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/height_holder_txt"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:text="25"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/level_holder"
+            android:fontFamily="@font/proximanovabold"
+            android:textColor="@color/color_secondary"
+            android:id="@+id/height_holder_txt"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_25ssp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <!--   /  height -->
 
     <androidx.constraintlayout.widget.ConstraintLayout

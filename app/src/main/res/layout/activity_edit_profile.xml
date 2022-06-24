@@ -87,7 +87,9 @@
 <ImageView
     android:layout_width="@dimen/_20sdp"
     android:layout_height="@dimen/_20sdp"
-    app:tint="@color/color_text_secondary"
+    android:id="@+id/calender_ic"
+
+    app:tint="@color/color_text_primary"
     app:layout_constraintTop_toTopOf="@id/ep_dob_edit"
     app:layout_constraintEnd_toEndOf="@id/ep_dob_edit"
     app:layout_constraintBottom_toBottomOf="@id/ep_dob_edit"
@@ -116,11 +118,11 @@
     <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        app:tint="@color/color_text_secondary"
+        app:tint="@color/color_text_primary"
+        app:layout_constraintStart_toStartOf="@id/calender_ic"
         app:layout_constraintTop_toTopOf="@id/ep_email_edit"
-        app:layout_constraintEnd_toEndOf="@id/ep_email_edit"
+        app:layout_constraintEnd_toEndOf="@id/calender_ic"
         app:layout_constraintBottom_toBottomOf="@id/ep_email_edit"
-        android:layout_marginEnd="@dimen/_10sdp"
         android:src="@drawable/envelope"
         />
 
@@ -129,26 +131,6 @@
 
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:paddingStart="@dimen/_40sdp"
-
-        android:inputType="phone"
-        android:imeOptions="actionDone"
-
-        android:fontFamily="@font/proximanovasemibold"
-        android:background="@drawable/fp_input_bg_null"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/ep_email_edit"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:padding="@dimen/_14sdp"
-        android:textSize="@dimen/_13ssp"
-        android:id="@+id/ep_phone_edit"
-        android:layout_marginEnd="@dimen/_10sdp"    />
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/_20sdp"
@@ -156,20 +138,12 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_height="@dimen/_20sdp"
         android:backgroundTint="@color/color_primary"
-        app:layout_constraintStart_toStartOf="@id/ep_phone_edit"
-        app:layout_constraintTop_toTopOf="@id/ep_phone_edit"
-        app:layout_constraintBottom_toBottomOf="@id/ep_phone_edit"
+        app:layout_constraintStart_toStartOf="@id/ep_gender_edit"
+        app:layout_constraintTop_toTopOf="@id/ep_gender_edit"
+        app:layout_constraintBottom_toBottomOf="@id/ep_gender_edit"
 
         >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/flag"
-            android:elevation="@dimen/_3sdp"
-            android:background="#1AAAAAAA"
 
-            android:scaleType="centerCrop"
-            />
 
     </androidx.cardview.widget.CardView>
 
@@ -184,7 +158,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/ep_phone_edit"
+        app:layout_constraintTop_toBottomOf="@id/ep_email_edit"
         android:layout_marginTop="@dimen/_20sdp"
         android:padding="@dimen/_14sdp"
         android:textSize="@dimen/_13ssp"

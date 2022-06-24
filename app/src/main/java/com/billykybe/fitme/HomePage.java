@@ -1,5 +1,6 @@
 package com.billykybe.fitme;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -7,13 +8,18 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 public class HomePage extends AppCompatActivity {
 TextView greatings;
+BottomNavigationView bottomNavigationView ;
     ImageView homeBtn,accountBtn,historyBtn;
 
     @Override
@@ -24,49 +30,13 @@ TextView greatings;
         homeBtn = findViewById(R.id.home_btn);
         accountBtn = findViewById(R.id.account_btn);
         historyBtn = findViewById(R.id.stats_btn);
+bottomNavigationView = findViewById(R.id.bottomnav);
+bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
 
         int activePage = 0; // todo : // for tint change on btn
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                replaceFragment(new HomeFragment());
-
-            }
-        });
-        accountBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                replaceFragment(new MyProfile());
 
 
-
-
-
-
-            }
-        });
-        historyBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                replaceFragment(new HistoryFragment());
-                Intent intent = new Intent(getApplicationContext(),LoginAccount.class);
-                startActivity(intent);
-
-
-            }
-        });
-
-
-
-    }
-    private void replaceFragment(Fragment fragment) {
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentContainer,fragment);
-        fragmentTransaction.commit();
 
     }
     long pressedtime;
@@ -82,4 +52,30 @@ TextView greatings;
         }
         pressedtime=System.currentTimeMillis();
     }
+    private  BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+         Fragment selectedFragment = new HomeFragment();
+         switch (item.getItemId()){
+             case R.id.nav_account:
+                 selectedFragment = new MyProfile();
+                 break;
+
+             case R.id.nav_home:
+                 selectedFragment = new HomeFragment();
+
+                 break;
+
+             case R.id.nav_insights:
+                 selectedFragment = new HistoryFragment();
+
+                 break;
+         }
+
+
+
+              getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,selectedFragment).commit();
+return true;
+        }
+    };
 }

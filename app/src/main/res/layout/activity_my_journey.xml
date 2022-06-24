@@ -98,7 +98,6 @@ app:layout_constraintBottom_toBottomOf="@id/topHolder"
         app:layout_constraintTop_toBottomOf="@id/progress_text"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
         />
-
     <ImageView
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_150sdp"
@@ -110,6 +109,30 @@ app:layout_constraintEnd_toEndOf="@id/center_holder"
         app:layout_constraintBottom_toBottomOf="@id/center_holder"
 app:layout_constraintStart_toStartOf="@id/center_holder"
 />
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintTop_toTopOf="@id/center_holder"
+        app:layout_constraintBottom_toBottomOf="@id/center_holder"
+        android:src="@drawable/fog_5"
+        android:id="@+id/fog5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageView
+        android:visibility="gone"
+
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintTop_toTopOf="@id/center_holder"
+        app:layout_constraintBottom_toBottomOf="@id/center_holder"
+        android:src="@drawable/fog_6"
+        android:id="@+id/fog6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:fontFamily="@font/proximanovalight"
@@ -122,18 +145,228 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
         app:layout_constraintTop_toBottomOf="@id/badge_img"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
         />
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
+    android:background="@drawable/dash_null"
+    />
     <ScrollView
-        android:layout_width="match_parent"
         android:id="@+id/mj_scrollScreen"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="#800D75EF"
-        android:orientation="horizontal"
+        android:background="@color/color_primary"
+        android:scrollbars="none"
+        android:scrollIndicators="none"
+        android:contentDescription="@string/app_name"
+       android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
 
-        >
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:id="@+id/basecampArch"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_basecamp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/kirkjufellArch"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/achievement_kirkjufell"
+                    app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toEndOf="@id/basecampArch"/>
+         <ImageView
+                   android:id="@+id/elcapitanArch"
+
+                   android:layout_width="@dimen/_60sdp"
+                   android:layout_height="@dimen/_60sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/achievement_el_capitan"
+                   app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toEndOf="@id/kirkjufellArch"
+
+                   app:layout_constraintTop_toTopOf="parent" />
+
+     <ImageView
+                android:id="@+id/mountOlympusArch"
+
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_olympus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/elcapitanArch"
+                app:layout_constraintTop_toTopOf="parent" />
+<ImageView
+                 android:id="@+id/fitzroyArch"
+
+                 android:layout_width="@dimen/_60sdp"
+                 android:layout_height="@dimen/_60sdp"
+                 android:layout_marginStart="@dimen/_10sdp"
+
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/achievement_fitz_roy"
+                 app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+     <ImageView
+                   android:id="@+id/aorakiArch"
+
+                   android:layout_width="@dimen/_60sdp"
+                   android:layout_height="@dimen/_60sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/achievement_aoraki"
+                   app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"                   app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                 android:id="@+id/mountFujiArch"
+
+                 android:layout_width="@dimen/_60sdp"
+                 android:layout_height="@dimen/_60sdp"
+                 android:layout_marginStart="@dimen/_10sdp"
+
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/achievement_fuji"
+                 app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+
+   <ImageView
+                  android:id="@+id/matterhornArch"
+
+                  android:layout_width="@dimen/_60sdp"
+                  android:layout_height="@dimen/_60sdp"
+                  android:layout_marginStart="@dimen/_10sdp"
+
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/achievement_matterhorn"
+                  app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+       <ImageView
+                  android:id="@+id/mountBlancArch"
+
+                  android:layout_width="@dimen/_60sdp"
+                  android:layout_height="@dimen/_60sdp"
+                  android:layout_marginStart="@dimen/_10sdp"
+
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/achievement_mont_blanc"
+                  app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+ <ImageView
+        android:id="@+id/popocArch"
+
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/achievement_popocatepetl"
+        app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <ImageView
+                   android:id="@+id/kilimanjaroArch"
+
+                   android:layout_width="@dimen/_60sdp"
+                   android:layout_height="@dimen/_60sdp"
+                   android:layout_marginStart="@dimen/_10sdp"
+
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/achievement_kilimanjaro"
+                   app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/denaliArch"
+
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_annapurna"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/kilimanjaroArch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/annapurnaArch"
+
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_annapurna"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/denaliArch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/k2Arch"
+
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_k2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/annapurnaArch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/everestArch"
+
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_everest"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/k2Arch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     </ScrollView>
@@ -142,7 +375,6 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="Share"
 
         app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +384,7 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
         android:textSize="@dimen/_15ssp"
         android:fontFamily="@font/proximanovabold"
 android:id="@+id/share_txt"
-        android:background="@drawable/myjourney_bg"
+        android:background="@drawable/share_jouney_bg"
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingBottom="@dimen/_10sdp"

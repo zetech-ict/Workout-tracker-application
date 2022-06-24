@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/gender_selected_bg.xml" value="0.235" />
         <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/genderselectorholder_bg.xml" value="0.235" />
         <entry key="..\:/Users/billy/Documents/FitMe/app/src/main/res/drawable/level_holder.xml" value="0.234" />
@@ -69,39 +70,55 @@
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/item_slider.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/notification_item.xml" value="0.3921161825726141" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/workouts_item.xml" value="0.17331081081081082" />
+        <entry key="app/src/main/res/drawable-v24/dash_null.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/ach_bg.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/addweight_bg.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/backbtn_bg.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/continue_bg.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/continuebtn_bg.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/continueitem_bg.xml" value="0.2405" />
+        <entry key="app/src/main/res/drawable/dash_null.xml" value="0.2345" />
+        <entry key="app/src/main/res/drawable/dashselected_bg.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/dc_goals_selected.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/fp_edit_bg.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/fp_input_bg_null.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/ft_bg.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/genderselectorholder_bg.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/myjourney_bg.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/noti_ic_bg.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/textval_bg.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/welcome_bg.xml" value="0.2405" />
         <entry key="app/src/main/res/layout/activity_about_your_self.xml" value="0.19155405405405404" />
         <entry key="app/src/main/res/layout/activity_bookmarked.xml" value="0.18929765886287625" />
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_data_collection.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_data_collection.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_end_of_workout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_fill_profile.xml" value="0.19155405405405404" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.1912162162162162" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_journey.xml" value="0.15164473684210528" />
         <entry key="app/src/main/res/layout/activity_lets_you_in.xml" value="0.19155405405405404" />
-        <entry key="app/src/main/res/layout/activity_login_account.xml" value="0.18929765886287625" />
+        <entry key="app/src/main/res/layout/activity_login_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19155405405405404" />
         <entry key="app/src/main/res/layout/activity_my_journey.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_notifications.xml" value="0.18929765886287625" />
-        <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.19155405405405404" />
+        <entry key="app/src/main/res/layout/activity_onboarding_screen.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/layout/activity_reminder.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/layout/activity_start_workouts.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_workout_screen.xml" value="0.15164473684210528" />
         <entry key="app/src/main/res/layout/bookedmarked_item.xml" value="0.19054054054054054" />
+        <entry key="app/src/main/res/layout/bookedmarked_list_item.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/dc_goals_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.1912162162162162" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2103307320698625" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14275956284153005" />
+        <entry key="app/src/main/res/layout/fragment_my_profile.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/item_slider.xml" value="0.5" />
         <entry key="app/src/main/res/layout/notification_item.xml" value="0.18929765886287625" />
+        <entry key="app/src/main/res/layout/workouts_item.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2355" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2355" />
       </map>

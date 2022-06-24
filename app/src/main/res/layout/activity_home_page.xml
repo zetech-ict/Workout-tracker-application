@@ -29,10 +29,24 @@
         android:id="@+id/nav_holder"
         android:background="@color/color_primary"
         />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+
+android:id="@+id/bottomnav"
+        android:background="@color/color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nav_holder"
+        app:layout_constraintBottom_toBottomOf="@id/nav_holder"
+        android:layout_height="0dp"
+app:menu="@menu/bottom_navigation"
+        />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-
+android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/nav_holder"
         app:layout_constraintStart_toStartOf="@id/nav_holder"
         app:layout_constraintEnd_toEndOf="@id/nav_holder"

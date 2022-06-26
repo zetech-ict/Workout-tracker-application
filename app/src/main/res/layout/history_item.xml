@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_primary">
+
+
+    <ImageView
+        android:id="@+id/workout_img"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_abs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/nunitolight"
+        android:text="May 25, 10:25PM"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/workout_img"
+        app:layout_constraintTop_toTopOf="@id/workout_img"
+
+        />
+
+    <TextView
+
+
+        android:id="@+id/workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proximanovasemibold"
+        android:text="ABS BEGINNER"
+        android:textColor="@color/color_secondary"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toTopOf="@id/w_timeimg"
+        app:layout_constraintStart_toStartOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/date"
+
+        />
+
+    <ImageView
+        android:id="@+id/w_timeimg"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/ic_workout_time"
+        app:layout_constraintBottom_toBottomOf="@id/workout_img"
+        app:layout_constraintStart_toStartOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/workout" />
+
+    <TextView
+        android:id="@+id/workouttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/nunitolight"
+        android:text="00:15"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/w_timeimg"
+        app:layout_constraintStart_toEndOf="@id/w_timeimg"
+        app:layout_constraintTop_toTopOf="@id/w_timeimg"
+
+        />
+
+    <ImageView
+        android:id="@+id/w_kcalimg"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/ic_workout_calories"
+        app:layout_constraintBottom_toBottomOf="@id/workouttime"
+        app:layout_constraintStart_toEndOf="@id/workouttime"
+        app:layout_constraintTop_toTopOf="@id/workouttime" />
+
+    <TextView
+        android:id="@+id/workoutkcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/nunitolight"
+
+
+        android:text="00:15"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/w_kcalimg"
+        app:layout_constraintStart_toEndOf="@id/w_kcalimg"
+        app:layout_constraintTop_toTopOf="@id/w_kcalimg"
+
+        />
+
+
+    <View
+        android:id="@+id/endline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="#4D212121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workout_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

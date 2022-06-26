@@ -34,6 +34,10 @@ public class OnboardingScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_screen);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
 
         fi_continue = findViewById(R.id.fi_continue);
         fi_text = findViewById(R.id.fi_text);
@@ -101,7 +105,10 @@ slider = findViewById(R.id.viewpager_slider);
         });
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     int getItem(int i){
         return slider.getCurrentItem() + i;

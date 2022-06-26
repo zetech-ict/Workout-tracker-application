@@ -14,37 +14,31 @@
         android:theme="@style/Theme.FitMe"
         tools:targetApi="31">
         <activity
-            android:name=".Reminder"
+            android:name=".SecuritySettings"
             android:exported="false" />
-        <!-- TODO:Add portrait orientation to all scrrens -->
+        <activity
+            android:name=".Reminder"
+            android:exported="false" /> <!-- TODO:Add portrait orientation to all scrrens -->
         <activity
             android:name=".EditProfile"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".EndOfWorkout"
-
-            android:exported="false" />
-        <activity
-            android:name=".JourneyAct"
             android:exported="false" />
         <activity
             android:name=".Workout"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-
+            android:name=".SecurityCheck"
             android:exported="false" />
         <activity
             android:name=".RestWorkout"
-
             android:exported="false" />
         <activity
-
             android:name=".LoginAccount"
-
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MyJourney"
             android:exported="false" />
@@ -52,8 +46,10 @@
             android:name=".OnboardingScreen"
             android:exported="false" />
         <activity
+            android:name=".StartWorkouts"
+            android:exported="false" />
+        <activity
             android:name=".WorkoutScreen"
-
             android:exported="false" />
         <activity
             android:name=".Bookmarked"
@@ -63,7 +59,6 @@
             android:exported="false" />
         <activity
             android:name=".HomePage"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,8 +73,7 @@
             android:name=".CreateAccount"
             android:exported="false" />
         <activity
-            android:name=".StartWorkouts"
-
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".WelcomeScreen"

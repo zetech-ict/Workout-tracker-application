@@ -12,9 +12,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Workout extends AppCompatActivity {
-    public ArrayList<Workout_items_model> workout_list = new ArrayList<>();
+    public List<Workout_items_model> workout_list = new ArrayList<>();
     TextView startBtn;
     Toolbar toolbar;
     RecyclerView rv_workouts;
@@ -32,7 +33,8 @@ public class Workout extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getStrings();
-        addItems(str_workout);
+        WorkoutsDB workoutsDB = new WorkoutsDB(str_workout);
+        workout_list = workoutsDB.getList();
 
         Toast.makeText(getApplicationContext(), str_workout, Toast.LENGTH_LONG).show();
 
@@ -49,6 +51,7 @@ public class Workout extends AppCompatActivity {
 
         startBtn.setOnClickListener(v -> {
             Intent toWorkoutLobby = new Intent(getApplicationContext(), StartWorkouts.class);
+            toWorkoutLobby.putExtra("id",str_workout);
             startActivity(toWorkoutLobby);
             finish();
         });
@@ -58,43 +61,5 @@ public class Workout extends AppCompatActivity {
         str_workout = getIntent().getStringExtra("id");
     }
 
-    public void addItems(String workout_name){
-        switch (workout_name){
-            case "fullbody-bg":
-                workout_list.clear();
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
 
-
-
-                break;
-            case "arms-bg":
-                workout_list.clear();
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                break;
-            case "abs-bg":
-                workout_list.clear();
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-
-                break;
-            case "chest-bg":
-                workout_list.clear();
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                workout_list.add(new Workout_items_model(R.raw.spaceman, "Kicks", "2.45"));
-                break;
-
-        }
-    }
 }

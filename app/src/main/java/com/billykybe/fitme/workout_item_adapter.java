@@ -2,10 +2,12 @@ package com.billykybe.fitme;
 
 
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,9 +33,12 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.lottieImg.setAnimation(workout_items_models.get(position).getW_lottie());
-        holder.lottieImg.playAnimation();
-        holder.lottieImg.loop(true);
+
+
+//        holder.lottieImg.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_items_models.get(position).w_lottie));
+        holder.lottieImg.start();
+
+
         holder.w_name.setText(workout_items_models.get(position).getW_name());
         holder.w_duration.setText(workout_items_models.get(position).getW_duration());
 
@@ -45,7 +50,7 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        LottieAnimationView lottieImg;
+        VideoView lottieImg;
         TextView w_name,w_duration;
 
         public MyViewHolder(@NonNull View itemView) {

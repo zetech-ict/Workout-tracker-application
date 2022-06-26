@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }else if (afterHandler == 2){
-//                    Intent toSecurityCheck = new Intent(getApplicationContext(),);
-//                    TODO://           startActivity(toSecurityCheck);
-
+                    Intent toSecurityCheck = new Intent(getApplicationContext(),SecurityCheck.class);
+                    startActivity(toSecurityCheck);
+finish();
                 }else if (afterHandler == 3){
                     Intent toOnboardingLauncher = new Intent(getApplicationContext(),WelcomeScreen.class);
 startActivity(toOnboardingLauncher);

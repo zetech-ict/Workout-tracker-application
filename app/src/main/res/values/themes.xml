@@ -1,22 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.FitMe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-<!--        <item name="colorPrimary"></item>
-        <item name="colorPrimaryVariant"></item>
-        <item name="colorOnPrimary"></item>-->
 
+        <item name="colorAccent">@color/color_secondary</item>
 
         <item name="android:statusBarColor">@color/color_primary</item>
-        <!-- Secondary brand color. -->
+        <item name="android:colorPrimary">@color/color_primary</item>
         <item name="android:navigationBarColor">@color/color_primary</item>
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="colorOnSecondary">@color/white</item>
-<!--        <item name="colorSecondaryVariant"></item>-->
-
-        <!-- Status bar color. -->
-        <!-- Customize your theme here. -->
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+   <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
     </style>
 

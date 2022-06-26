@@ -94,7 +94,7 @@ app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/counter_holder"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_120sdp"
-            app:layout_constraintBottom_toTopOf="@id/ws_pauseBtn"
+            app:layout_constraintBottom_toTopOf="@id/ws_skipBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ws_title"
@@ -137,30 +137,6 @@ app:layout_constraintTop_toTopOf="parent"
 
                 />
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/ws_pauseBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:background="@drawable/continue_bg"
-
-            android:elevation="0dp"
-            android:fontFamily="@font/proximanovasemibold"
-            android:gravity="center"
-            android:padding="@dimen/_12sdp"
-            android:paddingStart="@dimen/_25sdp"
-            android:paddingEnd="@dimen/_25sdp"
-            android:text="Pause"
-            android:textColor="@color/white"
-
-            android:textSize="@dimen/_12ssp"
-            app:layout_constraintBottom_toTopOf="@id/ws_skipBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/counter_holder" />
 
 
         <TextView
@@ -210,7 +186,7 @@ app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_primary"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <View
             android:id="@+id/top"

@@ -16,14 +16,13 @@
         app:cardElevation="0dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.airbnb.lottie.LottieAnimationView
+        <VideoView
             android:id="@+id/wi_img"
+            android:backgroundTint="@color/color_primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fadingEdge="none"
             android:background="@color/color_primary"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true" />
+            />
 
     </androidx.cardview.widget.CardView>
 

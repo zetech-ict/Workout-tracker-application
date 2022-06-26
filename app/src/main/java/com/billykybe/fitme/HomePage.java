@@ -70,6 +70,10 @@ bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
                  selectedFragment = new HistoryFragment();
 
                  break;
+             case R.id.nav_journey:
+                 selectedFragment = new Journey();
+
+                 break;
          }
 
 

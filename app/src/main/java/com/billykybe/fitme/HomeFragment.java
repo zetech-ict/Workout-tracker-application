@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class HomeFragment extends Fragment {
     TextView greatings;
-    boolean isMale = false;
+    boolean isMale = true;
     View featuredWorkout;
     ImageView notificationsBtn,favorites;
 ImageView featuredIc,fullbodyBg,chestbg ,absBg, armsBg ,legsBg, fullbodyIm,chestIm ,absIm, armsIm ,legsIm,fullbodyAd,chestAd ,absAd, armsAd, legsAd;
@@ -64,12 +64,13 @@ featuredWorkout = view.findViewById(R.id.ft_click);
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),Workout.class);
-                intent.putExtra("id","fullbody-bg");
+                intent.putExtra("id","m-fullbody-bg");
                 startActivity(intent);
 
             }
         });
         notificationsBtn.setOnClickListener(view1 -> {
+            notificationsBtn.setImageResource(R.drawable.menu_notifications);
             Intent notificationGo = new Intent(getActivity(),Notifications.class);
             startActivity(notificationGo);
 
@@ -130,9 +131,9 @@ featuredWorkout = view.findViewById(R.id.ft_click);
             armsIm.setImageResource(R.drawable.cover_arm_2);
             armsAd.setImageResource(R.drawable.cover_arm_3);
 
-            legsBg.setImageResource(R.drawable.cover_arm_1);
-            legsIm.setImageResource(R.drawable.cover_arm_2);
-            legsAd.setImageResource(R.drawable.cover_arm_3);
+            legsBg.setImageResource(R.drawable.cover_leg_1);
+            legsIm.setImageResource(R.drawable.cover_leg_2);
+            legsAd.setImageResource(R.drawable.cover_leg_3);
 
         }
         else {

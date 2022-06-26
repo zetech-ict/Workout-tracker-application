@@ -18,12 +18,17 @@ public class StartWorkouts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_workouts);
-skipcount= findViewById(R.id.fi_continue);
+
+
+        String id = getIntent().getStringExtra("id");
+
+
+        skipcount= findViewById(R.id.fi_continue);
 skipcount.setOnClickListener(view -> {
 
-    Intent intent = new Intent(getApplicationContext(),WorkoutScreen.class);
-    intent.putExtra("id","fullbody-bg");
-    startActivity(intent);
+    Intent intentTo = new Intent(getApplicationContext(),WorkoutScreen.class);
+    intentTo.putExtra("id",id);
+    startActivity(intentTo);
     finish();
 });
         progressBar = findViewById(R.id.gr_progressbar);
@@ -37,16 +42,16 @@ counter = findViewById(R.id.counter_text);
 counter.setText(""+modifier);
 progressBar.setProgress(modifier);
 modifier++;
-handler.postDelayed(this,200);
+handler.postDelayed(this,100);
                 }else {
 
                     Intent intent = new Intent(getApplicationContext(),WorkoutScreen.class);
-                  intent.putExtra("id","fullbody-bg");
+                  intent.putExtra("id",id);
                     startActivity(intent);
                     finish();
                 }
 
             }
-        },200);
+        },100);
     }
 }

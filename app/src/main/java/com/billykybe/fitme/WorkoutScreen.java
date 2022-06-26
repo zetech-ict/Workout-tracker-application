@@ -50,6 +50,21 @@ public class WorkoutScreen extends AppCompatActivity {
     int levelOfWorkout;
     ConstraintLayout clayout;
 ImageView backBtn ;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        wImage.suspend();
+        rest_img.suspend();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        wImage.resume();
+        rest_img.resume();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +95,13 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
         id = intent.getString("id");
         //update list of items
-        addItems(id);
+//        addItems(id);
+
+        WorkoutsDB addWorkouts = new WorkoutsDB(id);
+
+
+        workout_list = addWorkouts.getList();
+
         if (levelOfWorkout == 1) {
             factor = 1.375;
 
@@ -98,7 +119,18 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
         progressBar = findViewById(R.id.ws_progressbar);
         counter = findViewById(R.id.wscounter_text);
 
-        startWorkout(1);
+
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        try {
+
+            mediaPlayer.setDataSource("android.resource://"+getPackageName()+"/"+R.raw.cheer);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+        startWorkout(0);
 
         ////
 
@@ -109,10 +141,6 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             skipRest();
         });
 
-        ws_pauseBtn = findViewById(R.id.ws_pauseBtn);
-        ws_pauseBtn.setOnClickListener(view -> {
-
-        });
 
 
 
@@ -126,84 +154,106 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
     }
 
     private void startWorkout(int look) {
-
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                wText.setText(workout_list.get(look).w_name);
+        int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
+        wText.setText(workout_list.get(look).w_name);
                 wImage.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(look).w_lottie));
                 wImage.start();
 
-                if (modifier <=100){
-                    counter.setText(String.valueOf(modifier));
-                    Toast.makeText(WorkoutScreen.this, String.valueOf(modifier), Toast.LENGTH_SHORT).show();
-
-                    progressBar.setProgress(modifier);
-                    modifier++;
-                    handler.postDelayed(this,200);
-                }else {
-
-                 if (look < workout_list.size()){
-                     Toast.makeText(WorkoutScreen.this, "done", Toast.LENGTH_SHORT).show();
-                    int temp = modifier;
-                     if (modifier<workout_list.size()){
-                        temp = modifier+1;
-                    }
-rest_title.setText(String.valueOf(temp));
-                     rest_img.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(temp).w_lottie));
-                     rest_img.start();
-
-                     rest_img.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                         @Override
-                         public void onPrepared(MediaPlayer mediaPlayer) {
-                             mediaPlayer.setLooping(true);
-                         }
-                     });
-clayout.setVisibility(View.VISIBLE);
-
-                 }else {
-
-                    int lookNext =look+1;
-                     Toast.makeText(WorkoutScreen.this, "lookNext", Toast.LENGTH_SHORT).show();
 
 
 
-                 }
-                }
+        new CountDownTimer(timeToWait,1000){
+            int toShow = Integer.parseInt(workout_list.get(look).getW_duration());
 
+            @Override
+            public void onTick(long l) {
+counter.setText(String.valueOf(toShow));
+toShow--;
             }
-        },200);
+
+            @Override
+            public void onFinish() {
+                if (look == workout_list.size()-1){
+                    MediaPlayer mediaPlayer = new MediaPlayer();
+                    try {
+
+                        mediaPlayer.setDataSource("android.resource://"+getPackageName()+"/"+R.raw.cheer);
+                        mediaPlayer.prepare();
+                        mediaPlayer.start();
+                    }catch (Exception e){
+                        e.getStackTrace();
+                    }
+                    counter.setText("End");
+sentData();
+
+                }else {
+                    MediaPlayer mediaPlayer = new MediaPlayer();
+                    try {
+
+                        mediaPlayer.setDataSource("android.resource://"+getPackageName()+"/"+R.raw.ding);
+                        mediaPlayer.prepare();
+                        mediaPlayer.start();
+                    }catch (Exception e){
+                        e.getStackTrace();
+                    }
+                    int goNext = look+1;
+                    startWorkout(goNext);
+                }
+            }
+        }.start();
+
+//
+//        final Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                wText.setText(workout_list.get(look).w_name);
+//                wImage.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(look).w_lottie));
+//                wImage.start();
+//
+//                if (modifier <=100){
+//                    counter.setText(String.valueOf(modifier));
+//                    Toast.makeText(WorkoutScreen.this, String.valueOf(modifier), Toast.LENGTH_SHORT).show();
+//
+//                    progressBar.setProgress(modifier);
+//                    modifier++;
+//                    handler.postDelayed(this,200);
+//                }else {
+//
+//                 if (look < workout_list.size()){
+//                     Toast.makeText(WorkoutScreen.this, "done", Toast.LENGTH_SHORT).show();
+//                    int temp = modifier;
+//                     if (modifier<workout_list.size()){
+//                        temp = modifier+1;
+//                    }
+//rest_title.setText(String.valueOf(temp));
+//                     rest_img.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(temp).w_lottie));
+//                     rest_img.start();
+//
+//                     rest_img.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                         @Override
+//                         public void onPrepared(MediaPlayer mediaPlayer) {
+//                             mediaPlayer.setLooping(true);
+//                         }
+//                     });
+//clayout.setVisibility(View.VISIBLE);
+//
+//                 }else {
+//
+//                    int lookNext =look+1;
+//                     Toast.makeText(WorkoutScreen.this, "lookNext", Toast.LENGTH_SHORT).show();
+//
+//
+//
+//                 }
+//                }
+//
+//            }
+//        },200);
+
+        
     }
 
-    private void addItems(String id) {
-        switch (id) {
-            case "fullbody-bg":
-                workout_list.clear();
-                workout_list.add(new Workout_items_model(R.raw.bo001_side_leg_lift, "Side Leg Lift", "10"));
-                workout_list.add(new Workout_items_model(R.raw.bo002_mountain_climbers, "Mountain Climbers", "15"));
-
-                workout_list.add(new Workout_items_model(R.raw.bo004_frog_jumps, "Frog Jumps", "20"));
-                workout_list.add(new Workout_items_model(R.raw.bo058_front_wrist_stretch, "Front Wrist Stretch", "25"));
-
-
-                break;
-            case "arms-bg":
-                workout_list.clear();
-
-
-                break;
-            case "abs-bg":
-                workout_list.clear();
-
-                break;
-            case "chest-bg":
-
-                break;
-
-        }
-
-    }
 
     public void sentData() {
         int calories = calories();

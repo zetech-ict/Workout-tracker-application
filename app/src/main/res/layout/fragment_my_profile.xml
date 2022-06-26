@@ -126,7 +126,7 @@ app:layout_constraintTop_toBottomOf="@id/p_email_holder"
 app:layout_constraintStart_toStartOf="@id/game_mode"
         app:layout_constraintEnd_toEndOf="@id/game_mode"
         app:layout_constraintTop_toTopOf="@id/game_mode"
-        android:textColor="@color/white"
+        android:textColor="@color/color_primary"
         android:fontFamily="@font/proximanovabold"
         android:textSize="@dimen/_16ssp"
 android:text="Aim at a higher height"
@@ -196,7 +196,7 @@ android:layout_marginBottom="@dimen/_20sdp"
             android:id="@+id/logout_holder"
             android:layout_marginTop="@dimen/_5sdp"
 
-            app:layout_constraintTop_toBottomOf="@id/darkmode_holder"
+            app:layout_constraintTop_toBottomOf="@id/shareholder"
 
             />
 
@@ -219,15 +219,15 @@ android:layout_marginBottom="@dimen/_20sdp"
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/proximanovasemibold"
             android:text="Logout"
+            android:textColor="@color/error"
             android:textSize="@dimen/_14ssp"
-            android:layout_marginStart="@dimen/_10sdp"
-            app:layout_constraintTop_toTopOf="@id/logout_ic"
             app:layout_constraintBottom_toBottomOf="@id/logout_ic"
             app:layout_constraintStart_toEndOf="@id/logout_ic"
-            android:fontFamily="@font/proximanovasemibold"
-            android:textColor="@color/error"
-            />
+            app:layout_constraintTop_toTopOf="@id/logout_ic"
+            app:layout_constraintVertical_bias="1.0" />
 
 
         <View
@@ -238,28 +238,20 @@ android:layout_marginBottom="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/help_holder"
 
-            android:id="@+id/darkmode_holder"
+            android:id="@+id/shareholder"
             />
 
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/darkmode_holder"
-            android:checked="true"
-            app:layout_constraintBottom_toBottomOf="@id/darkmode_holder"
-            android:layout_marginEnd="@dimen/_10sdp"
 
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
         <ImageView
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/theme"
+            android:src="@drawable/share"
+            android:padding="@dimen/_2sdp"
             app:tint="@color/color_text_primary"
             android:id="@+id/dm_ic"
-            app:layout_constraintTop_toTopOf="@id/darkmode_holder"
-            app:layout_constraintBottom_toBottomOf="@id/darkmode_holder"
+            app:layout_constraintTop_toTopOf="@id/shareholder"
+            app:layout_constraintBottom_toBottomOf="@id/shareholder"
             android:layout_marginStart="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="@id/logout_holder"
             />
@@ -267,7 +259,7 @@ app:layout_constraintEnd_toEndOf="parent"
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dark Theme"
+            android:text="Share FitMe"
             android:layout_marginStart="@dimen/_10sdp"
             android:textSize="@dimen/_14ssp"
 
@@ -282,7 +274,7 @@ app:layout_constraintEnd_toEndOf="parent"
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
-            app:layout_constraintBottom_toTopOf="@id/darkmode_holder"
+            app:layout_constraintBottom_toTopOf="@id/shareholder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/security_holder"
@@ -429,4 +421,124 @@ app:layout_constraintTop_toBottomOf="@id/editprofile_holder"
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loghold_bg"
+    android:id="@+id/logout_holder_backcard"
+android:visibility="gone"
+    />
+    <View
+        android:visibility="gone"
+
+        android:id="@+id/logout_holder_card"
+        android:layout_width="match_parent"
+        android:background="@drawable/logoutp_bg"
+        android:layout_height="@dimen/_255sdp"
+app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+
+        android:id="@+id/customdialogLogout"
+        app:layout_constraintTop_toTopOf="@id/logout_holder_card"
+        app:layout_constraintStart_toStartOf="@id/logout_holder_card"
+        app:layout_constraintEnd_toEndOf="@id/logout_holder_card"
+        app:layout_constraintBottom_toBottomOf="@id/logout_holder_card"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+
+android:text="Logout"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/error"
+            android:id="@+id/logouttxt"
+            android:fontFamily="@font/proximanovabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+/>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+            android:id="@+id/lodivider"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/logouttxt"
+            android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/dash_null"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to log out?"
+android:id="@+id/logoutdesc"
+            android:textColor="@color/color_text_primary"
+android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/lodivider"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/proximanovabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="@dimen/_15sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes, Logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/yesBtn"
+            android:padding="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textSize="@dimen/_14ssp"
+            android:elevation="@dimen/_3sdp"
+app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoutdesc"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/continue_bg"
+            android:gravity="center"
+            />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/noBtn"
+            android:padding="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:textSize="@dimen/_14ssp"
+            android:elevation="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yesBtn"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/color_secondary"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/backbtn_bg"
+
+            android:gravity="center"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

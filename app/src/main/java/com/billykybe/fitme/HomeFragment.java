@@ -262,6 +262,7 @@ featuredWorkout = view.findViewById(R.id.ft_click);
 
     }
 
+
     private void initImages(boolean isMale) {
 
 

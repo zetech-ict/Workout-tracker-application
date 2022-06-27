@@ -94,7 +94,7 @@ app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/counter_holder"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_120sdp"
-            app:layout_constraintBottom_toTopOf="@id/ws_skipBtn"
+            app:layout_constraintBottom_toTopOf="@id/prevWork"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ws_title"
@@ -140,7 +140,7 @@ app:layout_constraintTop_toTopOf="parent"
 
 
         <TextView
-            android:id="@+id/ws_skipBtn"
+            android:id="@+id/prevWork"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_15sdp"
@@ -156,11 +156,11 @@ app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/color_secondary"
             android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ws_startBtn"
+            app:layout_constraintEnd_toStartOf="@id/skipWork"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/ws_startBtn"
+            android:id="@+id/skipWork"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -174,10 +174,10 @@ app:layout_constraintTop_toTopOf="parent"
             android:text="Skip"
             android:textColor="@color/white"
             android:textSize="@dimen/_14ssp"
-            app:layout_constraintBottom_toBottomOf="@id/ws_skipBtn"
+            app:layout_constraintBottom_toBottomOf="@id/prevWork"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ws_skipBtn"
-            app:layout_constraintTop_toTopOf="@id/ws_skipBtn" />
+            app:layout_constraintStart_toEndOf="@id/prevWork"
+            app:layout_constraintTop_toTopOf="@id/prevWork" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

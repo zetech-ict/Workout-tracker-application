@@ -27,26 +27,181 @@ ImageView featuredIc,fullbodyBg,chestbg ,absBg, armsBg ,legsBg, fullbodyIm,chest
 //method me
 
         featuredIc =  view.findViewById(R.id.heroImg);
+        featuredIc.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-fullbody-bg");
+            }else {
+                intent.putExtra("id","f-fullbody-bg");
+
+            }
+            startActivity(intent);
+        });
         fullbodyBg = view.findViewById(R.id.fb_bg);
+        fullbodyBg.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-fullbody-bg");
+            }else {
+                intent.putExtra("id","f-fullbody-bg");
+
+            }
+            startActivity(intent);
+        });
         fullbodyIm = view.findViewById(R.id.fb_im);
+        fullbodyIm.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-fullbody-im");
+            }else {
+                intent.putExtra("id","f-fullbody-im");
+
+            }
+            startActivity(intent);
+        });
         fullbodyAd = view.findViewById(R.id.fb_ad);
+        fullbodyAd.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-fullbody-ad");
+            }else {
+                intent.putExtra("id","f-fullbody-ad");
 
+            }
+            startActivity(intent);
+        });
         chestbg = view.findViewById(R.id.ch_bg);
+        chestbg.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-chest-bg");
+            }else {
+                intent.putExtra("id","f-chest-bg");
+
+            }
+            startActivity(intent);
+        });
         chestIm = view.findViewById(R.id.ch_im);
+        chestIm.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-chest-im");
+            }else {
+                intent.putExtra("id","f-chest-im");
+
+            }
+            startActivity(intent);
+        });
         chestAd = view.findViewById(R.id.ch_ad);
+        chestAd.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-chest-ad");
+            }else {
+                intent.putExtra("id","f-chest-ad");
 
+            }
+            startActivity(intent);
+        });
         absBg = view.findViewById(R.id.abs_bg);
+        absBg.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-abs-bg");
+            }else {
+                intent.putExtra("id","f-abs-bg");
+
+            }
+            startActivity(intent);
+        });
         absIm = view.findViewById(R.id.abs_im);
+        absIm.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-abs-im");
+            }else {
+                intent.putExtra("id","f-abs-im");
+
+            }
+            startActivity(intent);
+        });
         absAd = view.findViewById(R.id.abs_ad);
+        absAd.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-abs-ad");
+            }else {
+                intent.putExtra("id","f-abs-ad");
 
+            }
+            startActivity(intent);
+        });
         armsBg = view.findViewById(R.id.arm_bg);
+        armsBg.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-arm-bg");
+            }else {
+                intent.putExtra("id","f-arm-bg");
+
+            }
+            startActivity(intent);
+        });
         armsIm = view.findViewById(R.id.arm_im);
+        armsIm.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-arm-im");
+            }else {
+                intent.putExtra("id","f-arm-im");
+
+            }
+            startActivity(intent);
+        });
         armsAd = view.findViewById(R.id.arm_ad);
+        armsAd.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-arm-ad");
+            }else {
+                intent.putExtra("id","f-arm-ad");
 
+            }
+            startActivity(intent);
+        });
         legsBg = view.findViewById(R.id.leg_bg);
-        legsIm = view.findViewById(R.id.leg_im);
-        legsAd = view.findViewById(R.id.leg_ad);
+        legsBg.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-leg-bg");
+            }else {
+                intent.putExtra("id","f-leg-bg");
 
+            }
+            startActivity(intent);
+        });
+        legsIm = view.findViewById(R.id.leg_im);
+        legsIm.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-leg-im");
+            }else {
+                intent.putExtra("id","f-leg-im");
+
+            }
+            startActivity(intent);
+        });
+        legsAd = view.findViewById(R.id.leg_ad);
+        legsAd.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(),Workout.class);
+            if (isMale){
+                intent.putExtra("id","m-leg-ad");
+            }else {
+                intent.putExtra("id","f-leg-ad");
+
+            }
+            startActivity(intent);
+        });
 
         ////me me
         initImages(isMale);
@@ -108,9 +263,6 @@ featuredWorkout = view.findViewById(R.id.ft_click);
     }
 
     private void initImages(boolean isMale) {
-        if (isMale){
-
-        }
 
 
 

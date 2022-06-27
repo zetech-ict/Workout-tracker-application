@@ -36,8 +36,10 @@ public class WorkoutScreen extends AppCompatActivity {
     VideoView wImage;
     TextView wText, ws_pauseBtn;
     TextView rst_timmer;
+    TextView skip,prev;
     int modifier = 0;
     int size;
+
     int active;
     private CountDownTimer countDownTimer;
     private boolean countdownRunning;
@@ -74,6 +76,31 @@ rest_img = findViewById(R.id.rest_img);
         rest_rem =findViewById(R.id.wr_texttop_txt);
         rest_title =findViewById(R.id.wr_title_txt);
         rst_timmer =findViewById(R.id.resttimer);
+        skip = findViewById(R.id.skipWork);
+        prev = findViewById(R.id.prevWork);
+
+        skip.setOnClickListener(view ->{
+            if (currentWorkout < workout_list.size()){
+                countDownTimer.cancel();
+
+                currentWorkout++;
+                startWorkout(currentWorkout);
+
+            }
+            else {
+                sentData();
+            }
+
+        } );
+        prev.setOnClickListener(view ->{
+            if (currentWorkout >0){
+                countDownTimer.cancel();
+
+                currentWorkout--;
+                startWorkout(currentWorkout);
+
+            }
+        } );
 
 getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 getWindow().setStatusBarColor(Color.TRANSPARENT);
@@ -130,28 +157,28 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
         }catch (Exception e){
             e.getStackTrace();
         }
-        startWorkout(0);
+        startWorkout(currentWorkout);
 
         ////
 
 
 
-
-        rwContinue.setOnClickListener(View -> {
-            skipRest();
-        });
-
+//
+//        rwContinue.setOnClickListener(View -> {
+//            skipRest();
+//        });
+//
 
 
 
 
     }
 
-    private void skipRest() {
-        clayout.setVisibility(View.GONE);
-        currentWorkout += 1;
-        startWorkout(currentWorkout);
-    }
+//    private void skipRest() {
+//        clayout.setVisibility(View.GONE);
+//        currentWorkout += 1;
+//        startWorkout(currentWorkout);
+//    }
 
     private void startWorkout(int look) {
         int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
@@ -161,11 +188,16 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
 
 
-
+countDownTimer=
         new CountDownTimer(timeToWait,1000){
             int toShow = Integer.parseInt(workout_list.get(look).getW_duration());
 
-            @Override
+            @Override//
+//        rwContinue.setOnClickListener(View -> {
+//            skipRest();
+//        });
+//
+
             public void onTick(long l) {
 counter.setText(String.valueOf(toShow));
 toShow--;
@@ -196,8 +228,8 @@ sentData();
                     }catch (Exception e){
                         e.getStackTrace();
                     }
-                    int goNext = look+1;
-                    startWorkout(goNext);
+                 currentWorkout++;
+                    startWorkout(currentWorkout);
                 }
             }
         }.start();

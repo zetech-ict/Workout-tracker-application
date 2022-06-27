@@ -3,75 +3,90 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingBottom="30dp"
     android:layout_height="match_parent"
     tools:context=".Workout">
 
   <com.google.android.material.appbar.AppBarLayout
-      android:id="@+id/appBarLayout"
-
       android:layout_width="match_parent"
+      android:layout_height="@dimen/_120sdp"
 
-      android:layout_height="@dimen/_150sdp"
       android:fitsSystemWindows="true">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/colapsbar"
+    <com.google.android.material.appbar.CollapsingToolbarLayout
         android:layout_width="match_parent"
 
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:textAlignment="center"
         android:theme="@style/ThemeOverlay.MaterialComponents.Light"
-        app:collapsedTitleTextColor="@color/white"
+        app:collapsedTitleTextColor="@color/color_primary"
         app:contentScrim="@color/color_primary"
+        app:expandedTitleMarginBottom="@dimen/_15sdp"
+        app:expandedTitleMarginStart="@dimen/_15sdp"
         app:expandedTitleTextColor="@color/color_primary"
-        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
       <ImageView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:fitsSystemWindows="true"
-
           android:scaleType="centerCrop"
-          android:src="@drawable/cover_chest_3"
-          app:layout_collapseMode="parallax"
-          android:contentDescription="TODO" />
+          android:src="@drawable/cover_fullbody"
+          app:layout_collapseMode="parallax" />
 
       <View
           android:layout_width="match_parent"
           android:layout_height="@dimen/_100sdp"
           android:layout_gravity="bottom"
-          android:background="@drawable/ft_bg"
+          android:background="@drawable/workout_bg"
 
           />
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/colapsbar"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          app:title="@string/app_name"
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+
+        />
 
 
-    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
   </com.google.android.material.appbar.AppBarLayout>
 
   <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-
       android:background="@color/color_primary"
       android:overScrollMode="never"
       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
+        android:layout_height="wrap_content">
+<View
+    android:layout_width="5dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="@dimen/_10sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginEnd="@dimen/_5sdp"
+  android:background="@color/color_secondary"
+  app:layout_constraintTop_toTopOf="@id/workoutdata"
+    app:layout_constraintBottom_toBottomOf="@id/workoutdata"
+    app:layout_constraintEnd_toStartOf="@id/workoutdata"
+  />
       <TextView
           android:id="@+id/workoutdata"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:textSize="@dimen/_20ssp"
           android:layout_marginStart="@dimen/_15sdp"
           android:layout_marginTop="@dimen/_10sdp"
-          android:textColor="@color/black"
           android:layout_marginBottom="@dimen/_10sdp"
-          android:fontFamily="@font/proximanovabold"
-          android:text="Chest Advanced"
+          android:fontFamily="@font/nunitosemibold"
+          android:text="15 mins - 14 workouts"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +94,6 @@
       <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/rv_workout"
           android:layout_width="match_parent"
-          android:overScrollMode="never"
           android:layout_height="wrap_content"
           android:layout_marginTop="@dimen/_20sdp"
           tools:listitem="@layout/workouts_item"
@@ -98,36 +112,19 @@
 
       >
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textAllCaps="true"
-app:layout_constraintBottom_toBottomOf="parent"
-        android:elevation="@dimen/_3sdp"
-        android:fontFamily="@font/proximanovabold"
-
-
-
-
-
-
-
-        android:id="@+id/startbtn"
-        android:background="@drawable/continue_bg"
-
-        android:textSize="@dimen/_14ssp"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        android:textColor="@color/white"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:padding="@dimen/_14sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd= "@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/startbtn"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_width="match_parent"
+        android:background="@drawable/continue_bg"
+        android:fontFamily="@font/nunitobold"
         android:gravity="center"
-
-     />
+        android:text="START"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/_16ssp" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

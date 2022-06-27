@@ -2,6 +2,7 @@ package com.billykybe.fitme;
 
 
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,8 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
 
-//        holder.lottieImg.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_items_models.get(position).w_lottie));
+        holder.lottieImg.setVideoURI(Uri.parse(String.valueOf(workout_items_models.get(position).getW_lottie())));
+
         holder.lottieImg.start();
 
 
@@ -58,6 +60,12 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
             lottieImg = itemView.findViewById(R.id.wi_img);
             w_name = itemView.findViewById(R.id.wi_title);
             w_duration = itemView.findViewById(R.id.wi_duration);
+            lottieImg.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mediaPlayer) {
+                    mediaPlayer.setLooping(true);
+                }
+            });
         }
     }
 }

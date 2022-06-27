@@ -102,6 +102,7 @@
         <entry key="app/src/main/res/drawable/videooverlay.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/welcome_bg.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/workout_art_bg.xml" value="0.2345" />
+        <entry key="app/src/main/res/drawable/workout_bg.xml" value="0.245" />
         <entry key="app/src/main/res/layout/activity_about_your_self.xml" value="0.19155405405405404" />
         <entry key="app/src/main/res/layout/activity_bookmarked.xml" value="0.18929765886287625" />
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.22" />
@@ -124,7 +125,7 @@
         <entry key="app/src/main/res/layout/activity_security_settings.xml" value="0.15574324324324323" />
         <entry key="app/src/main/res/layout/activity_start_workouts.xml" value="0.15164473684210528" />
         <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_workout.xml" value="0.15164473684210528" />
+        <entry key="app/src/main/res/layout/activity_workout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_workout_screen.xml" value="0.15164473684210528" />
         <entry key="app/src/main/res/layout/bookedmarked_item.xml" value="0.19054054054054054" />
         <entry key="app/src/main/res/layout/bookedmarked_list_item.xml" value="0.24010416666666667" />

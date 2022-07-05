@@ -33,13 +33,6 @@
             android:name=".SecurityCheck"
             android:exported="false" />
         <activity
-            android:name=".RestWorkout"
-            android:exported="false" />
-        <activity
-            android:name=".LoginAccount"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".MyJourney"
             android:exported="false" />
         <activity
@@ -58,7 +51,8 @@
             android:name=".Notifications"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".MainActivity"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,29 +60,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".ForgotPassword"
-            android:exported="false" />
-        <activity
-            android:name=".CreateAccount"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".HomePage"
+
             android:exported="false" />
         <activity
             android:name=".WelcomeScreen"
             android:exported="false" />
-        <activity
-            android:name=".FillProfile"
-            android:exported="false" />
+
         <activity
             android:name=".DataCollection"
             android:exported="false" />
         <activity
             android:name=".AboutYourSelf"
-            android:exported="false" />
-        <activity
-            android:name=".LetsYouIn"
             android:exported="false" />
         <activity
             android:name=".NottificationSettings"

@@ -38,7 +38,8 @@ TextView yesLogout,noLogout;
 
 
         yesLogout.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getActivity(),LetsYouIn.class);
+            Intent intent = new Intent(getActivity(),MainActivity.class);
+            intent.putExtra("toOnboard",3);
             startActivity(intent);
     //TODO:// FINISH
 
@@ -72,7 +73,13 @@ closeLogout.setOnClickListener(view1 -> {
 
 
         shareholder.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getActivity(),SecurityCheck.class);
+
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT,"FitMe Workout Tracker");
+            intent.putExtra(Intent.EXTRA_TEXT,"Hey check out our app at : https://play.google.com/store/apps/details?1d="+BuildConfig.APPLICATION_ID);
+
             startActivity(intent);
 
         });

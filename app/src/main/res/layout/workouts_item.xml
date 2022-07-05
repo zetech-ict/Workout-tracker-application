@@ -14,14 +14,13 @@
         android:layout_marginStart="@dimen/_10sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:cardElevation="0dp"
+        android:background="@color/color_primary"
         app:layout_constraintTop_toTopOf="parent">
 
         <VideoView
             android:id="@+id/wi_img"
-            android:backgroundTint="@color/color_primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/color_primary"
             />
 
     </androidx.cardview.widget.CardView>

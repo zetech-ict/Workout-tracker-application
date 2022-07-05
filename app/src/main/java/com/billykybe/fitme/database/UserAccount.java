@@ -1,28 +1,63 @@
-package com.billykybe.fitme;
+package com.billykybe.fitme.database;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Dao;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.Query;
+
+import com.billykybe.fitme.favorite_model;
+
+import java.util.List;
+
+@Entity
 public class UserAccount {
+    @PrimaryKey(autoGenerate = true)
     int id;
-    String email,password;
-    int pinSecurity;
-    String name;
-    boolean isMale;
-    int age,wheight,height ;
-    int levelOfWorkout ;
-    int whyWorkout [] = new int[5];
-    int contryCode;
 
-    public UserAccount(int id, String email, String name ,boolean isMale,String password,  int age, int wheight, int height, int levelOfWorkout, int[] whyWorkout, int contryCode) {
+    @ColumnInfo(name = "user_email")
+    String email;
+    @ColumnInfo(name = "user_pin")
+    int pinSecurity;
+    @ColumnInfo(name = "user_name")
+    String name;
+    @ColumnInfo(name = "is_male")
+    boolean isMale;
+    @ColumnInfo(name = "user_age")
+int age;
+    @ColumnInfo(name = "user_wheight")
+    int wheight ;
+    @ColumnInfo(name = "user_height")
+
+    int height;
+    @ColumnInfo(name = "user_workout_level")
+
+    int levelOfWorkout ;
+    @ColumnInfo(name = "userWhyWorkout")
+
+    int whyWorkout [] = new int[5];
+    @ColumnInfo(name = "userLastWorkout")
+    favorite_model lastWorkout ;
+
+
+
+
+    public UserAccount(int id, favorite_model lastWorkout ,String email, String name ,boolean isMale,  int age, int wheight, int height, int levelOfWorkout, int[] whyWorkout, int contryCode) {
         this.id = id;
+        this.lastWorkout =lastWorkout;
         this.email = email;
         this.isMale=isMale;
-        this.password = password;
+
         this.name = name;
         this.age = age;
         this.wheight = wheight;
         this.height = height;
         this.levelOfWorkout = levelOfWorkout;
         this.whyWorkout = whyWorkout;
-        this.contryCode = contryCode;
+    }
+
+    public UserAccount() {
+
     }
 
     public int getId() {
@@ -41,12 +76,28 @@ public class UserAccount {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isMale() {
+        return isMale;
+    }
+
+    public void setMale(boolean male) {
+        isMale = male;
+    }
+
+    public favorite_model getLastWorkout() {
+        return lastWorkout;
+    }
+
+    public void setLastWorkout(favorite_model lastWorkout) {
+        this.lastWorkout = lastWorkout;
     }
 
     public int getPinSecurity() {
@@ -97,11 +148,5 @@ public class UserAccount {
         this.whyWorkout = whyWorkout;
     }
 
-    public int getContryCode() {
-        return contryCode;
-    }
 
-    public void setContryCode(int contryCode) {
-        this.contryCode = contryCode;
-    }
 }

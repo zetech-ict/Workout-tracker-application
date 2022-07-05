@@ -21,7 +21,6 @@ import java.util.List;
 public class Workout extends AppCompatActivity {
     public List<Workout_items_model> workout_list = new ArrayList<>();
     TextView startBtn,workoutData;
-    Toolbar toolbar;
     RecyclerView rv_workouts;
     workout_item_adapter workout_item_adapter;
 
@@ -36,7 +35,6 @@ public class Workout extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
-        toolbar = findViewById(R.id.colapsbar);
 workoutData = findViewById(R.id.workoutdata);
 
 

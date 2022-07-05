@@ -138,6 +138,7 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
         android:fontFamily="@font/proximanovalight"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_11ssp"
+        android:id="@+id/infoTxt"
         android:layout_height="wrap_content"
         android:text="The best view comes after the hardest climb"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +154,7 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
     app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
     android:background="@drawable/dash_null"
     />
-    <ScrollView
+    <HorizontalScrollView
         android:id="@+id/mj_scrollScreen"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
@@ -170,7 +171,9 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/_10sdp"
+
+            android:layout_height="match_parent"
 
             >
 
@@ -231,9 +234,9 @@ app:layout_constraintStart_toEndOf="@id/basecampArch"/>
                  android:layout_marginStart="@dimen/_10sdp"
 
                  android:scaleType="centerCrop"
+    app:layout_constraintStart_toEndOf="@id/mountOlympusArch"
                  android:src="@drawable/achievement_fitz_roy"
                  app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
                  app:layout_constraintTop_toTopOf="parent" />
 
      <ImageView
@@ -242,11 +245,11 @@ app:layout_constraintStart_toStartOf="parent"
                    android:layout_width="@dimen/_60sdp"
                    android:layout_height="@dimen/_60sdp"
                    android:layout_marginStart="@dimen/_10sdp"
-
+app:layout_constraintStart_toEndOf="@id/fitzroyArch"
                    android:scaleType="centerCrop"
                    android:src="@drawable/achievement_aoraki"
                    app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"                   app:layout_constraintTop_toTopOf="parent" />
+             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
                  android:id="@+id/mountFujiArch"
@@ -258,7 +261,8 @@ app:layout_constraintStart_toStartOf="parent"                   app:layout_const
                  android:scaleType="centerCrop"
                  android:src="@drawable/achievement_fuji"
                  app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/aorakiArch"
+
                  app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -272,7 +276,8 @@ app:layout_constraintStart_toStartOf="parent"
                   android:scaleType="centerCrop"
                   android:src="@drawable/achievement_matterhorn"
                   app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintStart_toEndOf="@id/mountFujiArch"
+
                   app:layout_constraintTop_toTopOf="parent" />
 
        <ImageView
@@ -285,7 +290,8 @@ app:layout_constraintStart_toStartOf="parent"
                   android:scaleType="centerCrop"
                   android:src="@drawable/achievement_mont_blanc"
                   app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintStart_toEndOf="@id/matterhornArch"
+
                   app:layout_constraintTop_toTopOf="parent" />
 
  <ImageView
@@ -298,7 +304,8 @@ app:layout_constraintStart_toStartOf="parent"
         android:scaleType="centerCrop"
         android:src="@drawable/achievement_popocatepetl"
         app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintStart_toEndOf="@id/mountBlancArch"
+
      app:layout_constraintTop_toTopOf="parent" />
 
  <ImageView
@@ -311,7 +318,8 @@ app:layout_constraintStart_toStartOf="parent"
                    android:scaleType="centerCrop"
                    android:src="@drawable/achievement_kilimanjaro"
                    app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintStart_toEndOf="@id/popocArch"
+
                    app:layout_constraintTop_toTopOf="parent" />
             <ImageView
                 android:id="@+id/denaliArch"
@@ -321,7 +329,7 @@ app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="@dimen/_10sdp"
 
                 android:scaleType="centerCrop"
-                android:src="@drawable/achievement_annapurna"
+                android:src="@drawable/achievement_denali"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/kilimanjaroArch"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -364,13 +372,14 @@ app:layout_constraintStart_toStartOf="parent"
                 android:src="@drawable/achievement_everest"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/k2Arch"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                 />
 
            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-    </ScrollView>
+    </HorizontalScrollView>
 
 
     <TextView

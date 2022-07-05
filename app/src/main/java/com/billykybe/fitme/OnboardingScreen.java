@@ -47,7 +47,7 @@ public class OnboardingScreen extends AppCompatActivity {
         mainImage =findViewById(R.id.mainimg);
 
         fi_continue.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),LetsYouIn.class);
+            Intent intent = new Intent(getApplicationContext(),HomePage.class);
             startActivity(intent);
             finish();
         });

@@ -40,17 +40,19 @@ dependencies {
     implementation 'io.github.ShawnLin013:number-picker:2.4.13'
 
 
+    implementation "androidx.room:room-runtime:2.4.2"
 
 //    Biometrics
     implementation 'androidx.biometric:biometric:1.1.0'
 
 
-
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'androidx.room:room-compiler:2.5.0-alpha02'
+
+    implementation 'androidx.room:room-runtime:2.5.0-alpha02'
     testImplementation 'junit:junit:4.13.2'
 
 

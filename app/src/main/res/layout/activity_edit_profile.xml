@@ -67,10 +67,11 @@
 
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Date of birth"
+        android:text="20"
         android:fontFamily="@font/proximanovasemibold"
         android:background="@drawable/fp_input_bg_null"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +85,179 @@
         android:imeOptions="actionNext"
         android:id="@+id/ep_dob_edit"
         android:layout_marginEnd="@dimen/_10sdp"    />
+
+<View
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/clickBack"
+    android:visibility="gone"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@drawable/avoid"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:id="@+id/editHolder"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_5sdp"
+
+        android:elevation="@dimen/_3sdp"
+        android:background="@color/color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:id="@+id/genderEdit"
+        android:elevation="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="@id/editHolder"
+        app:layout_constraintBottom_toBottomOf="@id/editHolder"
+        app:layout_constraintEnd_toEndOf="@id/editHolder"
+        app:layout_constraintTop_toTopOf="@id/editHolder"
+
+        >
+
+        <View
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/edit_female_holder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/edit_male_holder"
+            android:background="@drawable/genderselectorholder_bg"
+            />
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/edit_male_holder"
+            app:layout_constraintEnd_toEndOf="@id/edit_male_holder"
+            app:layout_constraintTop_toTopOf="@id/edit_male_holder"
+            app:layout_constraintBottom_toTopOf="@id/edit_male_txt"
+            android:id="@+id/edit_male_img"
+            android:src="@drawable/male"
+            />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/edit_male_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/edit_male_txt"
+            android:fontFamily="@font/proximanovabold"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/edit_male_holder"
+            app:layout_constraintEnd_toEndOf="@id/edit_male_holder"
+            app:layout_constraintBottom_toBottomOf="@id/edit_male_holder"
+            />
+
+
+        <View
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+
+app:layout_constraintStart_toEndOf="@id/edit_male_holder"            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/edit_female_holder"
+            android:background="@drawable/gender_selected_bg"
+            />
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/edit_female_holder"
+            app:layout_constraintEnd_toEndOf="@id/edit_female_holder"
+            app:layout_constraintTop_toTopOf="@id/edit_female_holder"
+            app:layout_constraintBottom_toTopOf="@id/edit_female_txt"
+            android:id="@+id/edit_female_img"
+            android:src="@drawable/female"
+            />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/edit_male_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/edit_female_txt"
+            android:fontFamily="@font/proximanovabold"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/edit_female_holder"
+            app:layout_constraintEnd_toEndOf="@id/edit_female_holder"
+            app:layout_constraintBottom_toBottomOf="@id/edit_female_holder"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:elevation="@dimen/_3sdp"
+android:id="@+id/ageedditor"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/editHolder"
+        app:layout_constraintBottom_toBottomOf="@id/editHolder"
+        app:layout_constraintEnd_toEndOf="@id/editHolder"
+        app:layout_constraintTop_toTopOf="@id/editHolder"
+
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:background="@color/color_primary"
+            android:fontFamily="@font/proximanovabold"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold"
+            android:id="@+id/ageedit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/color_text_primary"
+            />
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintTop_toTopOf="@id/ageedit"
+            app:layout_constraintBottom_toBottomOf="@id/ageedit"
+            app:layout_constraintEnd_toStartOf="@id/ageedit"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/age_minus"
+            app:tint="@color/color_text_primary"
+            android:id="@+id/minusagedit"
+
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/backbtn_bg"
+
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/addagedit"
+            app:layout_constraintStart_toEndOf="@id/ageedit"
+            app:layout_constraintTop_toTopOf="@id/ageedit"
+            app:layout_constraintBottom_toBottomOf="@id/ageedit"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/add_age"
+            app:tint="@color/color_text_primary"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/backbtn_bg"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 <ImageView
     android:layout_width="@dimen/_20sdp"
     android:layout_height="@dimen/_20sdp"
@@ -132,27 +306,15 @@
 
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_20sdp"
-        app:cardElevation="0dp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:backgroundTint="@color/color_primary"
-        app:layout_constraintStart_toStartOf="@id/ep_gender_edit"
-        app:layout_constraintTop_toTopOf="@id/ep_gender_edit"
-        app:layout_constraintBottom_toBottomOf="@id/ep_gender_edit"
-
-        >
-
-
-    </androidx.cardview.widget.CardView>
 
 
 
-    <EditText
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Gender"
+        android:text="Male"
         android:fontFamily="@font/proximanovasemibold"
         android:background="@drawable/fp_input_bg_null"
         app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +341,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Update"
-        android:elevation="@dimen/_3sdp"
         android:fontFamily="@font/proximanovasemibold"
 
 

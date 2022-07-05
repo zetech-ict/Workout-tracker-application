@@ -12,6 +12,8 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.billykybe.fitme.database.FitMeDatabase;
+import com.billykybe.fitme.database.UserAccount;
 import com.shawnlin.numberpicker.NumberPicker;
 
 import java.util.ArrayList;
@@ -20,9 +22,9 @@ import java.util.List;
 public class DataCollection extends AppCompatActivity {
     int age = 25;
     TextView ageHolder;
-    double weight = 55.00;
+    int weight = 55;
     TextView weightHolder;
-    double height = 300;
+    int height = 300;
     TextView heightHolder;
     boolean isMale;
     int goal,activityLevel;
@@ -68,7 +70,7 @@ updateView(COLLECTION_SCREEN);
             }
             else {
                 COLLECTION_SCREEN = 5;
-                Intent intent = new Intent(getApplicationContext(),FillProfile.class);
+                Intent intent = new Intent(getApplicationContext(),HomePage.class);
 
                 intent.putExtra("age",age);
                 intent.putExtra("weight",weight);
@@ -76,6 +78,8 @@ updateView(COLLECTION_SCREEN);
                 intent.putExtra("isMale",isMale);
                 intent.putExtra("goal",goal);
                 intent.putExtra("activityLevel",activityLevel);
+
+                createUser(age,weight,height,isMale,goal,activityLevel);
                 startActivity(intent);
             }
         });
@@ -185,6 +189,20 @@ updateView(COLLECTION_SCREEN);
 
         });
 
+    }
+
+    private void createUser(int age, int weight, int height, boolean isMale, int goal, int activityLevel) {
+        FitMeDatabase db = FitMeDatabase.getInstance(this.getApplicationContext());
+        UserAccount user = new UserAccount();
+        user.setId(1);
+        user.setAge(age);
+        user.setWheight(weight);
+        user.setHeight(height);
+        user.setMale(isMale);
+
+        user.setLevelOfWorkout(activityLevel);
+        db.userDao().insertUser(user);
+        finish();
     }
 
     private void goalsPicker() {

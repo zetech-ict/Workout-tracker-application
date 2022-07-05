@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class SecuritySettings extends AppCompatActivity {
 ImageView backIc ,backAct;
 boolean allowAccesss = false;
-String oldPin="1234",newPin;
+String oldPin="1234",newPin,tempPin;
 TextView ssEnterdPin,one,two,three,four,five,six,seven,eight,nine,zero,changePinBtn;
 View pinslotone,pinslottwo,pinslotthree,pinslotfour,pincover,keyboard,passHolder,logView;
 

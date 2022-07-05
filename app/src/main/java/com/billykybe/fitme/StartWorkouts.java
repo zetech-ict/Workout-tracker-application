@@ -24,25 +24,20 @@ public class StartWorkouts extends AppCompatActivity {
 
 
         skipcount= findViewById(R.id.fi_continue);
-skipcount.setOnClickListener(view -> {
 
-    Intent intentTo = new Intent(getApplicationContext(),WorkoutScreen.class);
-    intentTo.putExtra("id",id);
-    startActivity(intentTo);
-    finish();
-});
         progressBar = findViewById(R.id.gr_progressbar);
+        progressBar.setMax(15);
 counter = findViewById(R.id.counter_text);
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                if (modifier <= 100){
+                if (modifier >= 0){
 counter.setText(""+modifier);
 progressBar.setProgress(modifier);
-modifier++;
-handler.postDelayed(this,100);
+modifier--;
+handler.postDelayed(this,1000);
                 }else {
 
                     Intent intent = new Intent(getApplicationContext(),WorkoutScreen.class);
@@ -52,6 +47,13 @@ handler.postDelayed(this,100);
                 }
 
             }
-        },100);
+        },1500);
+        skipcount.setOnClickListener(view -> {
+handler.removeCallbacksAndMessages(null);
+            Intent intentTo = new Intent(getApplicationContext(),WorkoutScreen.class);
+            intentTo.putExtra("id",id);
+            startActivity(intentTo);
+            finish();
+        });
     }
 }

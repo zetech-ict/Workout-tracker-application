@@ -10,13 +10,17 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.billykybe.fitme.database.FitMeDatabase;
+import com.billykybe.fitme.database.UserAccount;
+
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
     TextView greatings;
-    boolean isMale = true;
+    boolean isMale ;
     View featuredWorkout;
     ImageView notificationsBtn,favorites;
 ImageView featuredIc,fullbodyBg,chestbg ,absBg, armsBg ,legsBg, fullbodyIm,chestIm ,absIm, armsIm ,legsIm,fullbodyAd,chestAd ,absAd, armsAd, legsAd;
@@ -25,7 +29,9 @@ ImageView featuredIc,fullbodyBg,chestbg ,absBg, armsBg ,legsBg, fullbodyIm,chest
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 //method me
+        FitMeDatabase db = FitMeDatabase.getInstance(getContext());
 
+List<UserAccount> userAccounts = db.userDao().getAllUsers();
         featuredIc =  view.findViewById(R.id.heroImg);
         featuredIc.setOnClickListener(view1 -> {
             Intent intent = new Intent(getActivity(),Workout.class);

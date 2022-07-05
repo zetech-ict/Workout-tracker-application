@@ -70,6 +70,42 @@
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/item_slider.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/notification_item.xml" value="0.3921161825726141" />
         <entry key="..\:/Users/billy/Downloads/Workout-tracker-application/app/src/main/res/layout/workouts_item.xml" value="0.17331081081081082" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/drawable/ach_bg.xml" value="0.25" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/drawable/archcard_bg.xml" value="0.25" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/drawable/avoid.xml" value="0.1335" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/drawable/calos_art_bg.xml" value="0.226" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/drawable/loghold_bg.xml" value="0.2385" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_about_your_self.xml" value="0.14719945355191258" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_bookmarked.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_create_account.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_data_collection.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_edit_profile.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_end_of_workout.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_fill_profile.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_forgot_password.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_home_page.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_login_account.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_main.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_my_journey.xml" value="0.2" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_notifications.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_nottification_settings.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_rest_workout.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_security_check.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_security_settings.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_start_workouts.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_welcome_screen.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_workout.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/activity_workout_screen.xml" value="0.14493243243243242" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/agepick_item.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/bookedmarked_list_item.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/dc_goals_item.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/favorite_item.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/fragment_history.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/fragment_home.xml" value="0.17432432432432432" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/fragment_journey.xml" value="0.25" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/fragment_my_profile.xml" value="0.33" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/history_item.xml" value="0.33" />
+        <entry key="..\:/Users/billy/OneDrive/Desktop/Workout-tracker-application/Workout-tracker-application/app/src/main/res/layout/workouts_item.xml" value="0.33" />
         <entry key="app/src/main/res/drawable-v24/dash_null.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/ach_bg.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/addweight_bg.xml" value="0.2615" />

@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MyJourney extends AppCompatActivity {
     ImageView mj_backBtn;
-    TextView shareBtn,progtext,share_txt;
+    TextView shareBtn,progtext,share_txt,infoTxt;
     String shareText ;
     List<MtData> mtData = new ArrayList<>();
     int openedSummit = 2;
@@ -33,12 +33,17 @@ mj_backBtn.setOnClickListener(view -> {finish();});
 initMt();
 shareBtn.setOnClickListener(view -> {
     shareText = "I summited "+mtData.get(currentWatchedItem).getName()+
-            " ("+mtData.get(currentWatchedItem).getHeight()+" m) on "+
-            mtData.get(currentWatchedItem).getDay()+" "+
-            mtData.get(currentWatchedItem).getMonth()+" "+
-            mtData.get(currentWatchedItem).getYear()+" Join me on my fitness journey with FitMe workouts";
+            " ("+mtData.get(currentWatchedItem).getHeight()+" m)  "+
+//            mtData.get(currentWatchedItem).getDay()+" "+
+//            mtData.get(currentWatchedItem).getMonth()+" "+
+//            mtData.get(currentWatchedItem).getYear()+
+            " Join me on my fitness journey with FitMe workouts";
 
-    Toast.makeText(this, shareText, Toast.LENGTH_SHORT).show();
+    Intent intent = new Intent(Intent.ACTION_SEND);
+    intent.setType("text/plain");
+    intent.putExtra(Intent.EXTRA_SUBJECT,"FitMe App");
+    intent.putExtra(Intent.EXTRA_TEXT,shareText);
+    startActivity(Intent.createChooser(intent,"Share using"));
 });
 
 
@@ -188,9 +193,11 @@ setShareBtn();
         }else {
         if (currentWatchedItem - openedSummit == 1){
             fog1.setVisibility(View.VISIBLE);
+            infoTxt.setText("Almost there keep climbing");
         }else {
             fog1.setVisibility(View.VISIBLE);
             fog2.setVisibility(View.VISIBLE);
+            infoTxt.setText("The best view comes after the hardest climb");
         }
             shareBtn.setVisibility(View.GONE);
 
@@ -212,6 +219,8 @@ setShareBtn();
         mt8 =findViewById(R.id.matterhornArch);
         mt9 =findViewById(R.id.mountBlancArch);
         mt10 =findViewById(R.id.popocArch);
+            infoTxt = findViewById(R.id.infoTxt);
+
         mt11 =findViewById(R.id.kilimanjaroArch);
         mt12 =findViewById(R.id.denaliArch);
         mt13 =findViewById(R.id.annapurnaArch);

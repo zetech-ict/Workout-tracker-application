@@ -41,7 +41,7 @@ public class WorkoutScreen extends AppCompatActivity {
     int size;
 
     int active;
-    private CountDownTimer countDownTimer;
+    private CountDownTimer countDownTimer,restCountTimer;
     private boolean countdownRunning;
     private long timeLeft;
     int weight = 30, height = 30, age = 20;
@@ -49,6 +49,7 @@ public class WorkoutScreen extends AppCompatActivity {
     int currentWorkout =0;
     TextView rest_rem,rest_title;
     VideoView rest_img;
+
     int levelOfWorkout;
     ConstraintLayout clayout;
 ImageView backBtn ;
@@ -67,6 +68,7 @@ ImageView backBtn ;
         wImage.resume();
         rest_img.resume();
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +145,7 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
         rwContinue = findViewById(R.id.rw_continue);
 
 
+
         progressBar = findViewById(R.id.ws_progressbar);
         counter = findViewById(R.id.wscounter_text);
 
@@ -163,22 +166,28 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
 
 
-//
-//        rwContinue.setOnClickListener(View -> {
-//            skipRest();
-//        });
-//
+
+        rwContinue.setOnClickListener(View -> {
+            skipRest();
+        });
+
 
 
 
 
     }
 
-//    private void skipRest() {
-//        clayout.setVisibility(View.GONE);
-//        currentWorkout += 1;
-//        startWorkout(currentWorkout);
-//    }
+    private void skipRest() {
+        try {
+            restCountTimer.cancel();
+            countDownTimer.cancel();
+        }catch (Exception e){
+
+        }
+        clayout.setVisibility(View.GONE);
+        currentWorkout += 1;
+        startWorkout(currentWorkout);
+    }
 
     private void startWorkout(int look) {
         int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
@@ -188,24 +197,28 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
 
 
+                progressBar.setMax(Integer.parseInt(workout_list.get(look).getW_duration()));
+
 countDownTimer=
         new CountDownTimer(timeToWait,1000){
-            int toShow = Integer.parseInt(workout_list.get(look).getW_duration());
+    int toShow = Integer.parseInt(workout_list.get(look).getW_duration());
+int modifiy  = 0;
 
-            @Override//
-//        rwContinue.setOnClickListener(View -> {
-//            skipRest();
-//        });
-//
+            @Override
+
 
             public void onTick(long l) {
+
 counter.setText(String.valueOf(toShow));
 toShow--;
+
+                progressBar.setProgress(modifiy);
+modifiy++;
             }
 
             @Override
             public void onFinish() {
-                if (look == workout_list.size()-1){
+                if (look == workout_list.size()){
                     MediaPlayer mediaPlayer = new MediaPlayer();
                     try {
 
@@ -219,71 +232,69 @@ toShow--;
 sentData();
 
                 }else {
-                    MediaPlayer mediaPlayer = new MediaPlayer();
-                    try {
 
-                        mediaPlayer.setDataSource("android.resource://"+getPackageName()+"/"+R.raw.ding);
-                        mediaPlayer.prepare();
-                        mediaPlayer.start();
-                    }catch (Exception e){
-                        e.getStackTrace();
-                    }
-                 currentWorkout++;
-                    startWorkout(currentWorkout);
+
+
+restShow(currentWorkout);
+
+
                 }
             }
         }.start();
 
-//
-//        final Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                wText.setText(workout_list.get(look).w_name);
-//                wImage.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(look).w_lottie));
-//                wImage.start();
-//
-//                if (modifier <=100){
-//                    counter.setText(String.valueOf(modifier));
-//                    Toast.makeText(WorkoutScreen.this, String.valueOf(modifier), Toast.LENGTH_SHORT).show();
-//
-//                    progressBar.setProgress(modifier);
-//                    modifier++;
-//                    handler.postDelayed(this,200);
-//                }else {
-//
-//                 if (look < workout_list.size()){
-//                     Toast.makeText(WorkoutScreen.this, "done", Toast.LENGTH_SHORT).show();
-//                    int temp = modifier;
-//                     if (modifier<workout_list.size()){
-//                        temp = modifier+1;
-//                    }
-//rest_title.setText(String.valueOf(temp));
-//                     rest_img.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(temp).w_lottie));
-//                     rest_img.start();
-//
-//                     rest_img.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//                         @Override
-//                         public void onPrepared(MediaPlayer mediaPlayer) {
-//                             mediaPlayer.setLooping(true);
-//                         }
-//                     });
-//clayout.setVisibility(View.VISIBLE);
-//
-//                 }else {
-//
-//                    int lookNext =look+1;
-//                     Toast.makeText(WorkoutScreen.this, "lookNext", Toast.LENGTH_SHORT).show();
-//
-//
-//
-//                 }
-//                }
-//
-//            }
-//        },200);
 
         
+    }
+
+    private void restShow(int currentWorkout) {
+int i =currentWorkout;
+
+            clayout.setVisibility(View.VISIBLE);
+            if (currentWorkout!= workout_list.size()) {
+                i = currentWorkout + 1;
+            }
+
+        String remtextMsg = "Next Workout ("+i+"/"+workout_list.size()+")";
+
+        rest_rem.setText(remtextMsg);
+        rest_title.setText(workout_list.get(i).w_name);
+        wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
+        rest_img.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(i).w_lottie));
+        wImage.start();
+
+int restDuration = 10000;
+        restCountTimer=
+                new CountDownTimer(restDuration,1000){
+                    int modifiy  = 0;
+                    int restRem = 10;
+
+                    @Override
+
+
+                    public void onTick(long l) {
+
+                        rst_timmer.setText(String.valueOf(restRem));
+
+                        restRem--;
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+
+
+             skipRest();
+
+                        }
+
+                }.start();
+        //// End of rest
+
     }
 
 

@@ -2,6 +2,7 @@ package com.billykybe.fitme;
 
 
 
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -20,8 +21,12 @@ import java.util.List;
 
 public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_adapter.MyViewHolder> {
 
-    List<Workout_items_model> workout_items_models;
 
+    List<Workout_items_model> workout_items_models;
+Context context ;
+    public  workout_item_adapter(Context context){
+        this.context = context;
+    }
     public workout_item_adapter(List<Workout_items_model> workout_items_models) {
         this.workout_items_models = workout_items_models;
     }
@@ -29,6 +34,7 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        this.context = parent.getContext();
         return   new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.workouts_item, parent, false));
     }
 
@@ -36,10 +42,8 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
 
-        holder.lottieImg.setVideoURI(Uri.parse(String.valueOf(workout_items_models.get(position).getW_lottie())));
-
+        holder.lottieImg.setVideoURI(Uri.parse("android.resource://"+context.getPackageName()+"/"+workout_items_models.get(position).w_lottie));
         holder.lottieImg.start();
-
 
         holder.w_name.setText(workout_items_models.get(position).getW_name());
         holder.w_duration.setText(workout_items_models.get(position).getW_duration());
@@ -56,6 +60,7 @@ public class workout_item_adapter  extends RecyclerView.Adapter<workout_item_ada
         TextView w_name,w_duration;
 
         public MyViewHolder(@NonNull View itemView) {
+
             super(itemView);
             lottieImg = itemView.findViewById(R.id.wi_img);
             w_name = itemView.findViewById(R.id.wi_title);

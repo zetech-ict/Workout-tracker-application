@@ -32,6 +32,8 @@ List<favorite_model> favorites ;
         holder.fav_image.setImageResource(favorites.get(position).getFav_image());
         holder.fav_level.setImageResource(favorites.get(position).getFav_level());
 
+
+
     }
 
     @Override
@@ -52,5 +54,6 @@ List<favorite_model> favorites ;
 
 
         }
+
     }
 }

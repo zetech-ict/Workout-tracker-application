@@ -33,7 +33,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="0dp"
-app:itemIconTint="@color/color_secondary"
+app:itemIconTint="@drawable/item_selected_nav"
         app:itemTextColor="@color/color_secondary"
 
 android:id="@+id/bottomnav"

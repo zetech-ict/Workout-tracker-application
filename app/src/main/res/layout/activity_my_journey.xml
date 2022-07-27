@@ -3,42 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/color_primary"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".MyJourney">
+
     <View
+        android:id="@+id/cloud_holder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
-        android:id="@+id/cloud_holder"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-<View
-    android:layout_width="match_parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_height="56dp"
-    android:id="@+id/topHolder"
-    />
+    <View
+        android:id="@+id/topHolder"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
+        android:id="@+id/mj_backBtn"
         android:layout_width="@dimen/_25sdp"
         android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="@id/topHolder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintBottom_toBottomOf="@id/topHolder"
-        android:src="@drawable/ic_round_arrow_back_24"
-        app:tint="@color/color_text_primary"
-        android:id="@+id/mj_backBtn"
-        android:layout_marginStart="@dimen/_10sdp"
-        />
+        app:tint="@color/color_text_primary" />
 
 
     <TextView
+        android:id="@+id/arch_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
@@ -47,133 +47,124 @@ app:layout_constraintBottom_toBottomOf="@id/topHolder"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        android:id="@+id/arch_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/mj_backBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/mj_backBtn"
 
         />
 
     <View
+        android:id="@+id/progress_text_holder"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="1dp"
-        app:layout_constraintStart_toStartOf="@id/arch_text"
-        app:layout_constraintEnd_toEndOf="@id/arch_text"
-        app:layout_constraintTop_toBottomOf="@id/arch_text"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="#4DAAAAAA"
-        android:id="@+id/progress_text_holder"
-        />
+        app:layout_constraintEnd_toEndOf="@id/arch_text"
+        app:layout_constraintStart_toStartOf="@id/arch_text"
+        app:layout_constraintTop_toBottomOf="@id/arch_text" />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="04 of 15"
-    android:padding="@dimen/_5sdp"
-    android:background="@color/color_primary"
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:fontFamily="@font/proximanovasemibold"
 
-    android:textColor="@color/color_text_primary"
-    android:fontFamily="@font/proximanovasemibold"
-    app:layout_constraintStart_toStartOf="@id/progress_text_holder"
-    app:layout_constraintEnd_toEndOf="@id/progress_text_holder"
-    app:layout_constraintTop_toTopOf="@id/progress_text_holder"
-    app:layout_constraintBottom_toBottomOf="@id/progress_text_holder"
+        android:padding="@dimen/_5sdp"
+        android:text="04 of 15"
+        android:textColor="@color/color_text_primary"
+        app:layout_constraintBottom_toBottomOf="@id/progress_text_holder"
+        app:layout_constraintEnd_toEndOf="@id/progress_text_holder"
+        app:layout_constraintStart_toStartOf="@id/progress_text_holder"
 
-    android:id="@+id/progress_text"
-    />
-
-
-
-
-
+        app:layout_constraintTop_toTopOf="@id/progress_text_holder" />
 
 
     <View
+        android:id="@+id/center_holder"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/center_holder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progress_text"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_text" />
+
     <ImageView
+        android:id="@+id/badge_img"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_150sdp"
-android:src="@drawable/achievement_basecamp"
-        android:id="@+id/badge_img"
         android:background="@color/color_primary"
-app:layout_constraintEnd_toEndOf="@id/center_holder"
-        app:layout_constraintTop_toTopOf="@id/center_holder"
+        android:src="@drawable/achievement_basecamp"
         app:layout_constraintBottom_toBottomOf="@id/center_holder"
-app:layout_constraintStart_toStartOf="@id/center_holder"
-/>
+        app:layout_constraintEnd_toEndOf="@id/center_holder"
+        app:layout_constraintStart_toStartOf="@id/center_holder"
+        app:layout_constraintTop_toTopOf="@id/center_holder" />
+
     <ImageView
+        android:id="@+id/fog5"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_200sdp"
-        app:layout_constraintTop_toTopOf="@id/center_holder"
-        app:layout_constraintBottom_toBottomOf="@id/center_holder"
         android:src="@drawable/fog_5"
-        android:id="@+id/fog5"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/center_holder"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/center_holder" />
+
     <ImageView
-        android:visibility="gone"
+        android:id="@+id/fog6"
 
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_200sdp"
-        app:layout_constraintTop_toTopOf="@id/center_holder"
-        app:layout_constraintBottom_toBottomOf="@id/center_holder"
         android:src="@drawable/fog_6"
-        android:id="@+id/fog6"
-        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/center_holder"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/center_holder" />
 
     <TextView
+        android:id="@+id/infoTxt"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/proximanovalight"
+        android:text="The best view comes after the hardest climb"
         android:textColor="@color/color_text_primary"
         android:textSize="@dimen/_11ssp"
-        android:id="@+id/infoTxt"
-        android:layout_height="wrap_content"
-        android:text="The best view comes after the hardest climb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/badge_img"
         app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
-        />
-<View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
-    android:background="@drawable/dash_null"
-    />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/badge_img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dash_null"
+        app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <HorizontalScrollView
         android:id="@+id/mj_scrollScreen"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
         android:background="@color/color_primary"
-        android:scrollbars="none"
-        android:scrollIndicators="none"
-        android:orientation="horizontal"
         android:contentDescription="@string/app_name"
-       android:fillViewport="true"
+        android:fillViewport="true"
+        android:orientation="horizontal"
+        android:scrollIndicators="none"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:paddingEnd="@dimen/_10sdp"
-
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:paddingEnd="@dimen/_10sdp"
 
             >
 
@@ -190,31 +181,32 @@ app:layout_constraintStart_toStartOf="@id/center_holder"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-                <ImageView
-                    android:id="@+id/kirkjufellArch"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginStart="@dimen/_10sdp"
-app:layout_constraintTop_toTopOf="parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/achievement_kirkjufell"
-                    app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toEndOf="@id/basecampArch"/>
-         <ImageView
-                   android:id="@+id/elcapitanArch"
+            <ImageView
+                android:id="@+id/kirkjufellArch"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_kirkjufell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/basecampArch"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                   android:layout_width="@dimen/_60sdp"
-                   android:layout_height="@dimen/_60sdp"
-                   android:layout_marginStart="@dimen/_10sdp"
+            <ImageView
+                android:id="@+id/elcapitanArch"
 
-                   android:scaleType="centerCrop"
-                   android:src="@drawable/achievement_el_capitan"
-                   app:layout_constraintBottom_toBottomOf="parent"
-             app:layout_constraintStart_toEndOf="@id/kirkjufellArch"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-                   app:layout_constraintTop_toTopOf="parent" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_el_capitan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/kirkjufellArch"
 
-     <ImageView
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
                 android:id="@+id/mountOlympusArch"
 
                 android:layout_width="@dimen/_60sdp"
@@ -226,101 +218,103 @@ app:layout_constraintStart_toEndOf="@id/basecampArch"/>
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/elcapitanArch"
                 app:layout_constraintTop_toTopOf="parent" />
-<ImageView
-                 android:id="@+id/fitzroyArch"
 
-                 android:layout_width="@dimen/_60sdp"
-                 android:layout_height="@dimen/_60sdp"
-                 android:layout_marginStart="@dimen/_10sdp"
+            <ImageView
+                android:id="@+id/fitzroyArch"
 
-                 android:scaleType="centerCrop"
-    app:layout_constraintStart_toEndOf="@id/mountOlympusArch"
-                 android:src="@drawable/achievement_fitz_roy"
-                 app:layout_constraintBottom_toBottomOf="parent"
-                 app:layout_constraintTop_toTopOf="parent" />
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-     <ImageView
-                   android:id="@+id/aorakiArch"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_fitz_roy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mountOlympusArch"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                   android:layout_width="@dimen/_60sdp"
-                   android:layout_height="@dimen/_60sdp"
-                   android:layout_marginStart="@dimen/_10sdp"
-app:layout_constraintStart_toEndOf="@id/fitzroyArch"
-                   android:scaleType="centerCrop"
-                   android:src="@drawable/achievement_aoraki"
-                   app:layout_constraintBottom_toBottomOf="parent"
-             app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/aorakiArch"
 
-        <ImageView
-                 android:id="@+id/mountFujiArch"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_aoraki"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fitzroyArch"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                 android:layout_width="@dimen/_60sdp"
-                 android:layout_height="@dimen/_60sdp"
-                 android:layout_marginStart="@dimen/_10sdp"
+            <ImageView
+                android:id="@+id/mountFujiArch"
 
-                 android:scaleType="centerCrop"
-                 android:src="@drawable/achievement_fuji"
-                 app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/aorakiArch"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-                 app:layout_constraintTop_toTopOf="parent" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_fuji"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/aorakiArch"
+
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-   <ImageView
-                  android:id="@+id/matterhornArch"
+            <ImageView
+                android:id="@+id/matterhornArch"
 
-                  android:layout_width="@dimen/_60sdp"
-                  android:layout_height="@dimen/_60sdp"
-                  android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-                  android:scaleType="centerCrop"
-                  android:src="@drawable/achievement_matterhorn"
-                  app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintStart_toEndOf="@id/mountFujiArch"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_matterhorn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mountFujiArch"
 
-                  app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-       <ImageView
-                  android:id="@+id/mountBlancArch"
+            <ImageView
+                android:id="@+id/mountBlancArch"
 
-                  android:layout_width="@dimen/_60sdp"
-                  android:layout_height="@dimen/_60sdp"
-                  android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-                  android:scaleType="centerCrop"
-                  android:src="@drawable/achievement_mont_blanc"
-                  app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintStart_toEndOf="@id/matterhornArch"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_mont_blanc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/matterhornArch"
 
-                  app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
- <ImageView
-        android:id="@+id/popocArch"
+            <ImageView
+                android:id="@+id/popocArch"
 
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-        android:scaleType="centerCrop"
-        android:src="@drawable/achievement_popocatepetl"
-        app:layout_constraintBottom_toBottomOf="parent"
-     app:layout_constraintStart_toEndOf="@id/mountBlancArch"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_popocatepetl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mountBlancArch"
 
-     app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
- <ImageView
-                   android:id="@+id/kilimanjaroArch"
+            <ImageView
+                android:id="@+id/kilimanjaroArch"
 
-                   android:layout_width="@dimen/_60sdp"
-                   android:layout_height="@dimen/_60sdp"
-                   android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
 
-                   android:scaleType="centerCrop"
-                   android:src="@drawable/achievement_kilimanjaro"
-                   app:layout_constraintBottom_toBottomOf="parent"
-     app:layout_constraintStart_toEndOf="@id/popocArch"
+                android:scaleType="centerCrop"
+                android:src="@drawable/achievement_kilimanjaro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/popocArch"
 
-                   app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/denaliArch"
 
@@ -372,34 +366,31 @@ app:layout_constraintStart_toEndOf="@id/fitzroyArch"
                 android:src="@drawable/achievement_everest"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/k2Arch"
-                app:layout_constraintTop_toTopOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent" />
 
-           </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </HorizontalScrollView>
 
 
     <TextView
+        android:id="@+id/share_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/mj_scrollScreen"
-        app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
-        android:textSize="@dimen/_15ssp"
-        android:fontFamily="@font/proximanovabold"
-android:id="@+id/share_txt"
         android:background="@drawable/share_jouney_bg"
+        android:fontFamily="@font/proximanovabold"
         android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_10sdp"
         android:paddingEnd="@dimen/_20sdp"
         android:paddingBottom="@dimen/_10sdp"
-        android:paddingTop="@dimen/_10sdp"
+        android:text="Share"
         android:textColor="@color/white"
-        />
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toTopOf="@id/mj_scrollScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mj_scrollScreen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

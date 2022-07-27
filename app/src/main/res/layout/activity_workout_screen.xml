@@ -7,7 +7,11 @@
 
     android:background="@color/color_primary"
     tools:context=".WorkoutScreen">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/workoutHolderView"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lottie_holder"
@@ -22,6 +26,7 @@
 
         <VideoView
             android:id="@+id/wi_iimg"
+            android:elevation="0dp"
 app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -65,9 +70,11 @@ app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lottie_holder">
 <View
     android:id="@+id/progress_bg"
-    android:layout_width="match_parent"
+    android:layout_width="@dimen/_10sdp"
     android:layout_marginStart="@dimen/_5sdp"
     android:layout_marginEnd="@dimen/_5sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
     android:layout_marginTop="@dimen/_2sdp"
     android:layout_height="@dimen/_2sdp"
 app:layout_constraintTop_toTopOf="parent"
@@ -180,14 +187,12 @@ app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintTop_toTopOf="@id/prevWork" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clayout"
         android:elevation="@dimen/_3sdp"
-        android:backgroundTint="@color/color_primary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_primary"
         android:visibility="gone">
 
         <View
@@ -304,11 +309,15 @@ app:layout_constraintTop_toTopOf="parent"
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@id/rw_continue">
+<View
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
+    />
             <VideoView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
                 android:id="@+id/rest_img"
              />
         </androidx.cardview.widget.CardView>

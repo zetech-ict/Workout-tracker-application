@@ -1,6 +1,7 @@
 package com.billykybe.fitme;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -8,6 +9,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -18,8 +21,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.room.Room;
 
-import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +40,10 @@ public class WorkoutScreen extends AppCompatActivity {
     TextView wText, ws_pauseBtn;
     TextView rst_timmer;
     TextView skip,prev;
+    View progress_bg;
     int modifier = 0;
     int size;
-
+View workoutHolderView ;
     int active;
     private CountDownTimer countDownTimer,restCountTimer;
     private boolean countdownRunning;
@@ -80,9 +84,9 @@ rest_img = findViewById(R.id.rest_img);
         rst_timmer =findViewById(R.id.resttimer);
         skip = findViewById(R.id.skipWork);
         prev = findViewById(R.id.prevWork);
-
+        progress_bg = findViewById(R.id.progress_bg);
         skip.setOnClickListener(view ->{
-            if (currentWorkout < workout_list.size()){
+            if (currentWorkout < workout_list.size()-1){
                 countDownTimer.cancel();
 
                 currentWorkout++;
@@ -110,12 +114,19 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);;
         wImage = findViewById(R.id.wi_iimg);
         wText = findViewById(R.id.ws_title);
-wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-    @Override
-    public void onPrepared(MediaPlayer mediaPlayer) {
-        mediaPlayer.setLooping(true);
-    }
-});
+        workoutHolderView =  findViewById(R.id.workoutHolderView);
+
+        wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });rest_img.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
         backBtn = findViewById(R.id.w_backBtn);
         backBtn.setOnClickListener(view -> {
 
@@ -177,7 +188,28 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
     }
 
+    private void updateBar() {
+
+
+        final DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        int widthInPx = Resources.getSystem().getDisplayMetrics().widthPixels;
+        int pixelDPI = Resources.getSystem().getDisplayMetrics().densityDpi;
+
+
+        int screenWidthInDp =(widthInPx/pixelDPI)*160;
+        int maxWidth =  (int)(screenWidthInDp - (6.50*2));
+
+        int currentMax = (screenWidthInDp * currentWorkout) / workout_list.size()-1;
+
+     progress_bg.setLayoutParams(new ConstraintLayout.LayoutParams(currentMax*2,3));
+
+
+    }
+
     private void skipRest() {
+        workoutHolderView.setVisibility(View.VISIBLE);
         try {
             restCountTimer.cancel();
             countDownTimer.cancel();
@@ -190,6 +222,8 @@ wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
     }
 
     private void startWorkout(int look) {
+        updateBar();
+
         int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
         wText.setText(workout_list.get(look).w_name);
                 wImage.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(look).w_lottie));
@@ -218,7 +252,7 @@ modifiy++;
 
             @Override
             public void onFinish() {
-                if (look == workout_list.size()){
+                if (look == workout_list.size()-1){
                     MediaPlayer mediaPlayer = new MediaPlayer();
                     try {
 
@@ -247,25 +281,31 @@ restShow(currentWorkout);
     }
 
     private void restShow(int currentWorkout) {
-int i =currentWorkout;
+        workoutHolderView.setVisibility(View.GONE);
+
+        int i =currentWorkout;
 
             clayout.setVisibility(View.VISIBLE);
-            if (currentWorkout!= workout_list.size()) {
+            if (currentWorkout!= workout_list.size()-1) {
                 i = currentWorkout + 1;
             }
 
-        String remtextMsg = "Next Workout ("+i+"/"+workout_list.size()+")";
+        String remtextMsg = "Next Workout ("+(i+1)+"/"+(workout_list.size())+")";
 
         rest_rem.setText(remtextMsg);
         rest_title.setText(workout_list.get(i).w_name);
-        wImage.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        rest_img.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
                 mediaPlayer.setLooping(true);
             }
         });
+
+
         rest_img.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(i).w_lottie));
-        wImage.start();
+        wImage.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+workout_list.get(i).w_lottie));
+
+        rest_img.start();
 
 int restDuration = 10000;
         restCountTimer=
@@ -299,6 +339,8 @@ int restDuration = 10000;
 
 
     public void sentData() {
+
+
         int calories = calories();
         int workouts;
 

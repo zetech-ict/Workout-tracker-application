@@ -12,7 +12,7 @@ public class StartWorkouts extends AppCompatActivity {
     ProgressBar progressBar ;
     TextView counter ,skipcount;
 
-    int modifier=0;
+    int modifier=15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ counter = findViewById(R.id.counter_text);
 counter.setText(""+modifier);
 progressBar.setProgress(modifier);
 modifier--;
-handler.postDelayed(this,1000);
+handler.postDelayed(this,0);
                 }else {
 
                     Intent intent = new Intent(getApplicationContext(),WorkoutScreen.class);
@@ -47,7 +47,7 @@ handler.postDelayed(this,1000);
                 }
 
             }
-        },1500);
+        },15000);
         skipcount.setOnClickListener(view -> {
 handler.removeCallbacksAndMessages(null);
             Intent intentTo = new Intent(getApplicationContext(),WorkoutScreen.class);

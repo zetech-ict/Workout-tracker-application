@@ -9,15 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bookmarked extends AppCompatActivity {
     RecyclerView favorite_rv;
+    ImageView unMark ;
     ImageView back;
     List<favorite_model> favorites = new ArrayList<>();
     favorite_adapter favorite_adapter;
+    //========= Room Db
 
+//=========  / Room Db
     @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,10 @@ public class Bookmarked extends AppCompatActivity {
         });
 
         favorite_rv = findViewById(R.id.favorite_rv);
+        unMark = findViewById(R.id.fb_bg_bookmark_img);
+        unMark.setOnClickListener(view -> {
+
+        });
         favorite_rv.setLayoutManager(new LinearLayoutManager(this));
         favorite_adapter = new favorite_adapter(favorites);
         favorite_rv.setAdapter(favorite_adapter);

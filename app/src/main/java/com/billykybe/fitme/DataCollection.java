@@ -1,20 +1,13 @@
 package com.billykybe.fitme;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.billykybe.fitme.database.FitMeDatabase;
-import com.billykybe.fitme.database.UserAccount;
-import com.shawnlin.numberpicker.NumberPicker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +72,7 @@ updateView(COLLECTION_SCREEN);
                 intent.putExtra("goal",goal);
                 intent.putExtra("activityLevel",activityLevel);
 
-                createUser(age,weight,height,isMale,goal,activityLevel);
+//                createUser(age,weight,height,isMale,goal,activityLevel);
                 startActivity(intent);
             }
         });
@@ -190,20 +183,20 @@ updateView(COLLECTION_SCREEN);
         });
 
     }
-
-    private void createUser(int age, int weight, int height, boolean isMale, int goal, int activityLevel) {
-        FitMeDatabase db = FitMeDatabase.getInstance(this.getApplicationContext());
-        UserAccount user = new UserAccount();
-        user.setId(1);
-        user.setAge(age);
-        user.setWheight(weight);
-        user.setHeight(height);
-        user.setMale(isMale);
-
-        user.setLevelOfWorkout(activityLevel);
-        db.userDao().insertUser(user);
-        finish();
-    }
+//
+//    private void createUser(int age, int weight, int height, boolean isMale, int goal, int activityLevel) {
+//        FitMeDatabase db = FitMeDatabase.getInstance(this.getApplicationContext());
+//        UserAccount user = new UserAccount();
+//        user.setId(1);
+//        user.setAge(age);
+//        user.setWheight(weight);
+//        user.setHeight(height);
+//        user.setMale(isMale);
+//
+//        user.setLevelOfWorkout(activityLevel);
+//        db.userDao().insertUser(user);
+//        finish();
+//    }
 
     private void goalsPicker() {
         //hackish to change

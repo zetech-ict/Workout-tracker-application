@@ -13,46 +13,98 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMe"
         tools:targetApi="31">
+
+
+
+
         <activity
-            android:name=".SecuritySettings"
+            android:name=".AboutYourSelf"
             android:exported="false" />
-        <activity
-            android:name=".Reminder"
-            android:exported="false" /> <!-- TODO:Add portrait orientation to all scrrens -->
-        <activity
-            android:name=".EditProfile"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".EndOfWorkout"
-            android:exported="false" />
-        <activity
-            android:name=".Workout"
-            android:exported="false" />
-        <activity
-            android:name=".SecurityCheck"
-            android:exported="false" />
-        <activity
-            android:name=".MyJourney"
-            android:exported="false" />
-        <activity
-            android:name=".OnboardingScreen"
-            android:exported="false" />
-        <activity
-            android:name=".StartWorkouts"
-            android:exported="false" />
-        <activity
-            android:name=".WorkoutScreen"
-            android:exported="false" />
+
+
         <activity
             android:name=".Bookmarked"
             android:exported="false" />
+
+
+        <activity
+            android:name=".ChangePin"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".DataCollection"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".EndOfWorkout"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".HomePage"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".NottificationSettings"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".MyJourney"
+            android:exported="false" />
+
+
         <activity
             android:name=".Notifications"
             android:exported="false" />
+
+
+        <activity
+            android:name=".OnboardingScreen"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".Reminder"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".SecurityCheck"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".SecuritySettings"
+            android:exported="false" />
+
+        <activity
+            android:name=".StartWorkouts"
+            android:exported="false" />
+
+        <activity
+            android:name=".WelcomeScreen"
+            android:exported="false" />
+
+        <activity
+            android:name=".Workout"
+            android:exported="false" />
+
+        <activity
+            android:name=".WorkoutScreen"
+            android:exported="false" />
+
+
         <activity
             android:name=".MainActivity"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,24 +112,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".HomePage"
-
-            android:exported="false" />
-        <activity
-            android:name=".WelcomeScreen"
-            android:exported="false" />
-
-        <activity
-            android:name=".DataCollection"
-            android:exported="false" />
-        <activity
-            android:name=".AboutYourSelf"
-            android:exported="false" />
-        <activity
-            android:name=".NottificationSettings"
-            android:exported="false" />
     </application>
 
 </manifest>

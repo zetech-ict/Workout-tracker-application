@@ -28,7 +28,33 @@
       android:background="@drawable/workout_bg"
 
       />
-  <ScrollView
+    <View
+    android:layout_width="5dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="@dimen/_10sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:background="@color/color_secondary"
+    app:layout_constraintTop_toTopOf="@id/workoutdata"
+    app:layout_constraintBottom_toBottomOf="@id/workoutdata"
+    app:layout_constraintEnd_toStartOf="@id/workoutdata"
+    />
+    <TextView
+        android:id="@+id/workoutdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/color_primary"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/nunitosemibold"
+        android:text="15 mins - 14 workouts"
+        app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/imgWork" />
+
+
+
+    <ScrollView
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:scrollbars="none"
@@ -42,37 +68,12 @@
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content">
-<View
-    android:layout_width="5dp"
-    android:layout_height="0dp"
-    android:layout_marginStart="@dimen/_10sdp"
-    app:layout_constraintStart_toStartOf="parent"
-    android:layout_marginEnd="@dimen/_5sdp"
-  android:background="@color/color_secondary"
-  app:layout_constraintTop_toTopOf="@id/workoutdata"
-    app:layout_constraintBottom_toBottomOf="@id/workoutdata"
-    app:layout_constraintEnd_toStartOf="@id/workoutdata"
-  />
-      <TextView
-          android:id="@+id/workoutdata"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/_15sdp"
-          android:layout_marginTop="@dimen/_10sdp"
-          android:layout_marginBottom="@dimen/_10sdp"
-          android:fontFamily="@font/nunitosemibold"
-          android:text="15 mins - 14 workouts"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-
-      <androidx.recyclerview.widget.RecyclerView
+<androidx.recyclerview.widget.RecyclerView
           android:id="@+id/rv_workout"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="@dimen/_20sdp"
           tools:listitem="@layout/workouts_item"
-          app:layout_constraintTop_toBottomOf="@id/workoutdata" />
+       app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>

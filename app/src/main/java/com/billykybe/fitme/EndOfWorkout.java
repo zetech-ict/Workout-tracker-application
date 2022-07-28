@@ -40,14 +40,16 @@ time = timeMin+":"+timeSec;
         toHome = findViewById(R.id.eow_toHome);
         toHome.setOnClickListener(view -> {
             Intent toHome = new Intent(getApplicationContext(), HomePage.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(toHome);
+
             finish();
         });
         toReminder = findViewById(R.id.eow_toTimer);
         toReminder.setOnClickListener(view -> {
             Intent toReminder = new Intent(getApplicationContext(), Reminder.class);
             startActivity(toReminder);
-            finish();
+finish();
         });
     }
 }

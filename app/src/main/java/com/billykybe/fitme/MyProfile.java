@@ -41,7 +41,10 @@ TextView yesLogout,noLogout;
             Intent intent = new Intent(getActivity(),MainActivity.class);
             intent.putExtra("toOnboard",3);
             startActivity(intent);
-    //TODO:// FINISH
+
+            //TODO:Database reset here
+            getActivity().finish();
+            System.exit(0);
 
         });
         noLogout.setOnClickListener(view1 -> {

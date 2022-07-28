@@ -13,6 +13,8 @@ public class StartWorkouts extends AppCompatActivity {
     TextView counter ,skipcount;
 
     int modifier=15;
+    int startCount = 0;
+    int temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +35,14 @@ counter = findViewById(R.id.counter_text);
             @Override
             public void run() {
 
-                if (modifier >= 0){
-counter.setText(""+modifier);
-progressBar.setProgress(modifier);
-modifier--;
+                if (startCount < modifier){
+                    temp = modifier -  startCount;
+counter.setText(""+temp); //fall
+
+
+                    startCount ++;
+
+progressBar.setProgress(startCount); //rise
 handler.postDelayed(this,0);
                 }else {
 

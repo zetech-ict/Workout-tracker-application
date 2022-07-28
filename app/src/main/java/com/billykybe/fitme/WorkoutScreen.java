@@ -25,6 +25,7 @@ import androidx.room.Room;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class WorkoutScreen extends AppCompatActivity {
@@ -33,7 +34,8 @@ public class WorkoutScreen extends AppCompatActivity {
     String id;
     boolean isMale = false;
     int current = 0;
-
+int[]start;
+int[]end;
     ProgressBar progressBar;
     TextView counter, rwContinue;
     VideoView wImage;
@@ -171,6 +173,8 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
         }catch (Exception e){
             e.getStackTrace();
         }
+
+        getStartTime();
         startWorkout(currentWorkout);
 
         ////
@@ -188,7 +192,31 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
 
     }
 
-    private void updateBar() {
+    private void getStartTime() {
+        start = new int[3];
+        int m,s;
+        Calendar calendar = Calendar.getInstance();
+
+        start[0] = calendar.get(Calendar.HOUR_OF_DAY);
+        start[1] =calendar.get(Calendar.MINUTE);
+        start[2] =calendar.get(Calendar.SECOND);
+
+    }
+    private void getEndTime() {
+        end = new int[3];
+
+        Calendar calendar = Calendar.getInstance();
+
+        end[0] = calendar.get(Calendar.HOUR_OF_DAY);
+        end[1] =calendar.get(Calendar.MINUTE);
+        end[2] =calendar.get(Calendar.SECOND);
+
+
+
+    }
+
+    private void updateBar(int position) {
+
 
 
         final DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -199,9 +227,8 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
 
 
         int screenWidthInDp =(widthInPx/pixelDPI)*160;
-        int maxWidth =  (int)(screenWidthInDp - (6.50*2));
 
-        int currentMax = (screenWidthInDp * currentWorkout) / workout_list.size()-1;
+        int currentMax = (screenWidthInDp * position) / workout_list.size()-1;
 
      progress_bg.setLayoutParams(new ConstraintLayout.LayoutParams(currentMax*2,3));
 
@@ -222,7 +249,8 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
     }
 
     private void startWorkout(int look) {
-        updateBar();
+
+        updateBar(look+1);
 
         int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
         wText.setText(workout_list.get(look).w_name);
@@ -340,30 +368,25 @@ int restDuration = 10000;
 
     public void sentData() {
 
-
+        getEndTime();
         int calories = calories();
         int workouts;
 
-        int time = 0, minutes, seconds;
+        int hours , minutes, seconds;
 
-
-        for (Workout_items_model workout : workout_list) {
-            time = time + Integer.parseInt(workout.getW_duration());
-
-
-
-
-        }
-        minutes = (time / 60) % 60;
-        seconds = (time / 60);
+hours = start[0];
+        minutes =start[1];
+        seconds = start[2];
         workouts = workout_list.size();
 
         Intent intent = new Intent(this.getApplicationContext(),EndOfWorkout.class);
 
         intent.putExtra("workouts",String.valueOf(workouts));
         intent.putExtra("calos",String.valueOf(calories));
-        intent.putExtra("mins",String.valueOf(minutes));
-        intent.putExtra("secs",String.valueOf(seconds));
+        String timeTaken []= new String[2];
+        timeTaken = getTimeTaken(start,end);
+        intent.putExtra("mins",timeTaken[0]);
+        intent.putExtra("secs",timeTaken[1]);
 
         startActivity(intent);
         finish();
@@ -371,6 +394,16 @@ int restDuration = 10000;
 
 
 
+    }
+
+    private String[] getTimeTaken(int[] start, int[] end) {
+        int tt []={-1,-1};
+        String ttString []= {"10","30"};
+
+
+
+        /* TODO: FIx This Quick Task */
+        return ttString;
     }
 
     private int calories() {

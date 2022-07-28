@@ -26,7 +26,6 @@
       app:layout_constraintBottom_toBottomOf="@id/img_holder"
       app:lottie_rawRes="@raw/congratulations"
       app:lottie_autoPlay="true"
-      app:lottie_loop="false"
 
 
 
@@ -38,7 +37,6 @@
     app:layout_constraintEnd_toEndOf="@id/img_holder"
     app:layout_constraintStart_toStartOf="@id/img_holder"
     app:lottie_autoPlay="true"
-    app:lottie_loop="false"
     app:lottie_rawRes="@raw/trophy"
     android:id="@+id/lootietrophy"
     app:layout_constraintTop_toTopOf="@id/img_holder"
@@ -255,12 +253,5 @@ app:layout_constraintBottom_toTopOf="@id/eow_toHome"
       app:layout_constraintEnd_toEndOf="parent"
 
       app:layout_constraintStart_toStartOf="parent" />
-<com.airbnb.lottie.LottieAnimationView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:lottie_rawRes="@raw/animation_gift"
-    app:lottie_autoPlay="true"
-    android:visibility="gone"
 
-    />
 </androidx.constraintlayout.widget.ConstraintLayout>

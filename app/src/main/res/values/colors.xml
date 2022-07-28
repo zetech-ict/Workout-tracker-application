@@ -26,10 +26,10 @@
 
 
 
-    <color name="fullbody">#66000000</color>
-    <color name="arms">#330C2D48</color>
-    <color name="abs">#332E8BC0</color>
-    <color name="chest">#1AB1D4E0</color>
+    <color name="fullbody">#0D000000</color>
+    <color name="arms">#0D0C2D48</color>
+    <color name="abs">#0D2E8BC0</color>
+    <color name="chest">#0DB1D4E0</color>
     <color name="warning">#ffbb00</color>
     <color name="error">#ee2c4a</color>
     <color name="success">#44cc77</color>

@@ -24,8 +24,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class WorkoutScreen extends AppCompatActivity {
@@ -75,18 +78,7 @@ ImageView backBtn ;
         rest_img.resume();
     }
 
-    public static final String EXTRA_ID =
-            "com.billykybe.fitme.EXTRA_ID";
 
-    public static final String EXTRA_DATE_TIME =
-            "com.billykybe.fitme.EXTRA_DATE_TIME";
-    public static final String EXTRA_NAME =
-            "com.billykybe.fitme.EXTRA_NAME";
-    public static final String EXTRA_TIME =
-            "com.billykybe.fitme.EXTRA_TIME";
-
-    public static final String EXTRA_KCAL =
-            "com.billykybe.fitme.EXTRA_KCAL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +143,7 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
         id = intent.getString("id");
         //update list of items
 //        addItems(id);
+
 
         WorkoutsDB addWorkouts = new WorkoutsDB(id);
 
@@ -402,14 +395,50 @@ hours = start[0];
 
         intent.putExtra("workouts",String.valueOf(workouts));
         intent.putExtra("calos",String.valueOf(calories));
-        String timeTaken []= new String[2];
-        timeTaken = getTimeTaken(start,end);
-        intent.putExtra("mins",timeTaken[0]);
-        intent.putExtra("secs",timeTaken[1]);
+        String timeTaken = getTimeTaken(start,end);
+
+
+
+        intent.putExtra("mins",timeTaken);
+
 
         //=====> Room database start
         FittMeDatabase fittMeDatabase = FittMeDatabase.getInstance(this);
-        History_item_model model = new History_item_model(R.drawable.ic_chest,"Chest Begg","3:40","203","June 10,2021");
+
+
+    String name =getData(id);
+
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date = new Date();
+
+        String date1 = formatter.format(date);
+
+int imgArt;
+if (id.contains("full")){
+    imgArt = R.drawable.ic_fullbodyalt;
+}else if(id.contains("hest"))
+{
+    imgArt = R.drawable.ic_chest;
+
+}else if(id.contains("rm"))
+{
+    imgArt = R.drawable.ic_arm;
+
+}else if(id.contains("bs"))
+{
+    imgArt = R.drawable.ic_abs;
+
+}else if(id.contains("eg"))
+{
+    imgArt = R.drawable.ic_leg;
+
+}else {
+    imgArt = R.drawable.ic_fullbodyalt;
+
+}
+        History_item_model model = new History_item_model(imgArt,name,timeTaken.toString(),String.valueOf(calories),date1);
+
         fittMeDatabase.databaseDAO().insertWorkoutDone(model);
         //=====> Room database end
 
@@ -421,14 +450,129 @@ hours = start[0];
 
     }
 
-    private String[] getTimeTaken(int[] start, int[] end) {
-        int tt []={-1,-1};
+    private String getData(String id) {
+String wname ="";
+
+        switch (id){
+            case "m-fullbody-bg":
+                wname = "Fullbody Beginner";
+
+                break;
+
+            case "m-chest-bg":
+                wname = "Chest Beginner";
+
+                break;
+
+            case "m-abs-bg":
+                wname = "Abs Beginner";
+
+                break;
+
+            case "m-arm-bg":
+                wname = "Arms Beginner";
+
+                break;
+
+            case "m-leg-bg":
+                wname = "Legs Beginner";
+
+
+                break;
+
+            case "m-fullbody-in":
+                wname = "Fullbody Intermediate";
+
+                break;
+
+            case "m-chest-in":
+                wname = "Chest Intermediate";
+
+                break;
+
+            case "m-abs-in":
+                wname = "Abs Intermediate";
+
+                break;
+
+            case "m-arm-in":
+                wname = "Arms Intermediate";
+
+                break;
+
+            case "m-leg-in":
+                wname = "Legs Intermediate";
+
+
+                break;
+            case "m-fullbody-ad":
+                wname = "Fullbody Advanced";
+
+                break;
+
+            case "m-chest-ad":
+                wname = "Chest Advanced";
+
+                break;
+
+            case "m-abs-ad":
+                wname = "Abs Advanced";
+
+                break;
+
+            case "m-arm-ad":
+                wname = "Arms Advanced";
+
+                break;
+
+            case "m-leg-ad":
+                wname = "Legs Advance";
+
+
+                break;
+        }
+
+
+
+
+return wname;
+    }
+
+    private String getTimeTaken(int[] start, int[] end) {
+        String timeTaken = "";
+
+
+        SimpleDateFormat sdf
+                = new SimpleDateFormat(
+                "HH:mm:ss");
+
+        String timeOneHolder = start[0]+":"+start[1]+start[2];
+
+        try {
+            Date timeOne = sdf.parse(timeOneHolder);
+            Date timeTwo = sdf.parse(new Date().toString());
+            long timeDiff = timeOne.getTime()-timeTwo.getTime();
+
+            long difference_In_Seconds
+                    = (timeDiff
+                    / 1000)
+                    % 60;
+
+            long difference_In_Minutes
+                    = (timeDiff
+                    / (1000 * 60))
+                    % 60;
+            timeTaken = difference_In_Minutes+" : "+difference_In_Seconds;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         String ttString []= {"10","30"};
 
 
 
         /* TODO: FIx This Quick Task */
-        return ttString;
+        return timeTaken;
     }
 
     private int calories() {

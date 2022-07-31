@@ -156,7 +156,6 @@ app:layout_constraintTop_toTopOf="parent"
             android:elevation="@dimen/_3sdp"
             android:fontFamily="@font/proximanovabold"
             android:gravity="center"
-
             android:padding="@dimen/_14sdp"
             android:text="Previous"
             android:textColor="@color/color_secondary"

@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -21,7 +22,6 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.room.Room;
 
 
 import java.util.ArrayList;
@@ -74,6 +74,19 @@ ImageView backBtn ;
         wImage.resume();
         rest_img.resume();
     }
+
+    public static final String EXTRA_ID =
+            "com.billykybe.fitme.EXTRA_ID";
+
+    public static final String EXTRA_DATE_TIME =
+            "com.billykybe.fitme.EXTRA_DATE_TIME";
+    public static final String EXTRA_NAME =
+            "com.billykybe.fitme.EXTRA_NAME";
+    public static final String EXTRA_TIME =
+            "com.billykybe.fitme.EXTRA_TIME";
+
+    public static final String EXTRA_KCAL =
+            "com.billykybe.fitme.EXTRA_KCAL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -305,7 +318,7 @@ restShow(currentWorkout);
         }.start();
 
 
-        
+
     }
 
     private void restShow(int currentWorkout) {
@@ -367,6 +380,12 @@ int restDuration = 10000;
 
 
     public void sentData() {
+try {
+    restCountTimer.cancel();
+    countDownTimer.cancel();
+}catch (Exception e){
+
+}
 
         getEndTime();
         int calories = calories();
@@ -387,6 +406,12 @@ hours = start[0];
         timeTaken = getTimeTaken(start,end);
         intent.putExtra("mins",timeTaken[0]);
         intent.putExtra("secs",timeTaken[1]);
+
+        //=====> Room database start
+        FittMeDatabase fittMeDatabase = FittMeDatabase.getInstance(this);
+        History_item_model model = new History_item_model(R.drawable.ic_chest,"Chest Begg","3:40","203","June 10,2021");
+        fittMeDatabase.databaseDAO().insertWorkoutDone(model);
+        //=====> Room database end
 
         startActivity(intent);
         finish();

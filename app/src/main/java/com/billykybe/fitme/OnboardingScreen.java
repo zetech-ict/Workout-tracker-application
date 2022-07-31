@@ -47,7 +47,7 @@ public class OnboardingScreen extends AppCompatActivity {
         mainImage =findViewById(R.id.mainimg);
 
         fi_continue.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),HomePage.class);
+            Intent intent = new Intent(getApplicationContext(),DataCollection.class);
             startActivity(intent);
             finish();
         });
@@ -91,7 +91,7 @@ slider = findViewById(R.id.viewpager_slider);
 //    view3.setBackgroundResource(R.drawable.dashselected_bg);
 //
 //}TODO: Fix this
-                Toast.makeText(OnboardingScreen.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(OnboardingScreen.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
 
 
             }

@@ -1,18 +1,19 @@
 package com.billykybe.fitme;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
 
-import com.billykybe.fitme.database.FitMeDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class Journey extends Fragment {
     List<History_item_model> history_item_models = new ArrayList<>();
     History_item_adapter history_item_adapter;
     TextView tojourney;
+    private static final int ADD_COURSE_REQUEST = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,20 +41,19 @@ public class Journey extends Fragment {
         });
 
 
-        FitMeDatabase fitMeDatabase = Room.databaseBuilder(requireContext()
-                        , FitMeDatabase.class, "workouts_done")
-                .build();
-        history_item_models = fitMeDatabase.doneWorkoutsDAO().getAll();
-
-
         rv_history.setLayoutManager(new LinearLayoutManager(getContext()));
         history_item_adapter = new History_item_adapter(history_item_models);
         rv_history.setAdapter(history_item_adapter);
 
+FittMeDatabase fittMeDatabase = FittMeDatabase.getInstance(this.getContext());
+history_item_models =
+fittMeDatabase.databaseDAO().getWorkoutsDoneList();
 
         history_item_adapter.notifyDataSetChanged();
         return view;
 
 
     }
+
+
 }

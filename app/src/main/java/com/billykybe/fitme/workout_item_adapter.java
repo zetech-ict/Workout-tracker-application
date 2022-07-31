@@ -65,6 +65,7 @@ Context context ;
             lottieImg = itemView.findViewById(R.id.wi_img);
             w_name = itemView.findViewById(R.id.wi_title);
             w_duration = itemView.findViewById(R.id.wi_duration);
+
             lottieImg.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mediaPlayer) {

@@ -18,9 +18,9 @@
         android:title="Journey"
         />
 
-    <item
-        android:icon="@drawable/icon_botbar_b_me"
-        android:id="@+id/nav_account"
-        android:title="Account"
-        />
+<!--    <item-->
+<!--        android:icon="@drawable/icon_botbar_b_me"-->
+<!--        android:id="@+id/nav_account"-->
+<!--        android:title="Account"-->
+<!--        />-->
 </menu>

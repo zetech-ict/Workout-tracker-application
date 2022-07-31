@@ -57,9 +57,9 @@ bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
          Fragment selectedFragment = new HomeFragment();
          switch (item.getItemId()){
-             case R.id.nav_account:
-                 selectedFragment = new MyProfile();
-                 break;
+//             case R.id.nav_account:
+//                 selectedFragment = new MyProfile();
+//                 break;
 
              case R.id.nav_home:
                  selectedFragment = new HomeFragment();

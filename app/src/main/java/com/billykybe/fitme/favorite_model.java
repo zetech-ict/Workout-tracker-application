@@ -1,23 +1,14 @@
 
 package com.billykybe.fitme;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "bookmarks_table")
 public class favorite_model  implements Serializable {
-    @PrimaryKey(autoGenerate = true)
     private  int ID;
-    @ColumnInfo(name = "fav_img")
     int fav_image;
-    @ColumnInfo(name = "fav_level")
     int fav_level;
-    @ColumnInfo(name = "fav_title")
     String fav_title;
-    @ColumnInfo(name = "fav_duration")
     String
     fav_duration;
 

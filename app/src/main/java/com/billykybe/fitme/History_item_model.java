@@ -1,25 +1,29 @@
 package com.billykybe.fitme;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-import java.io.Serializable;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "history_table")
-public class History_item_model  implements Serializable {
+@Entity(tableName = "allWorkoutsDone")
+public class History_item_model   {
     @PrimaryKey(autoGenerate = true)
-            public  int hId;
+    public  int hId;
+
     @ColumnInfo(name = "w_img")
     int w_img;
+
     @ColumnInfo(name = "w_name")
     String w_name;
+
     @ColumnInfo(name = "w_duration")
     String  w_duration;
+
     @ColumnInfo(name = "w_kcal")
     String  w_kcal;
+
     @ColumnInfo(name = "w_date")
-String w_date;
+    String w_date;
 
     public History_item_model ( int w_img, String w_name, String w_duration, String w_kcal, String w_date) {
         this.w_img = w_img;

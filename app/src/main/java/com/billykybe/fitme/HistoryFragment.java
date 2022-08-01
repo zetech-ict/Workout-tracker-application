@@ -58,7 +58,7 @@ int caloriesToday,caloriesThisWeek;
 
 
         duration_count_txt = view.findViewById(R.id.duration_count_txt);
-        duration_count_txt.setText(String.valueOf(durationThisWeek)+" Minutes");
+        duration_count_txt.setText("< "+String.valueOf(durationThisWeek)+" Hours");
 
 
 

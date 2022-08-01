@@ -19,7 +19,7 @@ public class MyJourney extends AppCompatActivity {
     TextView shareBtn,progtext,share_txt,infoTxt;
     String shareText ;
     List<MtData> mtData = new ArrayList<>();
-    int openedSummit = 2;
+    int openedSummit = 1;
     int currentWatchedItem = 0;
 ImageView mt1,mt2,mt3,mt4,mt5,mt6,mt7,mt8,mt9,mt10,mt11,mt12,mt13,mt14,mt15,badge_img,fog1,fog2;
     @Override
@@ -98,7 +98,6 @@ shareBtn.setOnClickListener(view -> {
 
     private void initCurrentView() {
         mt1.setOnClickListener(view -> {
-            mt1.setLayoutParams(new ConstraintLayout.LayoutParams(90,90));
 
             currentWatchedItem = 0;
             initText();setShareBtn();

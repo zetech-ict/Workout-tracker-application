@@ -101,7 +101,7 @@ rest_img = findViewById(R.id.rest_img);
 
             }
             else {
-                sentData();
+
             }
 
         } );

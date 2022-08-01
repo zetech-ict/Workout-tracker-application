@@ -29,6 +29,7 @@ public class StartWorkouts extends AppCompatActivity {
 
         progressBar = findViewById(R.id.gr_progressbar);
         progressBar.setMax(15);
+        progressBar.setProgress(1);
 counter = findViewById(R.id.counter_text);
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -53,7 +54,7 @@ handler.postDelayed(this,0);
                 }
 
             }
-        },15000);
+        },1000);
         skipcount.setOnClickListener(view -> {
 handler.removeCallbacksAndMessages(null);
             Intent intentTo = new Intent(getApplicationContext(),WorkoutScreen.class);

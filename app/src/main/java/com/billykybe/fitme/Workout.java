@@ -50,7 +50,7 @@ workoutData = findViewById(R.id.workoutdata);
         WorkoutsDB workoutsDB = new WorkoutsDB(str_workout);
         workout_list = workoutsDB.getList();
 
-        Toast.makeText(getApplicationContext(), str_workout, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), str_workout, Toast.LENGTH_LONG).show();
         int wSize = workout_list.size();
         int wTime = workoutTime(workout_list);
 

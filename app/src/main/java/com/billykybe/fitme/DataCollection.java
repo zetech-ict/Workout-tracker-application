@@ -19,7 +19,7 @@ public class DataCollection extends AppCompatActivity {
     TextView weightHolder;
     int height = 300;
     TextView heightHolder;
-    boolean isMale;
+    boolean isMale = true;
     int goal,activityLevel;
     View one,two,three,four,five;
     List<Boolean> isPicked = new ArrayList<>();
@@ -48,9 +48,6 @@ TextView mainHeading,mainDescription,nexBtn,prevBtnt;
         goalsPicker();
 
         ///
-        Bundle bundle = getIntent().getExtras();
-         isMale = bundle.getBoolean("isMale");
-
 
          initViews();
         updateView(COLLECTION_SCREEN);

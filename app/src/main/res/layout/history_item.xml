@@ -18,20 +18,28 @@
 
         app:layout_constraintTop_toTopOf="parent"/>
 
+<androidx.cardview.widget.CardView
+    android:id="@+id/workout_img_holder"
 
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    app:cardElevation="0dp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    >
     <ImageView
         android:id="@+id/workout_img"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
+       android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_abs"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
         />
+</androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/date"
@@ -43,8 +51,8 @@
         android:textColor="@color/black"
 
         android:textSize="@dimen/_10ssp"
-        app:layout_constraintStart_toEndOf="@id/workout_img"
-        app:layout_constraintTop_toTopOf="@id/workout_img"
+        app:layout_constraintStart_toEndOf="@id/workout_img_holder"
+        app:layout_constraintTop_toTopOf="@id/workout_img_holder"
 
         />
 
@@ -69,7 +77,7 @@
         android:layout_width="@dimen/_10sdp"
         android:layout_height="@dimen/_10sdp"
         android:src="@drawable/ic_workout_time"
-        app:layout_constraintBottom_toBottomOf="@id/workout_img"
+        app:layout_constraintBottom_toBottomOf="@id/workout_img_holder"
         app:layout_constraintStart_toStartOf="@id/date"
         app:layout_constraintTop_toBottomOf="@id/workout" />
 

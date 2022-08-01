@@ -8,8 +8,10 @@ import java.util.List;
 
 @Dao
 public interface DatabaseDAO {
-    @Query("SELECT * FROM allWorkoutsDone")
+    @Query("SELECT * FROM allWorkoutsDone ORDER BY hId DESC")
     List<History_item_model> getWorkoutsDoneList();
+
+
 
     @Insert
     void insertWorkoutDone(History_item_model historyItemModel);

@@ -11,26 +11,14 @@ This is an application that helps athletes,users of the app perform home workout
     - [Objectives](#objectives)
     - [Users](#users)
     - [Technologies](#technologies)
-    - [Contributing Guide](#contributing-guide)
     - [REQUIREMENTS SPECIFICATION](#requirements-specification)
         - [Technical Requirements](#technical-requirements)
         - [Non-functional requirements](#non-functional-requirements)
         - [Functional Requirements](#functional-requirements)
             - [Users Module](#users-module)
             - [Notification Module](#notification-module)
-            - [Article management Module](#article-management-module)
-            - [Clubs/Societies Module](#clubssocieties-module)
-            - [Student News and Announcements](#student-news-and-announcements)
     - [Software Design Description](#software-design-description)
-        - [User Interface Design](#user-interface-design)
-            - [Landing Page](#landing-page)
-            - [Dashboard](#dashboard)
-            - [Login Page](#login-page)
-            - [Registration Page](#registration-page)
-            - [News and Announcements](#news-and-announcements)
-            - [Comment Modal](#comment-modal)
-            - [Share Modal](#share-modal)
-            - [Create Event Page](#create-event-page)
+    
 ## Problem Statement
 
 Ideally the application will act as a personal gym assistant were it provides variety of workouts of different level of difficulty and also keep a record when a plan is selected and done with.

@@ -213,6 +213,7 @@ app:layout_constraintStart_toEndOf="@id/divider_right"
   <TextView
       android:id="@+id/eow_toTimer"
       android:layout_width="match_parent"
+      android:visibility="gone"
       android:layout_height="wrap_content"
       android:layout_marginStart="@dimen/_15sdp"
       android:layout_marginEnd="@dimen/_15sdp"

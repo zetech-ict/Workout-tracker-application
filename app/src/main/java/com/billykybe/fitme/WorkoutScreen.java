@@ -89,7 +89,7 @@ ImageView backBtn ;
 
 //        start measuring time
         startTimeMeasure = System.currentTimeMillis();
-        Toast.makeText(this, "get "+String.valueOf(startTimeMeasure), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "get "+String.valueOf(startTimeMeasure), Toast.LENGTH_SHORT).show();
 
         rest_img = findViewById(R.id.rest_img);
         rest_rem =findViewById(R.id.wr_texttop_txt);
@@ -371,7 +371,7 @@ long totalTimeTaken = endTimeMesure -startTimeMeasure;
         long  minutes, seconds;
         minutes = (totalTimeTaken/1000)/60;
         seconds = (totalTimeTaken/1000)%60;
-        Toast.makeText(this, "get end "+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "get end "+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
         int calories = calories();
         int workouts;
 

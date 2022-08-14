@@ -51,11 +51,11 @@ public class Journey extends Fragment {
         int seconds = 0;
         for(int i = 0;i<= history_item_models.size()-1;i++){
             minutes+=Integer.parseInt(history_item_models.get(i).w_duration);
-            minutes+=Integer.parseInt(history_item_models.get(i).w_durationSecs);
+            seconds+=Integer.parseInt(history_item_models.get(i).w_durationSecs);
         }
 
 
-        tv_minutes.setText(minutes +":"+seconds);
+        tv_minutes.setText(String.format("%02d",minutes) +":"+String.format("%02d",seconds));
 
 
         calos = 0;

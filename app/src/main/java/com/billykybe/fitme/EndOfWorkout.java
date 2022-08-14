@@ -45,7 +45,7 @@ private  final int NOTIFICATION_ID=1;
         congrats_calos.setText(calories);
 
 
-        congrats_time.setText(timeMin+":"+timeSec);
+        congrats_time.setText(String.format("%02d",Integer.parseInt(timeMin))+":"+String.format("%02d",Integer.parseInt(timeSec)));
 
 //========> Notification first test
 createNotification();

@@ -81,6 +81,7 @@ public class Journey extends Fragment {
 
 
         rv_history.setLayoutManager(new LinearLayoutManager(getContext()));
+
         history_item_adapter = new History_item_adapter(history_item_models);
         rv_history.setAdapter(history_item_adapter);
 

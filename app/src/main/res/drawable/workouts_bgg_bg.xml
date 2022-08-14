@@ -11,7 +11,7 @@
 
     <stroke
         android:width="2dp"
-        android:color="#33EE2C4A"
+        android:color="@color/error"
         />
 
 

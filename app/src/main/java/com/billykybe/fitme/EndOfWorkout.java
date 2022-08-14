@@ -34,7 +34,7 @@ private  final int NOTIFICATION_ID=1;
         calories = intent.getStringExtra("calos");
         timeMin = intent.getStringExtra("mins");
         timeSec = intent.getStringExtra("secs");
-time = timeMin+":"+timeSec;
+
 
 //init
         congrats_workouts = findViewById(R.id.congrats_workouts);
@@ -43,7 +43,9 @@ time = timeMin+":"+timeSec;
 
         congrats_workouts.setText(workouts);
         congrats_calos.setText(calories);
-        congrats_time.setText(time);
+
+
+        congrats_time.setText(timeMin+":"+timeSec);
 
 //========> Notification first test
 createNotification();
@@ -68,10 +70,10 @@ finish();
 
     private void addNotification() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),CHANEL_ID);
-        builder.setSmallIcon(R.drawable.cover_chest_1);
-        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.cover_chest_2));
-        builder.setContentTitle("tittle");
-        builder.setContentText("text");
+        builder.setSmallIcon(R.drawable.recent_dis_78);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.recent_dis_78));
+        builder.setContentTitle("Congratulations");
+        builder.setContentText("You have completed you workout, keep going athlete");
         builder.setAutoCancel(true);
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
 

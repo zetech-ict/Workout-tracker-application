@@ -5,9 +5,9 @@
     <corners
         android:radius="@dimen/_10sdp"/>
 
-<!--    <solid-->
-<!--        android:color="#33FFBB00"-->
-<!--        />-->
+    <solid
+        android:color="#05FFBB00"
+        />
 
 
     <stroke

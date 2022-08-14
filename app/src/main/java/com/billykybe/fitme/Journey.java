@@ -45,9 +45,19 @@ public class Journey extends Fragment {
 //        Set vals
         seccions = history_item_models.size();
         //ToDO:Add time
-        long timeInSeconds = 120;
 
-        minutes = (int)timeInSeconds/60;
+
+        minutes = 0;
+        int seconds = 0;
+        for(int i = 0;i<= history_item_models.size()-1;i++){
+            minutes+=Integer.parseInt(history_item_models.get(i).w_duration);
+            minutes+=Integer.parseInt(history_item_models.get(i).w_durationSecs);
+        }
+
+
+        tv_minutes.setText(minutes +":"+seconds);
+
+
         calos = 0;
                 for(int i = 0;i<= history_item_models.size()-1;i++){
                     calos+=Integer.parseInt(history_item_models.get(i).w_kcal);
@@ -68,7 +78,6 @@ public class Journey extends Fragment {
             tv_calos.setText(String.valueOf(calos));
 
         }
-        tv_minutes.setText(String.valueOf(minutes));
 
         rv_history = view.findViewById(R.id.rv_history);
         tojourney = view.findViewById(R.id.mj_textLnk);

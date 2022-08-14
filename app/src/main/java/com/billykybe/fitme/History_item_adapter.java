@@ -32,8 +32,8 @@ public class History_item_adapter extends RecyclerView.Adapter<History_item_adap
         holder.w_img.setImageResource(history_item_models.get(position).getW_img());
         holder.date.setText(history_item_models.get(position).getW_date());
         holder.name.setText(history_item_models.get(position).getW_name());
-        holder.duration.setText(history_item_models.get(position).getW_duration());
-        holder.kcal.setText(history_item_models.get(position).getW_kcal());
+        holder.duration.setText(history_item_models.get(position).getW_duration()+":"+history_item_models.get(position).getW_duration());
+        holder.kcal.setText(history_item_models.get(position).getW_kcal()+" kcal");
     }
 
     @Override

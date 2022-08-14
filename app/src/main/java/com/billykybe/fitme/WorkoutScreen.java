@@ -60,7 +60,7 @@ View workoutHolderView ;
     int currentWorkout =0;
     TextView rest_rem,rest_title;
     VideoView rest_img;
-
+    long startTimeMeasure;
     int levelOfWorkout;
     ConstraintLayout clayout;
 ImageView backBtn ;
@@ -87,7 +87,11 @@ ImageView backBtn ;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_screen);
 
-rest_img = findViewById(R.id.rest_img);
+//        start measuring time
+        startTimeMeasure = System.currentTimeMillis();
+        Toast.makeText(this, "get "+String.valueOf(startTimeMeasure), Toast.LENGTH_SHORT).show();
+
+        rest_img = findViewById(R.id.rest_img);
         rest_rem =findViewById(R.id.wr_texttop_txt);
         rest_title =findViewById(R.id.wr_title_txt);
         rst_timmer =findViewById(R.id.resttimer);
@@ -212,18 +216,7 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
         start[2] =calendar.get(Calendar.SECOND);
 
     }
-    private void getEndTime() {
-        end = new int[3];
 
-        Calendar calendar = Calendar.getInstance();
-
-        end[0] = calendar.get(Calendar.HOUR_OF_DAY);
-        end[1] =calendar.get(Calendar.MINUTE);
-        end[2] =calendar.get(Calendar.SECOND);
-
-
-
-    }
 
     private void updateBar(int position) {
 
@@ -365,6 +358,7 @@ int restDuration = 10000;
 
 
     public void sentData() {
+
 try {
     restCountTimer.cancel();
     countDownTimer.cancel();
@@ -372,26 +366,30 @@ try {
 
 }
 
-        getEndTime();
+       long endTimeMesure = System.currentTimeMillis();
+long totalTimeTaken = endTimeMesure -startTimeMeasure;
+        long  minutes, seconds;
+        minutes = (totalTimeTaken/1000)/60;
+        seconds = (totalTimeTaken/1000)%60;
+        Toast.makeText(this, "get end "+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
         int calories = calories();
         int workouts;
 
-        int hours , minutes, seconds;
 
-hours = start[0];
-        minutes =start[1];
-        seconds = start[2];
+
         workouts = workout_list.size();
 
         Intent intent = new Intent(this.getApplicationContext(),EndOfWorkout.class);
 
         intent.putExtra("workouts",String.valueOf(workouts));
         intent.putExtra("calos",String.valueOf(calories));
-        String timeTaken = getTimeTaken(start,end);
+        String timeTakenMins = String.valueOf(minutes);
+        String timeTakenSecs = String.valueOf(seconds);
 
 
 
-        intent.putExtra("mins",timeTaken);
+        intent.putExtra("mins",timeTakenMins);
+        intent.putExtra("secs",timeTakenSecs);
 
 
         //=====> Room database start
@@ -429,7 +427,7 @@ if (id.contains("full")){
     imgArt = R.drawable.ic_fullbodyalt;
 
 }
-        History_item_model model = new History_item_model(imgArt,name,timeTaken.toString(),String.valueOf(calories),date1);
+        History_item_model model = new History_item_model(imgArt,name, timeTakenMins,timeTakenSecs,String.valueOf(calories),date1);
 
         fittMeDatabase.databaseDAO().insertWorkoutDone(model);
         //=====> Room database end
@@ -530,42 +528,6 @@ String wname ="";
 return wname;
     }
 
-    private String getTimeTaken(int[] start, int[] end) {
-        String timeTaken = "";
-
-
-        SimpleDateFormat sdf
-                = new SimpleDateFormat(
-                "HH:mm:ss");
-
-        String timeOneHolder = start[0]+":"+start[1]+start[2];
-
-        try {
-            Date timeOne = sdf.parse(timeOneHolder);
-            Date timeTwo = sdf.parse(new Date().toString());
-            long timeDiff = timeOne.getTime()-timeTwo.getTime();
-
-            long difference_In_Seconds
-                    = (timeDiff
-                    / 1000)
-                    % 60;
-
-            long difference_In_Minutes
-                    = (timeDiff
-                    / (1000 * 60))
-                    % 60;
-            timeTaken = difference_In_Minutes+" : "+difference_In_Seconds;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        String ttString []= {"10","30"};
-
-
-
-        /* TODO: FIx This Quick Task */
-        return timeTaken;
-    }
 
     private int calories() {
         int calos;

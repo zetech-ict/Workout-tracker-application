@@ -48,9 +48,8 @@ int caloriesToday,caloriesThisWeek;
             caloriesThisWeek+=Integer.parseInt(history_item_models.get(i).w_kcal);
         }
 
-        long timeInSeconds = 120;
 
-        durationThisWeek = (int)timeInSeconds/60;
+
 
 
         workout_count_txt = view.findViewById(R.id.workout_count_txt);
@@ -58,8 +57,17 @@ int caloriesToday,caloriesThisWeek;
 
 
         duration_count_txt = view.findViewById(R.id.duration_count_txt);
-        duration_count_txt.setText("< "+String.valueOf(durationThisWeek)+" Hours");
-
+        int totalTime = 0;
+        for (int i = 0; i < history_item_models.size()-1; i++) {
+            totalTime += Integer.parseInt(history_item_models.get(i).w_duration);
+        }
+        if (totalTime>999){
+            totalTime = totalTime /1000;
+            duration_count_txt.setText(totalTime+"K"+" Minutes");
+        }else {
+            duration_count_txt.setText(totalTime+" Minutes");
+        }
+//TODO:
 
 
                         counter_text = view.findViewById(R.id.counter_text);

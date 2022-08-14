@@ -56,11 +56,12 @@ android:visibility="gone"
         />
 
     <ImageView
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
 android:id="@+id/notificationClick"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/notifficationonn"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/security"
         app:layout_constraintBottom_toBottomOf="@id/logoimg"
         app:layout_constraintEnd_toStartOf="@id/bookmark_img"
         app:layout_constraintTop_toTopOf="@id/logoimg"

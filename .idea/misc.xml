@@ -7,9 +7,15 @@
         <entry key="..\:/Users/billy/Desktop/FitMe/app/src/main/res/layout/activity_end_of_workout.xml" value="0.2" />
         <entry key="..\:/Users/billy/Desktop/FitMe/app/src/main/res/layout/activity_workout.xml" value="0.17702702702702702" />
         <entry key="..\:/Users/billy/Desktop/FitMe/app/src/main/res/layout/fragment_journey.xml" value="0.17702702702702702" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/drawable/calos_bg.xml" value="0.193" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/drawable/circle_shape.xml" value="0.193" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/drawable/durationn_bg.xml" value="0.193" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/drawable/time_art_bg.xml" value="0.193" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/drawable/workouts_bgg_bg.xml" value="0.193" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_data_collection.xml" value="0.19493243243243244" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_end_of_workout.xml" value="0.19493243243243244" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_home_page.xml" value="0.15641891891891893" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_main.xml" value="0.1516891891891892" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.19493243243243244" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_start_workouts.xml" value="0.19493243243243244" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/activity_workout.xml" value="0.22" />
@@ -17,8 +23,9 @@
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/dc_goals_item.xml" value="0.1" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/favorite_item.xml" value="0.11527777777777778" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/fragment_history.xml" value="0.19493243243243244" />
-        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/fragment_journey.xml" value="0.19493243243243244" />
+        <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/fragment_my_profile.xml" value="0.22" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/layout/history_item.xml" value="0.5" />
         <entry key="..\:/Users/billy/Documents/GitHub/Workout-tracker-application/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
       </map>

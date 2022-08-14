@@ -1,10 +1,19 @@
 package com.billykybe.fitme;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 public class EndOfWorkout extends AppCompatActivity {
     TextView toHome, toReminder;
@@ -13,7 +22,9 @@ public class EndOfWorkout extends AppCompatActivity {
     String timeSec;
 String time;
 TextView congrats_workouts,congrats_calos,congrats_time;
-
+private final String CHANEL_ID = "workout_notification";
+private  final int NOTIFICATION_ID=1;
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +45,9 @@ time = timeMin+":"+timeSec;
         congrats_calos.setText(calories);
         congrats_time.setText(time);
 
-
+//========> Notification first test
+createNotification();
+addNotification();
 
 
         toHome = findViewById(R.id.eow_toHome);
@@ -51,6 +64,35 @@ time = timeMin+":"+timeSec;
             startActivity(toReminder);
 finish();
         });
+    }
+
+    private void addNotification() {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),CHANEL_ID);
+        builder.setSmallIcon(R.drawable.cover_chest_1);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.cover_chest_2));
+        builder.setContentTitle("tittle");
+        builder.setContentText("text");
+        builder.setAutoCancel(true);
+        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        //Make ita notific
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
+        notificationManagerCompat.notify(NOTIFICATION_ID,builder.build());
+    }
+
+    //api Annotation
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void createNotification() {
+        CharSequence title ="titlee";
+        String desc = "desc";
+        NotificationChannel notificationChannel = new NotificationChannel(CHANEL_ID,title,NotificationManager.IMPORTANCE_DEFAULT);
+        notificationChannel.setDescription(desc);
+
+        NotificationManager  notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.createNotificationChannel(notificationChannel);
+
+
+
     }
 }
 

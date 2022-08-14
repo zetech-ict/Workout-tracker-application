@@ -53,7 +53,21 @@ public class Journey extends Fragment {
                     calos+=Integer.parseInt(history_item_models.get(i).w_kcal);
                 }
         tv_sesh.setText(String.valueOf(seccions));
-        tv_calos.setText(String.valueOf(calos));
+
+
+       if (calos>999){
+           int first = calos/1000;
+           int second = calos%1000;
+           while (second>=10){
+               second/=10;
+           }
+            tv_calos.setText(first+"."+second+"K");
+
+
+        }else {
+            tv_calos.setText(String.valueOf(calos));
+
+        }
         tv_minutes.setText(String.valueOf(minutes));
 
         rv_history = view.findViewById(R.id.rv_history);

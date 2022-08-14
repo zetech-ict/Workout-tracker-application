@@ -225,8 +225,8 @@ public class HomeFragment extends Fragment {
             }
         });
         notificationsBtn.setOnClickListener(view1 -> {
-            notificationsBtn.setImageResource(R.drawable.menu_notifications);
-            Intent notificationGo = new Intent(getActivity(), Notifications.class);
+
+            Intent notificationGo = new Intent(getActivity(), SecuritySettings.class);
             startActivity(notificationGo);
 
         });

@@ -39,7 +39,7 @@ public class WorkoutScreen extends AppCompatActivity {
     int current = 0;
 int[]start;
 int[]end;
-    ProgressBar progressBar;
+    ProgressBar progressBar ,progressB;
     TextView counter, rwContinue;
     VideoView wImage;
     TextView wText, ws_pauseBtn;
@@ -53,6 +53,8 @@ View workoutHolderView ;
     private CountDownTimer countDownTimer,restCountTimer;
     private boolean countdownRunning;
     private long timeLeft;
+
+    //TODO: Get fromDb
     int weight = 30, height = 30, age = 20;
     double factor;
     int currentWorkout =0;
@@ -91,7 +93,7 @@ rest_img = findViewById(R.id.rest_img);
         rst_timmer =findViewById(R.id.resttimer);
         skip = findViewById(R.id.skipWork);
         prev = findViewById(R.id.prevWork);
-        progress_bg = findViewById(R.id.progress_bg);
+
         skip.setOnClickListener(view ->{
             if (currentWorkout < workout_list.size()-1){
                 countDownTimer.cancel();
@@ -166,6 +168,8 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
 
 
         progressBar = findViewById(R.id.ws_progressbar);
+        progressB = findViewById(R.id.progressB);
+        progressB.setMax(workout_list.size());
         counter = findViewById(R.id.wscounter_text);
 
 
@@ -223,21 +227,9 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
 
     private void updateBar(int position) {
 
+//TODO: HERE
 
-
-        final DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        int widthInPx = Resources.getSystem().getDisplayMetrics().widthPixels;
-        int pixelDPI = Resources.getSystem().getDisplayMetrics().densityDpi;
-
-
-        int screenWidthInDp =(widthInPx/pixelDPI)*160;
-
-        int currentMax = (screenWidthInDp * position) / workout_list.size()-1;
-
-     progress_bg.setLayoutParams(new ConstraintLayout.LayoutParams(currentMax*2,3));
-
+    progressB.setProgress(position);
 
     }
 
@@ -409,7 +401,7 @@ hours = start[0];
     String name =getData(id);
 
 
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat formatter = new SimpleDateFormat("MMM dd, hh:mm aa");
         Date date = new Date();
 
         String date1 = formatter.format(date);

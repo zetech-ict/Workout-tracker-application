@@ -70,17 +70,19 @@ app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lottie_holder">
 
-        <View
-            android:id="@+id/progress_bg"
-            android:layout_width="@dimen/_10sdp"
-            android:layout_height="@dimen/_2sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:background="@color/color_secondary"
-            android:foregroundGravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ProgressBar
+            android:id="@+id/progressB"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:progressBackgroundTint="@color/color_primary"
+            android:layout_height="3dp"
+            android:progress="50"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             />
 
 
@@ -184,6 +186,8 @@ app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/prevWork"
             app:layout_constraintTop_toTopOf="@id/prevWork" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

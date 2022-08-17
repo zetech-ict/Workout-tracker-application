@@ -103,9 +103,9 @@ ImageView lwe_fb_level_img;
 
         WorkoutsDB workoutsDB = new WorkoutsDB(str_workout);
         workout_list = workoutsDB.getList();
-lw_name.setText();
+//lw_name.setText();
 
-        lwe_fb_level_img.setImageResource(history_item_models.get(0).);
+        lwe_fb_level_img.setImageResource(history_item_models.get(0).getW_img());
 
         return view;
     }

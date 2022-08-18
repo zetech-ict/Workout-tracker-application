@@ -54,6 +54,10 @@ public class Journey extends Fragment {
             seconds+=Integer.parseInt(history_item_models.get(i).w_durationSecs);
         }
 
+        while (seconds > 59){
+            seconds = seconds /60;
+            minutes++;
+        }
 
         tv_minutes.setText(String.format("%02d",minutes) +":"+String.format("%02d",seconds));
 

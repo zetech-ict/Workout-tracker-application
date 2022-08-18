@@ -62,6 +62,7 @@
                 android:layout_height="56dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
 
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,6 +71,8 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="Today"
+                android:visibility="gone"
+
                 android:id="@+id/today_toogle_text"
                 app:layout_constraintTop_toTopOf="@id/datePicker"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -85,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="This week"
+                android:visibility="gone"
                 app:layout_constraintTop_toTopOf="@id/datePicker"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textSize="@dimen/_15ssp"

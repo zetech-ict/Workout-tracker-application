@@ -1,5 +1,6 @@
 package com.billykybe.fitme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,7 @@ import java.util.List;
 
 
 public class HistoryFragment extends Fragment {
-
+View fb_bg_cv;
 TextView workout_count_txt,duration_count_txt,counter_text;
  ProgressBar gr_progressbar;
     TextView today, thisWeek;
@@ -60,17 +61,25 @@ ImageView lwe_fb_level_img;
 
 
         duration_count_txt = view.findViewById(R.id.duration_count_txt);
-        int totalTime = 0;
-        for (int i = 0; i < history_item_models.size()-1; i++) {
-            totalTime += Integer.parseInt(history_item_models.get(i).w_duration);
+
+
+
+
+      int  minutes = 0;
+        int seconds = 0;
+        for(int i = 0;i<= history_item_models.size()-1;i++){
+            minutes+=Integer.parseInt(history_item_models.get(i).w_duration);
+            seconds+=Integer.parseInt(history_item_models.get(i).w_durationSecs);
         }
-        if (totalTime>999){
-            totalTime = totalTime /1000;
-            duration_count_txt.setText(totalTime+"K"+" Minutes");
-        }else {
-            duration_count_txt.setText(totalTime+" Minutes");
+
+        while (seconds > 59){
+            seconds = seconds /60;
+            minutes++;
         }
-//TODO:
+
+
+            duration_count_txt.setText(minutes+":"+seconds+" Minutes");
+
 
 
                         counter_text = view.findViewById(R.id.counter_text);
@@ -99,13 +108,38 @@ ImageView lwe_fb_level_img;
         lw_duration = view.findViewById(R.id.lw_duration);
         lw_name = view.findViewById(R.id.lw_name);
 
-        String str_workout =        getStrings(history_item_models.get(0).w_name,1);
+        String key =  history_item_models.get(0).w_name;
 
-        WorkoutsDB workoutsDB = new WorkoutsDB(str_workout);
-        workout_list = workoutsDB.getList();
-//lw_name.setText();
 
-        lwe_fb_level_img.setImageResource(history_item_models.get(0).getW_img());
+
+        int level ;
+        if (key.contains("eginner")){
+            level = 1;
+            lwe_fb_level_img.setImageResource(R.drawable.ic_level_1);
+
+        }else if (key.contains("termediate")) {
+            level = 2;
+            lwe_fb_level_img.setImageResource(R.drawable.ic_level_2);
+
+        }else {
+            level = 3;
+            lwe_fb_level_img.setImageResource(R.drawable.ic_level_3);
+
+
+        }
+        String str_workout =        getStrings(history_item_models.get(0).w_name,level);
+
+
+
+lw_name.setText(history_item_models.get(0).w_name);
+
+        fb_bg_cv = view.findViewById(R.id.fb_bg_cv);
+        fb_bg_cv.setOnClickListener(v -> {
+            Intent toWorkoutLobby = new Intent(getActivity(), Workout.class);
+            toWorkoutLobby.putExtra("id",str_workout);
+            startActivity(toWorkoutLobby);
+        });
+
 
         return view;
     }
@@ -116,7 +150,8 @@ ImageView lwe_fb_level_img;
 
 
 
-        String toReturn = "";
+
+    String toReturn = "";
         if (level == 1){
 
 
@@ -193,10 +228,6 @@ toReturn = "m-fullbody-bg";
 
                         break;
                 }
-            }
-            else {
-                toReturn = "m-fullbody-bg";
-
             }
 
 

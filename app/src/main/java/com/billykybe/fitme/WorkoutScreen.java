@@ -55,7 +55,7 @@ View workoutHolderView ;
     private long timeLeft;
 
     //TODO: Get fromDb
-    int weight = 30, height = 30, age = 20;
+    int weight = 30, height = 200, age = 20;
     double factor;
     int currentWorkout =0;
     TextView rest_rem,rest_title;
@@ -242,6 +242,22 @@ getWindow().setStatusBarColor(Color.TRANSPARENT);
     private void startWorkout(int look) {
 
         updateBar(look+1);
+        if (look ==0){
+            prev.setVisibility(View.GONE);
+        }
+        else {
+            prev.setVisibility(View.VISIBLE);
+
+        }
+        if (look ==workout_list.size()-1){
+            skip.setVisibility(View.GONE);
+
+        }
+        else {
+            skip.setVisibility(View.VISIBLE);
+
+        }
+
 
         int timeToWait = Integer.parseInt(workout_list.get(look).getW_duration())*1000;
         wText.setText(workout_list.get(look).w_name);

@@ -52,6 +52,7 @@ app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/w_backBtn"
         android:layout_width="@dimen/_25sdp"
         android:layout_height="@dimen/_25sdp"
+        android:visibility="invisible"
         android:layout_marginStart="@dimen/_10sdp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_round_arrow_back_24"
@@ -93,6 +94,9 @@ app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="@font/proximanovabold"
             android:text="Side Plank"
             android:textColor="@color/color_text_primary"
+android:textAlignment="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:textSize="@dimen/_25ssp"
             app:layout_constraintBottom_toTopOf="@id/counter_holder"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +107,8 @@ app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/counter_holder"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_120sdp"
-            app:layout_constraintBottom_toTopOf="@id/prevWork"
+            android:layout_marginBottom="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ws_title"
@@ -170,6 +175,9 @@ app:layout_constraintStart_toStartOf="parent"
         <TextView
             android:id="@+id/skipWork"
             android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_15sdp"
@@ -182,10 +190,10 @@ app:layout_constraintStart_toStartOf="parent"
             android:text="Skip"
             android:textColor="@color/white"
             android:textSize="@dimen/_14ssp"
-            app:layout_constraintBottom_toBottomOf="@id/prevWork"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/prevWork"
-            app:layout_constraintTop_toTopOf="@id/prevWork" />
+         />
 
 
 
@@ -193,10 +201,11 @@ app:layout_constraintStart_toStartOf="parent"
 </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clayout"
+        android:visibility="gone"
         android:elevation="@dimen/_3sdp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        >
 
         <View
             android:id="@+id/top"
@@ -209,9 +218,10 @@ app:layout_constraintStart_toStartOf="parent"
 
         <ImageView
             android:id="@+id/sw_backBtn"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
+
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_round_arrow_back_24"
@@ -283,15 +293,18 @@ app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:fontFamily="@font/proximanovalight"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="Next Workout (2/10)"
             android:textColor="@color/color_text_primary"
             android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@id/progress_text_holder"
             app:layout_constraintBottom_toTopOf="@id/wr_title_txt"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/wr_title_txt"
             android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/wr_texttop_txt"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_15sdp"
@@ -308,7 +321,10 @@ app:layout_constraintStart_toStartOf="parent"
             android:layout_height="@dimen/_300sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/wr_title_txt"
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@id/rw_continue">
@@ -318,8 +334,8 @@ app:layout_constraintStart_toStartOf="parent"
 
     />
             <VideoView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
                 android:elevation="0dp"
                 android:id="@+id/rest_img"
              />

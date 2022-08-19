@@ -366,7 +366,7 @@ app:layout_constraintStart_toStartOf="parent"
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
+android:id="@+id/lw_main_img"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cover_fullbody" />
 

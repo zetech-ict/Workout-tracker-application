@@ -6,25 +6,22 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Workout extends AppCompatActivity {
     public List<Workout_items_model> workout_list = new ArrayList<>();
-    TextView startBtn,workoutData;
+    TextView startBtn, workoutData;
     RecyclerView rv_workouts;
     workout_item_adapter workout_item_adapter;
-
+    ImageView imgWork;
     String str_workout = "";
 
     @SuppressLint("NotifyDataSetChanged")
@@ -40,21 +37,23 @@ public class Workout extends AppCompatActivity {
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         getWindow().setStatusBarColor(Color.TRANSPARENT);
-        getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);;
+        getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        ;
 
 
-workoutData = findViewById(R.id.workoutdata);
+        workoutData = findViewById(R.id.workoutdata);
 
+        imgWork=findViewById(R.id.imgWork);
 
         getStrings();
         WorkoutsDB workoutsDB = new WorkoutsDB(str_workout);
         workout_list = workoutsDB.getList();
-
+        initImages(str_workout);
 //        Toast.makeText(getApplicationContext(), str_workout, Toast.LENGTH_LONG).show();
         int wSize = workout_list.size();
         int wTime = workoutTime(workout_list);
 
-        workoutData.setText(wTime+ " mins "+wSize+" workouts");
+        workoutData.setText(wTime + " mins " + wSize + " workouts");
         rv_workouts = findViewById(R.id.rv_workout);
         rv_workouts.setLayoutManager(new LinearLayoutManager(this));
         workout_item_adapter = new workout_item_adapter(workout_list);
@@ -68,7 +67,7 @@ workoutData = findViewById(R.id.workoutdata);
 
         startBtn.setOnClickListener(v -> {
             Intent toWorkoutLobby = new Intent(getApplicationContext(), StartWorkouts.class);
-            toWorkoutLobby.putExtra("id",str_workout);
+            toWorkoutLobby.putExtra("id", str_workout);
             startActivity(toWorkoutLobby);
             finish();
         });
@@ -77,10 +76,10 @@ workoutData = findViewById(R.id.workoutdata);
     private int workoutTime(List<Workout_items_model> workout_list) {
         int wTime = 0;
         for (int i = 0; i < workout_list.size(); i++) {
-            wTime +=Integer.parseInt( workout_list.get(i).w_duration);
+            wTime += Integer.parseInt(workout_list.get(i).w_duration);
 
         }
-        wTime = wTime/60;
+        wTime = wTime / 60;
 
         return wTime;
     }
@@ -89,5 +88,93 @@ workoutData = findViewById(R.id.workoutdata);
         str_workout = getIntent().getStringExtra("id");
     }
 
+
+    private void initImages(String key) {
+//=====> Male set
+        if (key.contains("full")) {
+            imgWork.setImageResource(R.drawable.cover_fullbody);
+
+        }
+
+        if (key.contains("hes") && key.contains("bg")) {
+            imgWork.setImageResource(R.drawable.cover_chest_1);
+
+
+        }
+        if (key.contains("hes") && key.contains("im")) {
+            imgWork.setImageResource(R.drawable.cover_chest_2);
+
+
+        }
+        if (key.contains("hes") && key.contains("ad")) {
+            imgWork.setImageResource(R.drawable.cover_chest_3);
+
+        }
+
+
+
+
+        if (key.contains("abs") && key.contains("bg")) {
+
+
+            imgWork.setImageResource(R.drawable.cover_abs_1);
+
+
+        }
+        if (key.contains("abs") && key.contains("im")) {  imgWork.setImageResource(R.drawable.cover_abs_2);
+
+
+
+        }
+        if (key.contains("abs") && key.contains("ad")) {
+            imgWork.setImageResource(R.drawable.cover_abs_3);
+
+        }
+
+
+
+
+
+        if (key.contains("arm") && key.contains("bg")) {
+            imgWork.setImageResource(R.drawable.cover_arm_1);
+
+        }
+        if (key.contains("arm") && key.contains("im")) {
+
+            imgWork.setImageResource(R.drawable.cover_arm_2);
+
+        }
+        if (key.contains("arm") && key.contains("ad")) {
+
+
+            imgWork.setImageResource(R.drawable.cover_arm_3);
+        }
+
+
+
+
+
+
+
+        if (key.contains("leg") && key.contains("bg")) {
+            imgWork.setImageResource(R.drawable.cover_leg_1);
+
+        }
+        if (key.contains("leg") && key.contains("im")) {
+
+            imgWork.setImageResource(R.drawable.cover_leg_2);
+
+        }
+        if (key.contains("leg") && key.contains("ad")) {
+
+            imgWork.setImageResource(R.drawable.cover_leg_3);
+
+        }
+
+
+
+
+
+    }
 
 }

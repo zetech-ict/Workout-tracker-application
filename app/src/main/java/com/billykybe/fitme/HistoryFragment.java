@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -16,7 +17,7 @@ import java.util.List;
 
 
 public class HistoryFragment extends Fragment {
-View fb_bg_cv;
+ImageView lw_main_img;
 TextView workout_count_txt,duration_count_txt,counter_text;
  ProgressBar gr_progressbar;
     TextView today, thisWeek;
@@ -130,11 +131,10 @@ ImageView lwe_fb_level_img;
         String str_workout =        getStrings(history_item_models.get(0).w_name,level);
 
 
-
 lw_name.setText(history_item_models.get(0).w_name);
 
-        fb_bg_cv = view.findViewById(R.id.fb_bg_cv);
-        fb_bg_cv.setOnClickListener(v -> {
+        lw_main_img = view.findViewById(R.id.lw_main_img);
+        lw_main_img.setOnClickListener(v -> {
             Intent toWorkoutLobby = new Intent(getActivity(), Workout.class);
             toWorkoutLobby.putExtra("id",str_workout);
             startActivity(toWorkoutLobby);
@@ -148,85 +148,69 @@ lw_name.setText(history_item_models.get(0).w_name);
         //===> trying to fasten the search Hackish to change
 
 
+String toReturn ="";
 
 
-
-    String toReturn = "";
         if (level == 1){
 
 
 
         switch (key) {
             case "Fullbody Beginner":
-toReturn = "m-fullbody-bg";
-                break;
+return   "m-fullbody-bg";
             case "Chest Beginner":
-                toReturn = "m-chest-bg";
+                return "m-chest-bg";
 
-                break;
             case "Abs Beginner":
-                toReturn = "m-abs-bg";
+                return "m-abs-bg";
 
-                break;
 
             case "Arms Beginner":
-                toReturn = "m-arms-bg";
+                return "m-arms-bg";
 
-                break;
             case "Legs Beginner":
-                toReturn = "m-legs-bg";
+                return "m-legs-bg";
 
-                break;
         }
         if (level == 2){
             switch (key) {
                 case "Fullbody Intermediate":
-                    toReturn = "m-fullbody-bg";
+                    return "m-fullbody-bg";
 
-                    break;
                 case "Chest Intermediate":
-                    toReturn = "m-chest-im";
+                    return "m-chest-im";
 
-                    break;
                 case "Abs Intermediate":
-                    toReturn = "m-abs-im";
+                    return "m-abs-im";
 
-                    break;
 
                 case "Arms Intermediate":
-                    toReturn = "m-arms-im";
+                    return "m-arms-im";
 
-                    break;
                 case "Legs Intermediate":
-                    toReturn = "m-legs-im";
+                    return "m-legs-im";
 
-                    break;
             }
 
         }
             if (level == 3){
                 switch (key) {
                     case "Fullbody Advanced":
-                        toReturn = "m-fullbody-bg";
+                        return "m-fullbody-bg";
 
-                        break;
                     case "Chest Advanced":
-                        toReturn = "m-chest-ad";
+                        return "m-chest-ad";
 
-                        break;
                     case "Abs Advanced":
-                        toReturn = "m-abs-ad";
+                        return "m-abs-ad";
 
-                        break;
 
                     case "Arms Advanced":
-                        toReturn = "m-arms-ad";
+                        return "m-arms-ad";
 
-                        break;
                     case "Legs Advanced":
-                        toReturn = "m-legs-ad";
+                        return "m-legs-ad";
 
-                        break;
                 }
             }
 

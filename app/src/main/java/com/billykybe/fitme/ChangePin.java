@@ -9,11 +9,12 @@ import android.widget.TextView;
 
 public class ChangePin extends AppCompatActivity {
     TextView ssEnterdPin,one,two,three,four,five,six,seven,eight,nine,zero,changePinBtn;
-    View pinslotone,pinslottwo,pinslotthree,pinslotfour,pincover,keyboard,passHolder;
+    View pinslotone,pinslottwo,pinslotthree,pinslotfour,pincover,keyboard,passHolder,old_pass,new_pass,new_again_pass,old_new,new_new;
     int ss_count = 0;
+    int progress = 1;
     ImageView backIc,cp_backBtn;
     boolean allowAccesss = false;
-    String oldPin="1234",newPin,tempPin;
+    String oldPin="1234",newPin="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,12 @@ public class ChangePin extends AppCompatActivity {
 
     }
     private void initViews() {
+        new_pass = findViewById(R.id.new_pin_holder);
+        new_again_pass = findViewById(R.id.new_again_pin_holder);
+        old_pass = findViewById(R.id.old_pin_holder);
+        old_new = findViewById(R.id.old_new_divide);
+        new_new = findViewById(R.id.new_new_divide);
+        old_pass = findViewById(R.id.old_pin_holder);
        cp_backBtn = findViewById(R.id.cp_backBtn);
         pinslotone = findViewById(R.id.ss_pin_slot_one);
         pinslottwo = findViewById(R.id.ss_pin_slot_two);
@@ -88,28 +95,83 @@ public class ChangePin extends AppCompatActivity {
         if (ssEnterdPin.getText().toString().length() == 4) {
 
 
+if (progress == 1){
 
-            if (ssEnterdPin.getText().toString().equals("1234")) {
+    if (ssEnterdPin.getText().toString().equals(oldPin)) {
 
+        old_pass.setBackgroundResource(R.drawable.pin_bg_fill);
+        old_new.setBackgroundResource(R.drawable.progress_bg);
 
+        allowAccesss = true;
+        checkAllow();
+        ss_count = 0;
+        counter();
+        ssEnterdPin.setText("");
+        progress = 2;
 
-                allowAccesss = true;
-                checkAllow();
-            } else {
-                //todo:// failed animation
+    } else {
+        //todo:// failed animation
+        old_pass.setBackgroundResource(R.drawable.pin_fail_bg);
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        old_pass.setBackgroundResource(R.drawable.pin_bg_null);
 
+        ss_count = 0;
+        counter();
+        ssEnterdPin.setText("");
 
-
-                ss_count = 0;
-                counter();
-                ssEnterdPin.setText("");
-
-            }
-
-
-
+    }
+}
 
         }
+        else if (progress == 2){
+            newPin = ssEnterdPin.getText().toString();
+
+
+            new_pass.setBackgroundResource(R.drawable.pin_bg_fill);
+            new_new.setBackgroundResource(R.drawable.progress_bg);
+
+
+
+            ss_count = 0;
+            counter();
+            ssEnterdPin.setText("");
+            progress = 3;
+        }else {
+if (newPin.equals(ssEnterdPin.getText().toString())){
+    oldPin = newPin;
+ }else {
+    old_pass.setBackgroundResource(R.drawable.pin_fail_bg);
+    try {
+        Thread.sleep(100);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    old_pass.setBackgroundResource(R.drawable.pin_bg_null);
+
+    ss_count = 0;
+    counter();
+    ssEnterdPin.setText("");
+ }
+
+
+            new_pass.setBackgroundResource(R.drawable.pin_bg_fill);
+            new_new.setBackgroundResource(R.drawable.progress_bg);
+
+
+
+            ss_count = 0;
+            counter();
+            ssEnterdPin.setText("");
+            progress = 3;
+
+        }
+
+
+
 
 
         if (ssEnterdPin.getText().toString().equals("")) {

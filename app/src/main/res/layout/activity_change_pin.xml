@@ -42,17 +42,110 @@
 
         />
 
-<View
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:background="@color/color_text_secondary"
+
     android:id="@+id/changeProgress"
 
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/topHolderCp"
     app:layout_constraintBottom_toTopOf="@id/pinholderView"
-    />
+    >
+
+    <View
+        android:id="@+id/old_pin_holder"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/pin_bg_null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/old_new_divide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Old Pin"
+        app:layout_constraintTop_toBottomOf="@id/old_pin_holder"
+        app:layout_constraintStart_toStartOf="@id/old_pin_holder"
+        app:layout_constraintEnd_toEndOf="@id/old_pin_holder"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_secondary"
+        />
+
+    <View
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+app:layout_constraintStart_toEndOf="@id/old_pin_holder"
+        app:layout_constraintEnd_toStartOf="@id/new_pin_holder"
+        app:layout_constraintTop_toTopOf="@id/old_pin_holder"
+        app:layout_constraintBottom_toBottomOf="@id/old_pin_holder"
+        android:background="@drawable/progress_bg"
+
+        android:id="@+id/old_new_divide"
+        />
+
+    <View
+        android:layout_width="@dimen/_60sdp"
+        android:background="@drawable/pin_bg_null"
+        android:layout_height="@dimen/_60sdp"
+        android:id="@+id/new_pin_holder"
+        app:layout_constraintStart_toEndOf="@id/old_new_divide"
+        app:layout_constraintEnd_toStartOf="@id/new_new_divide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Pin"
+        app:layout_constraintTop_toBottomOf="@id/new_pin_holder"
+        app:layout_constraintStart_toStartOf="@id/new_pin_holder"
+        app:layout_constraintEnd_toEndOf="@id/new_pin_holder"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_secondary"
+        />
+
+    <View
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/new_pin_holder"
+        app:layout_constraintEnd_toStartOf="@id/new_again_pin_holder"
+        app:layout_constraintTop_toTopOf="@id/old_pin_holder"
+        app:layout_constraintBottom_toBottomOf="@id/old_pin_holder"
+        android:background="@drawable/progress_bg"
+
+        android:id="@+id/new_new_divide"
+        />
+
+    <View
+        android:layout_width="@dimen/_60sdp"
+        android:background="@drawable/pin_bg_null"
+        android:layout_height="@dimen/_60sdp"
+        android:id="@+id/new_again_pin_holder"
+        app:layout_constraintStart_toEndOf="@id/new_new_divide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Pin"
+        app:layout_constraintTop_toBottomOf="@id/new_pin_holder"
+        app:layout_constraintStart_toStartOf="@id/new_again_pin_holder"
+        app:layout_constraintEnd_toEndOf="@id/new_again_pin_holder"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/proximanovasemibold"
+        android:textColor="@color/color_secondary"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:layout_width="match_parent"
